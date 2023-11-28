@@ -1,0 +1,32 @@
+.you {
+    position: absolute;
+    top: 600px;
+    left: 1200px;
+    width: 400px;
+    height: 350px;
+    z-index: 2; /* squareのz-indexを設定 */
+    clip-path: circle(130px at center);
+  }
+  .you img {
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+  }
+  .you:hover img {
+    transform: scale(1.1); /* 拡大 */
+  }
+  .huran {
+    position: absolute;
+    top: 890px;
+    left: 1200px;
+    width: 400px;
+    height: 350px;
+    z-index: 2; /* squareのz-indexを設定 */
+    clip-path: circle(130px at center);
+  }
+  .huran img {
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+  }
+  .huran:hover img {
+    transform: scale(1.1); /* 拡大 */
+  }

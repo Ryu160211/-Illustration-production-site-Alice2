@@ -1,0 +1,48 @@
+.ryu {
+    position: absolute;
+    top: 600px;
+    left: 1200px;
+    width: 400px;
+    height: 350px;
+    z-index: 2; /* squareのz-indexを設定 */
+    clip-path: circle(130px at center);
+  }
+  .ryu img {
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+  }
+  .ryu:hover img {
+    transform: scale(1.1); /* 拡大 */
+  }
+  .seiga {
+    position: absolute;
+    top: 890px;
+    left: 1200px;
+    width: 400px;
+    height: 350px;
+    z-index: 2; /* squareのz-indexを設定 */
+    clip-path: circle(130px at center);
+  }
+  .seiga img {
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+  }
+  .seiga:hover img {
+    transform: scale(1.1); /* 拡大 */
+  }
+  .yukari {
+    position: absolute;
+    top: 1190px;
+    left: 1200px;
+    width: 400px;
+    height: 350px;
+    z-index: 2; /* squareのz-indexを設定 */
+    clip-path: circle(130px at center);
+  }
+  .yukari img {
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+  }
+  .yukari:hover img {
+    transform: scale(1.1); /* 拡大 */
+  }

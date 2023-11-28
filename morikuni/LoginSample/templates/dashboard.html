@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Dashboard</title>
+</head>
+
+<body>
+	<h1>Welcome, {{ session["username"] }}!</h1>
+	<p>This is your dashboard.</p>
+	<!-- ログアウトボタンを追加 -->
+	<form action="/logout" method="post">
+		<input type="submit" value="Logout">
+	</form>
+</body>
+
+</html>

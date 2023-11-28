@@ -1,0 +1,15 @@
+body {
+    overflow-x: hidden;
+    background-color: rgb(65, 62, 80);
+    z-index: 1; /* squareのz-indexを設定 */
+  }
+.background-image {
+    background-image: url('image/メールの無料アイコンその20.png');
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position: center center;
+    background-attachment: fixed;
+    /* 他のスタイルを追加することもできます */
+    
+  }
+  

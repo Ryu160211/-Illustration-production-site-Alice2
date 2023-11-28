@@ -1,0 +1,171 @@
+body {
+  overflow-x: hidden; /* 横スクロールを禁止 */
+  overflow-y: scroll; /* 縦スクロールを許可 */
+  margin-top: 100px; /* メニューバーの高さ分だけコンテンツを下げる */
+  /* 50%の拡大率のスタイル */
+
+}
+
+/* CSSスタイルシート */
+.square {
+  width: 2600px; /* 幅 */
+  height: 1498px; /* 高さ */
+  background-color: #f1f1f1; /* 背景色 (灰色) */
+  position: relative; /* 親要素に対しての相対位置指定 */
+  top: -20px; /* 上からの位置 (例: 20px) */
+  left: 220px; /* 左からの位置 (例: 50px) */
+  z-index: 1; /* squareのz-indexを設定 */
+}
+
+
+/* メニューのスタイル */
+.menu {
+  background-color: #333;
+  height: 100px; /* 高さを60pxに変更 */
+  position: fixed;
+  top: 0;
+  width: 2600px;
+  left: 230px;
+  z-index: 4; /* squareのz-indexを設定 */
+}
+/* メニュー項目のスタイル */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* メニュー項目を中央揃えに */
+}
+
+.menu li {
+  display: inline;
+  margin-right: 20px; /* メニュー項目の間隔 */
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  font-family:  "LEMON MILK";
+  color: #fff; /* メニュー項目のテキスト色 */
+  font-size: 70px;
+  letter-spacing: 2px;
+}
+
+/* メニュー項目へのホバー効果 */
+.menu li:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 0;
+  height: 3px;
+  background-color: #4e70c7; /* メニュー項目にホバー時の背景色 */
+  transition: width 0.3s ease;
+  transform: translateX(-50px);
+  letter-spacing: 2px;
+}
+
+.menu li a:hover {
+  color: #ff6600; /* メニュー項目にホバー時のテキスト色 */
+  
+}
+
+
+
+
+
+/* ヘッダー（画像とアニメーション） */
+.imageactive2{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1700px;
+  height: 1200px;
+}
+.imageactive3{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1700px;
+  height: 1200px;
+}
+.imageactive4{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1700px;
+  height: 1200px;
+}
+.imageactive5{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1700px;
+  height: 1200px;
+}
+.image-container {
+  display: flex;
+  position: absolute;
+  top: 250px;
+  left: 700px;
+  width: 4500px;
+  height: 1200px;
+
+  z-index: 2; /* image-containerのz-indexを設定 */
+  transition: transform 1s, opacity 1s;
+}
+
+
+
+
+.image.active {
+  opacity: 1;
+  z-index: 3; /* アクティブな画像のz-indexを設定 */
+}
+
+/* style.css */
+
+.rectangle {
+  width: 40px; /* 長方形の幅 */
+  height: 1200px; /* 長方形の高さ */
+  background-color: #1b1919; /* 長方形の背景色 */
+  position: absolute;
+  top: 0;
+  left: 2100px; /* 左からの位置 (例: 50px) */
+  letter-spacing: 2px;
+}
+
+
+
+.bottom {
+  bottom: 100; /* 新しい長方形の位置 */
+  left: -470px; /* 左からの位置 (例: 50px) */
+}
+
+
+
+.text-container {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: #000000; 
+  margin-top: 20px; /* テキストの上方向の位置を調整 */
+}
+
+.text-container span {
+  display: inline-block;
+  position: relative;
+  margin-right: 250px;
+
+}
+
+.initial-square {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 1s; /* フェードアウトに1秒かけるトランジションを設定 */
+}

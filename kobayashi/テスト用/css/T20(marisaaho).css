@@ -1,0 +1,16 @@
+.reimuaho {
+    position: absolute;
+    top: 600px;
+    left: 1200px;
+    width: 400px;
+    height: 350px;
+    z-index: 2; /* squareのz-indexを設定 */
+    clip-path: circle(130px at center);
+  }
+  .reimuaho img {
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+  }
+  .reimuaho:hover img {
+    transform: scale(1.1); /* 拡大 */
+  }

@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>{{ session['username'] }}さんのポスト一覧</h2>
+<form action="{{ url_for('logout')}}" >
+    <input type="submit" value="Logout">
+</form>
+
+<!-- 検索フォームの追加 -->
+<form action="{{ url_for('index') }}" method="GET">
+    <input type="text" name="q" placeholder="Search">
+    <input type="submit" value="Search">
+</form>
+
+<form action="{{ url_for('add') }}" method="post">
+    <textarea name="body"></textarea>
+    <input type="submit" value="Add Post">
+</form>
+
+{% for post in posts %}
+    <p name="post-body">{{ post.body }}</p>
+    <p id="pl{{ post.id }}">{{ post.likes.count() }} likes</p>
+    <button id="{{ post.id }}"  onclick="send_to_python(this.id)">
+        {% if post.isLike(session['user_id']) %}
+        Like
+        {% else %}
+        Unlike
+        {% endif %}
+    </button><br>
+{% endfor %}
+<script type="text/javascript">
+    function send_to_python(post_id) {
+        var button = $("#" + post_id);
+        var likes_count = $("#pl" + post_id);
+        $.ajax({
+            url: '/like',
+            type: 'POST',
+            data: {"post_id": post_id}
+        }).done(function(received_data) {
+            var dict = JSON.parse(received_data);
+            var status = dict["status"];
+            var likes = dict["likes"];
+            button.text(status);
+            likes_count.text(likes + " likes");
+        }).fail(function() {
+            console.log("failed");
+        });
+    };
+</script>
+{% endblock %}

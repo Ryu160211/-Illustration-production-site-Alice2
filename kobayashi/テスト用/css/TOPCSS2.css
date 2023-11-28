@@ -1,0 +1,139 @@
+.body{
+  overflow-x: hidden; /* 横スクロールを禁止 */
+  overflow-y: scroll; /* 縦スクロールを許可 */
+
+}
+.square2 {
+  display: inline-block;
+  position: relative;
+ top: -2650px;
+ left: 1000px;
+  width: 1000px;
+  height: 170px;
+  background-color: #353535;
+  margin-right: 8px; /* 四角形間の間隔を調整 */
+  z-index: 2; /* メニューバーを最前面に表示 */
+  margin-right: 100px;
+   border-radius: 50px; 
+   z-index: 1; /* square2より前面に表示 */
+}
+.text {
+  position: absolute;
+  top: 1630px; /* square2の位置に合わせて調整 */
+  left: 1060px; /* square2の位置に合わせて調整 */
+  font-size: 100px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  z-index: 2; /* square2より前面に表示 */
+  letter-spacing: 20px;
+  font-family: "けいふぉんと";
+}
+
+
+.scroll_appear {
+  width: 250px;
+  height: 200px;
+  margin: 32px auto;
+  background-color: darkslategrey;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: relative;
+  left: -300px;
+  transition: all .5s ease-in-out;
+}
+.scroll_appear.active {
+  opacity: 1;
+  left: 0;
+}
+.flipped-vertical {
+  position: absolute;
+  width: 600px; /* 画像の親要素に対して100%の幅に伸ばす */
+  height: auto; /* アスペクト比を維持するために高さを自動調整 */
+  top: 100px; /* square2の位置に合わせて調整 */
+  left: 900px; /* square2の位置に合わせて調整 */
+  transform: scaleY(-1) scaleX(-1);
+
+ z-index: 2; /* square2より前面に表示 */
+
+}
+.imageactive8{
+  position: absolute;
+  width: 350px; /* 画像の親要素に対して100%の幅に伸ばす */
+  height: auto; /* アスペクト比を維持するために高さを自動調整 */
+  top: 70px; /* square2の位置に合わせて調整 */
+  left: 650px; /* square2の位置に合わせて調整 */
+  z-index: 2; /* square2より前面に表示 */
+  transform: scaleX(-1)
+}
+.main-heading1{
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 120px;
+  left: 1000px;
+  font-size: 39px;
+  z-index: 2;
+}
+.comento {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 10;
+}
+
+/* 新しいスタイル */
+.comento.fade-in {
+  display: block;
+  opacity: 1;
+}
+
+
+
+.flipped-vertical1 {
+  position: absolute;
+  width: 600px; /* 画像の親要素に対して100%の幅に伸ばす */
+  height: auto; /* アスペクト比を維持するために高さを自動調整 */
+  top: 100px; /* square2の位置に合わせて調整 */
+  left: 900px; /* square2の位置に合わせて調整 */
+  transform: scaleY(-1) scaleX(-1);
+
+ z-index: 2 /* square2より前面に表示 */
+
+}
+.imageactive9{
+  position: absolute;
+  width: 350px; /* 画像の親要素に対して100%の幅に伸ばす */
+  height: auto; /* アスペクト比を維持するために高さを自動調整 */
+  top: 70px; /* square2の位置に合わせて調整 */
+  left: 650px; /* square2の位置に合わせて調整 */
+  z-index: 2; /* square2より前面に表示 */
+  transform: scaleX(-1)
+}
+.main-heading11{
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 100px;
+  left: 1000px;
+  font-size: 39px;
+  z-index: 3;
+}
+.comento1{
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  display: none;
+  opacity: 0;
+}
+.comento1 {
+  transition: opacity 0.3s ease-in-out; /* フェードインに0.3秒かけるトランジション */
+}
+
+/* 表示状態 */
+.comento1.active {
+  opacity: 1;
+}
+

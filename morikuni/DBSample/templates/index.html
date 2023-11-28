@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+<!-- コンテンツ開始 -->
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+	{% for message in messages %}
+	<li>{{ message }}</li>
+	{% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<h1>Hello SQLAlchemy</h1>
+<p>{{ message }}</p>
+
+<form method="POST">
+	<input type="text" name="name" placeholder="UserName">
+	<input type="text" name="mail" placeholder="Mail">
+	<input type="password" name="pwd" placeholder="Password">
+	<input type="submit" value="送信">
+</form>
+<table>
+	{% for user in users %}
+	<tr>
+		<td>{{ user.id }}</td>
+		<td>{{ user.name }}</td>
+		<td>{{ user.mail }}</td>
+		<td>{{ user.password }}</td>
+	</tr>
+	{% endfor %}
+</table>
+<!-- コンテンツ終了 -->
+{% endblock %}

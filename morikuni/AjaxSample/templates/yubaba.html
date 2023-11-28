@@ -1,0 +1,36 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+契約書だよ。そこに名前を書きな。<br>
+<input type="text" id="inputbox">
+<input type="button" id="submit" value="送信" onclick="send_to_python()"><br>
+<br>
+<div id="result" style="border: 1px solid black; width: 500px; height: 100px;"></div>
+<input type="button" id="reset" value="リセット" onclick="reset()"><br>
+
+<script type="text/javascript">
+function send_to_python() {
+    var send_data = $("#inputbox").val();
+    $.ajax("/call_from_ajax", {
+        type: "post",
+        data: {"data": send_data},              // 連想配列をPOSTする
+    }).done(function(received_data) {           // 戻ってきたのはJSON（文字列）
+        var dict = JSON.parse(received_data);   // JSONを連想配列にする
+        // 以下、Javascriptで料理する
+        var answer = dict["answer"];
+        $("#result").html(answer);              // html要素を書き換える
+    }).fail(function() {
+        console.log("失敗");
+    });
+};
+
+function reset(){
+    //これは普通のJavaScript（jQuery）
+    $("#inputbox").val("");
+    $("#result").text("");
+};
+</script>
+</body>
+</html>

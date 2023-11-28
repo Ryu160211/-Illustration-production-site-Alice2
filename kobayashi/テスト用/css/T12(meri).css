@@ -1,0 +1,48 @@
+.huji {
+  position: absolute;
+  top: 600px;
+  left: 1200px;
+  width: 400px;
+  height: 350px;
+  z-index: 2; /* squareのz-indexを設定 */
+  clip-path: circle(130px at center);
+}
+.huji img {
+  height: auto;
+  transition: transform .6s ease; /* ゆっくり変化させる */
+}
+.huji:hover img {
+  transform: scale(1.1); /* 拡大 */
+}
+.hourai {
+  position: absolute;
+  top: 890px;
+  left: 1200px;
+  width: 400px;
+  height: 350px;
+  z-index: 2; /* squareのz-indexを設定 */
+  clip-path: circle(130px at center);
+}
+.hourai img {
+  height: auto;
+  transition: transform .6s ease; /* ゆっくり変化させる */
+}
+.hourai:hover img {
+  transform: scale(1.1); /* 拡大 */
+}
+.ina {
+  position: absolute;
+  top: 1190px;
+  left: 1200px;
+  width: 400px;
+  height: 350px;
+  z-index: 2; /* squareのz-indexを設定 */
+  clip-path: circle(130px at center);
+}
+.ina img {
+  height: auto;
+  transition: transform .6s ease; /* ゆっくり変化させる */
+}
+.ina:hover img {
+  transform: scale(1.1); /* 拡大 */
+}

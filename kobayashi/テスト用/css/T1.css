@@ -1,0 +1,164 @@
+.center-box {
+  width: 1200px; /* 長方形の幅を調整 */
+  height: 1260px; /* 長方形の高さを調整 */
+  
+  position: absolute;
+  top: 932px; /* 要素の上端を中央に配置 */
+  left: 1013px; /* 要素の左端を中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  border: 1px solid rgba(200, 72, 72, 0.818);
+  z-index: 1; /* squareのz-indexを設定 */
+}
+.center2-box {
+  width: 1200px; /* 長方形の幅を調整 */
+  height: 260px; /* 長方形の高さを調整 */
+  background-color: rgb(253, 251, 251); /* 薄水色の背景色 */
+  position: absolute;
+  top: 132px; /* 要素の上端を中央に配置 */
+  left: 1013px; /* 要素の左端を中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 1; /* squareのz-indexを設定 */
+  border: 1px solid rgba(200, 72, 72, 0.818);
+}
+.center3-box {
+  width: 300px; /* 長方形の幅を調整 */
+  height: 100px; /* 長方形の高さを調整 */
+  background-color: rgb(51, 51, 51); /* 薄水色の背景色 */
+  position: absolute;
+  top: 165px; /* 要素の上端を中央に配置 */
+  left: 870px; /* 要素の左端を中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 1; /* squareのz-indexを設定 */
+  clip-path: inset(20px 20px 20px 20px round 15px);
+}
+.Twitter{
+  width: 85px; /* 長方形の幅を調整 */
+  height: 85px; /* 長方形の高さを調整 */
+  position: absolute;
+  top: 122px; /* 要素の上端を中央に配置 */
+  left: 750px; /* 要素の左端を中央に配置 */
+  z-index: 1;
+}
+.Twittermoji{
+  color: #ffffff;
+  font-family: "LEMON MILK";
+  width: 85px; /* 長方形の幅を調整 */
+  height: 85px; /* 長方形の高さを調整 */
+  position: absolute;
+  top: 122px; /* 要素の上端を中央に配置 */
+  left: 830px; /* 要素の左端を中央に配置 */
+  z-index: 1;
+}
+.center4-box {
+  width: 300px; /* 長方形の幅を調整 */
+  height: 100px; /* 長方形の高さを調整 */
+  background-color: rgb(51, 51, 51); /* 薄水色の背景色 */
+  position: absolute;
+  top: 165px; /* 要素の上端を中央に配置 */
+  left: 1160px; /* 要素の左端を中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 1; /* squareのz-indexを設定 */
+  clip-path: inset(20px 20px 20px 20px round 15px);
+}
+.pixiv{
+  width: 58px; /* 長方形の幅を調整 */
+  height: 58px; /* 長方形の高さを調整 */
+  position: absolute;
+  top: 138px; /* 要素の上端を中央に配置 */
+  left: 1040px; /* 要素の左端を中央に配置 */
+  z-index: 1;
+}
+.pixivmoji{
+  color: #ffffff;
+  font-family: "LEMON MILK";
+  width: 85px; /* 長方形の幅を調整 */
+  height: 85px; /* 長方形の高さを調整 */
+  position: absolute;
+  top: 122px; /* 要素の上端を中央に配置 */
+  left: 1130px; /* 要素の左端を中央に配置 */
+  z-index: 1;
+}
+.imageactive{
+  width: 800px;
+  height: 550px;
+  position: relative; /* .center-boxに対して相対位置 */
+  z-index: 2;
+  left: 405px; /* 要素の左端を中央に配置 */
+  top: 294px;
+}
+.imageactive2{
+  width: 400px;
+  height: 400px;
+  position: relative; /* .center-boxに対して相対位置 */
+  z-index: 2;
+  left: 370px; /* 要素の左端を中央に配置 */
+  top: -640px;
+  clip-path: circle(120px at center);
+}
+
+.moji { 
+  color: #100f0f;
+  font-size: 40px;
+  font-family: "けいふぉんと";
+  position: relative;
+  text-align:center;
+  padding:20px 0;
+  left: 755px; 
+  position: absolute; 
+  top: 0%;
+  z-index: 3;
+}
+.vertical-box {
+  width: 0px; /* 縦の細い図形の幅を調整 */
+  height: 1260px; /* 縦の細い図形の高さを調整 */
+  position: absolute;
+  top: 934px; /* 要素の上端を中央に配置 */
+  left: 1213px; /* 要素の左端を中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 3; /* 他の図形と重ならないようにz-indexを設定 */
+  border: 1px solid rgba(200, 72, 72, 0.818);
+}
+.taitoru { 
+  color: #100f0f;
+  font-size: 30px;
+  font-family: "けいふぉんと";
+  position: relative;
+  text-align:center;
+  padding:20px 0;
+  left: 1265px; 
+  position: absolute; 
+  top: 300px;
+  z-index: 3;
+}
+.download-container {
+  position: relative; /* 相対配置を設定 */
+  text-align: center; /* ボタンを中央揃え */
+}
+
+.download-button {
+  background-color: #b44d67; /* ボタンの背景色 */
+  padding: 30px 90px; /* パディングを調整してボタンの大きさを変更 */
+  border: none; /* ボーダーを削除 */
+  border-radius: 10px; /* 角丸の半径を設定 */
+  cursor: pointer;
+  text-decoration: none; /* リンクの下線を削除 */
+  z-index: 2; /* ボタンを他の要素の上に配置 */
+  position: absolute; /* 絶対配置を設定 */
+  left: 1400px; /* 要素の左端を中央に配置 */
+  transform: translateX(-50%); /* 水平方向の中央揃え */
+  bottom: 460px; /* 下からの距離を調整 */
+}
+
+.Dmoji {
+  font-size: 60px; /* フォントサイズを調整 */
+  display: block; /* ブロック要素に変更して、テキストの配置位置を調整 */
+  margin-top: 10px; /* 上からの余白を追加して配置位置を調整 */
+  text-align: center; /* テキストを中央揃え */
+}
+.Riyou{
+  left: 500px; 
+  position: absolute; 
+  top: 970px;
+  font-size: 24px; /* フォントサイズを調整 */
+  z-index: 2;
+}

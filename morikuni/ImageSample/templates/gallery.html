@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+  <meta charset="utf-8">
+  <title>立ち絵|GALLEREY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="search">
+      <input type="text" id="search-bar" placeholder="検索...">
+      <button id="search-button">検索</button>
+    </div>
+    <ul>
+      <li><a class="menu" href="TOP.html">HOME</a></li>
+      <li><a class="menu" href="https://forms.gle/u5EE1F1627GpKL8L8">INGUIRY</a></li>
+      <li><a class="menu" href="move.html">EXAMPLE OF USE</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    {% for image in images %}
+      <div class="image">
+        <a href="{{ url_for('static', filename='image/' + image.filename|e ) }}" download="{{ image.filename }}"><img src="{{ url_for('static', filename='image/' + image.filename|e ) }}"></a>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
