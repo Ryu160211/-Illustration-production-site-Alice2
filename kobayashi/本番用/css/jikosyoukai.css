@@ -1,0 +1,20 @@
+.jikosyoukai{
+  color:  rgb(66, 64, 64);
+  font-family: "けいふぉんと";
+  font-size: 20px;
+  position: absolute;
+  top: 180px; /* 要素の上端を中央に配置 */
+  left: 400px; /* 要素の左端を中央に配置 */
+  z-index: 5;
+  white-space: nowrap;
+}
+.tatieirai{
+  color:  rgb(66, 64, 64);
+  font-family: "けいふぉんと";
+  font-size: 20px;
+  position: absolute;
+  top: 280px; /* 要素の上端を中央に配置 */
+  left: 400px; /* 要素の左端を中央に配置 */
+  z-index: 5;
+  white-space: nowrap;
+}

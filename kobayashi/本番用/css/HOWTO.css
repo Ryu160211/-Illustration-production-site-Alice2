@@ -1,0 +1,97 @@
+.container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    z-index: 3;
+    width: 700px;
+    position: absolute;
+    top: 130px;
+    left: 300px;
+}
+
+.gazou {
+    transform: scaleX(-1);
+    position: absolute; /* 相対配置を設定 */
+    top: 45px;
+    left: 75px;
+    padding: 10px;
+    z-index: 3;
+}
+.container1 {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    z-index: 3;
+    width: 700px;
+    height: 70px; /* 高さを60pxに変更 */
+    position: absolute;
+    top: 300px;
+    left: 450px;
+}
+
+.gazou1 {
+    position: absolute; /* 相対配置を設定 */
+    top: 200px;
+    left: 1130px;
+    padding: 10px;
+    z-index: 3;
+}
+.container2 {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    z-index: 3;
+    width: 700px;
+    height: 70px; /* 高さを60pxに変更 */
+    position: absolute;
+    top: 470px;
+    left: 350px;
+}
+
+.gazou2 {
+    transform: scaleX(-1);
+    position: absolute; /* 相対配置を設定 */
+    top: 380px;
+    left: 100px;
+    padding: 10px;
+    z-index: 3;
+}
+.container3 {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    z-index: 3;
+    width: 700px;
+    height: 70px; /* 高さを60pxに変更 */
+    position: absolute;
+    top: 640px;
+    left: 450px;
+}
+
+.gazou3 {
+    position: absolute; /* 相対配置を設定 */
+    top: 540px;
+    left: 1130px;
+    padding: 10px;
+    z-index: 3;
+}
+.HOW .container p {
+    font-size: 16px;
+    font-family: 'ラノベPOP', sans-serif;
+}
+
+.setume1 .long-rectangle1 p,
+.setume2 .long-rectangle2 p,
+.setume3 .long-rectangle2 p {
+    font-size: 16px;
+    font-family: 'ラノベPOP', sans-serif;
+}
+  .top .HOW,
+  .top .HOW2 {
+      z-index: 3; /* 子要素のz-indexを指定 */
+  }
+

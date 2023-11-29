@@ -1,0 +1,210 @@
+
+.aikon{
+    width: 100px;
+    height: 100px;
+    position: relative; /* .center-boxに対して相対位置 */
+    z-index: 2;
+    left: 300px; /* 要素の左端を中央に配置 */
+    top: 70px;
+    clip-path: circle(50px at center);
+  }
+  .name { 
+    white-space: nowrap;
+    color: #100f0f;
+    font-size: 25px;
+    font-family: "けいふぉんと";
+    position: relative;
+    text-align:center;
+    padding:20px 0;
+    left: 440px; 
+    position: absolute; 
+    top: 75px;
+    z-index: 3;
+  }
+/* 背景 */
+
+  .haikei {
+    filter: blur(3px); /* ぼかし */
+    opacity: 0.5; /* 透明度 */
+    pointer-events: none; /* マウスイベントを無効にする */
+    position: fixed; /* 画面スクロールに対して固定 */
+  top: 0px; /* 画面上下中央に配置 */
+  left: 00px; /* 画面左右中央に配置 */
+  
+  background-attachment: fixed; /* 画面サイズの変更に対して固定する */
+  width: 100vw; /* 画面の幅いっぱいに広げる */
+  height: 100vh; /* 画面の高さいっぱいに広げる */
+}
+
+/* SNS */
+
+  .center3-box {
+    width: 170px; /* 長方形の幅を調整 */
+    height: 70px; /* 長方形の高さを調整 */
+    background-color: rgb(66, 64, 64); /* 薄水色の背景色 */
+    position: absolute;
+    top: 125px; /* 要素の上端を中央に配置 */
+    left: 670px; /* 要素の左端を中央に配置 */
+    transform: translate(-50%, -50%); /* 中央揃え */
+    z-index: 1; /* squareのz-indexを設定 */
+    clip-path: inset(20px 20px 20px 20px round 15px);
+    border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 *//
+  }
+  .Twittermoji{
+    color: rgb(219, 186, 186);
+    font-family: "LEMON MILK";
+font-size: 23px;
+    position: absolute;
+    top: 95px; /* 要素の上端を中央に配置 */
+    left: 617px; /* 要素の左端を中央に配置 */
+    z-index: 1;
+  }
+  .center4-box {
+    width: 170px; /* 長方形の幅を調整 */
+    height: 70px; /* 長方形の高さを調整 */
+    background-color: rgb(66, 64, 64); /* 薄水色の背景色 */
+    position: absolute;
+    top: 125px; /* 要素の上端を中央に配置 */
+    left: 830px; /* 要素の左端を中央に配置 */
+    transform: translate(-50%, -50%); /* 中央揃え */
+    z-index: 1; /* squareのz-indexを設定 */
+    clip-path: inset(20px 20px 20px 20px round 15px);
+    border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 */
+  }
+  .Pixivmoji{
+    color: rgb(219, 186, 186);
+    font-family: "LEMON MILK";
+    width: 65px; /* 長方形の幅を調整 */
+    height: 65px; /* 長方形の高さを調整 */
+    font-size: 23px;
+    position: absolute;
+    top: 95px; /* 要素の上端を中央に配置 */
+    left: 798px; /* 要素の左端を中央に配置 */
+    z-index: 2;
+  }
+  .center6-box {
+    width: 170px; /* 長方形の幅を調整 */
+    height: 70px; /* 長方形の高さを調整 */
+    background-color: rgb(66, 64, 64); /* 薄水色の背景色 */
+    position: absolute;
+    top: 125px; /* 要素の上端を中央に配置 */
+    left: 990px; /* 要素の左端を中央に配置 */
+    transform: translate(-50%, -50%); /* 中央揃え */
+    z-index: 1; /* squareのz-indexを設定 */
+    clip-path: inset(20px 20px 20px 20px round 15px);
+    border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 */
+  }
+  .FANBOXmoji{
+    color: rgb(219, 186, 186);
+    font-family: "LEMON MILK";
+    width: 65px; /* 長方形の幅を調整 */
+    height: 65px; /* 長方形の高さを調整 */
+    font-size: 23px;
+    position: absolute;
+    top: 95px; /* 要素の上端を中央に配置 */
+    left: 940px; /* 要素の左端を中央に配置 */
+    z-index: 2;
+  }
+  .center5-box {
+    width: 170px; /* 長方形の幅を調整 */
+    height: 70px; /* 長方形の高さを調整 */
+    background-color: rgb(66, 64, 64); /* 薄水色の背景色 */
+    position: absolute;
+    top: 125px; /* 要素の上端を中央に配置 */
+    left: 1150px; /* 要素の左端を中央に配置 */
+    transform: translate(-50%, -50%); /* 中央揃え */
+    z-index: 1; /* squareのz-indexを設定 */
+    clip-path: inset(20px 20px 20px 20px round 15px);
+    border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 */
+  }
+  .Skebmoji{
+    color: rgb(219, 186, 186);
+    font-family: "LEMON MILK";
+    width: 65px; /* 長方形の幅を調整 */
+    height: 65px; /* 長方形の高さを調整 */
+    font-size: 23px;
+    position: absolute;
+    top: 95px; /* 要素の上端を中央に配置 */
+    left: 1120px; /* 要素の左端を中央に配置 */
+    z-index: 1;
+  }
+
+
+  
+  .Droshi{
+    position: absolute;
+    top: 50px; /* 要素の上端を中央に配置 */
+    left: -230px; /* 要素の左端を中央に配置 */
+  }
+
+
+  
+  hr {
+    position: absolute;
+    top: 140px; /* 要素の上端を中央に配置 */
+    left: 370px; /* 要素の左端を中央に配置 */
+    border: 1px solid black; /* 線の太さと色を指定 */
+            width: 870px; /* 横幅を調節（例: 50%） */
+}
+
+
+
+/* 01 Dolsie */
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* 移動する距離を指定 */
+  }
+}
+.Dolsie {
+    position: absolute;
+    top: 10px;
+    left: 1100px;
+    width: 450px;
+    height: 800px;
+    background-color: rgb(235, 235, 235);
+    z-index: 3;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.4);
+    overflow-y: scroll; /* 縦スクロールを有効にする */
+    overflow-x: hidden; /* 横スクロールを無効にする */
+    max-height: 800px; /* 任意の高さを指定（必要に応じて調整） */
+  }
+
+  .rectangle {
+    position: relative; /* 相対的な位置指定 */
+  }
+  .gazou1 {
+    position: relative; /* 相対位置指定に変更 */
+    width: 100%; /* 幅を100%に設定して親要素に合わせる */
+    height: auto;
+    z-index: 3;
+  }
+  .gazou2 {
+    position: relative; /* 相対位置指定に変更 */
+    width: 100%; /* 幅を100%に設定して親要素に合わせる */
+    height: auto;
+    z-index: 3;
+    width: 450px;
+  }
+  .gazou3 {
+    position: relative; /* 相対位置指定に変更 */
+    width: 100%; /* 幅を100%に設定して親要素に合わせる */
+    height: auto;
+    z-index: 3;
+    width: 450px;
+  }
+  .gazou4 {
+    position: absolute;
+    top: 500px; /* 要素の上端を中央に配置 */
+    left: 1400px; /* 要素の左端を中央に配置 */
+    position: relative; /* 相対位置指定に変更 */
+    height: auto;
+    z-index: 4;
+    width: 100px;
+    filter: brightness(0) invert(1);
+    opacity: 0.5; /* 透明度 */
+    animation: floatUpDown 2s ease-in-out infinite; /* アニメーションを設定 */
+  }
