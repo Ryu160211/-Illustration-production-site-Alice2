@@ -1,0 +1,226 @@
+
+.center3-box {
+  width: 300px; /* 長方形の幅を調整 */
+  height: 100px; /* 長方形の高さを調整 */
+  background-color: rgb(51, 51, 51); /* 薄水色の背景色 */
+  position: absolute;
+  top: 205px; /* 要素の上端を中央に配置 */
+  left: 870px; /* 要素の左端を中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 1; /* squareのz-indexを設定 */
+  clip-path: inset(20px 20px 20px 20px round 15px);
+}
+
+.imageactive{
+  
+  width: 600px;
+  height: 420px;
+  position: relative; /* .center-boxに対して相対位置 */
+  z-index: 2;
+  left: 180px; /* 要素の左端を中央に配置 */
+  top: 0px;
+}
+.imageactive2{
+  width: 40px;
+  height: 40px;
+  position: relative; /* .center-boxに対して相対位置 */
+  z-index: 2;
+  left: 800px; /* 要素の左端を中央に配置 */
+  top: -375px;
+  clip-path: circle(20px at center);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.rounded-box {
+  position: absolute;
+  top: 67px;
+  left: 845px;
+  width: 260px;
+  height: 25px;
+  border-radius: 30px; /* 四方を丸めるための値 */
+  background: linear-gradient(to right, rgb(217, 217, 217) 60%, rgb(47, 47, 47) 0%);
+  border-radius: 30px 30px 30px 30px; /* 上右下左の順で丸みを指定 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+.moji { 
+  color: #100f0f;
+  font-size: 15px;
+  font-family: "ぼくたちのゴシック2ボールド";
+  position: relative;
+  text-align:center;
+  padding:20px 0;
+  left: 860px; 
+  position: absolute; 
+  top: 37px;
+  z-index: 3;
+  white-space: nowrap;
+}
+.FOLLOW {
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "けいふぉんと";
+  position: relative;
+  text-align:center;
+  padding:20px 0;
+  left: 1017px; 
+  position: absolute; 
+  top: 41px;
+  z-index: 3;
+  letter-spacing: 1px
+  
+}
+
+.name { 
+  white-space: nowrap;
+  color: #100f0f;
+  font-size: 30px;
+  font-family: "ぼくたちのゴシック2ボールド";
+  position: relative;
+  text-align:center;
+  padding:20px 0;
+  left: 800px; 
+  position: absolute; 
+  top: 60px;
+  z-index: 3;
+  letter-spacing: 10px
+}
+.nameenglish{
+  white-space: nowrap;
+  color: #100f0f;
+  font-size: 7px;
+  font-family: "LEMON MILK";
+  position: relative;
+  text-align:center;
+  padding:20px 0;
+  left: 805px; 
+  position: absolute; 
+  top: 115px;
+  z-index: 3;
+  letter-spacing: 9.5px
+}
+.download-container {
+  position: relative; /* 相対配置を設定 */
+  text-align: center; /* ボタンを中央揃え */
+}
+.gray-background {
+  width: 290px; /* 縦の細い図形の幅を調整 */
+  height: 100px; /* 縦の細い図形の高さを調整 */
+  position: absolute;
+  top: 220px; /* 要素の上端を中央に配置 */
+  left: 800px; /* 要素の左端を中央に配置 */
+  background-color: #eeeeee; /* グレーの背景色を指定 */
+  padding: 10px; /* 適切な余白を追加 */
+  border-radius: 10px; /* 四方を丸めるための値 */
+}
+.download-button {
+  background-color: #d59eac; /* ボタンの背景色 */
+  padding: 0px 20px; /* パディングを調整してボタンの大きさを変更 */
+  border: none; /* ボーダーを削除 */
+  border-radius: 200px; /* 角丸の半径を設定 */
+  cursor: pointer;
+  text-decoration: none; /* リンクの下線を削除 */
+  z-index: 3; /* ボタンを他の要素の上に配置 */
+  position: absolute; /* 絶対配置を設定 */
+  left: 950px; /* 要素の左端を中央に配置 */
+  transform: translateX(-50%); /* 水平方向の中央揃え */
+  bottom: 160px; /* 下からの距離を調整 */
+  white-space: nowrap;
+    font-family: "ほのか新アンティーク角"; /* フォントの指定（適切なフォントに調整） */
+}
+.download{
+  left: 40px;
+  width: 40px;
+  position: absolute;
+  top: 420px; /* 要素の上端を中央に配置 */
+  left: 880px; /* 要素の左端を中央に配置 */
+  z-index: 2;
+  filter: brightness(1000%);
+}
+
+
+.kouhyouka{
+  position: absolute;
+  top: -70px;
+  left: -120px;
+}
+.guddo{
+  position: absolute;
+  top: 181px;
+  left: 1126px;
+  width: 35px;
+  height: 30px;
+}
+.gray-circle {
+  width: 40px; /* 円の直径を指定 */
+  height: 40px; /* 円の直径を指定 */
+  background-color: gray; /* 背景色をグレーに設定 */
+  border-radius: 50%; /* border-radiusを50%に設定して円形にする */
+  position: absolute;
+  top: 178px;
+  left: 1170px;
+}
+.suuti{
+  position: absolute;
+  top: 155px;
+  left: 1179px;
+  color: #ffffff;
+}
+.black-border {
+  white-space: nowrap;
+  position: absolute;
+  top: 174px;
+  left: 1120px;
+  width: 100px; /* 要素の幅を指定 */
+  height: 48px; /* 要素の高さを指定 */
+  border: 2px solid rgb(199, 199, 199); /* 黒い枠線を指定 */
+  border-radius: 10px; /* 四方を丸める半径を指定 */
+}
+.explanation{
+  white-space: nowrap;
+  position: absolute;
+  top: 430px;
+  left: 190px;
+  font-size: 15px;
+  font-family:"ぼくたちのゴシック2ボールド"; 
+  font-weight: lighter;
+}
+.connection{
+  position: absolute;
+  top: 770px;
+  left: 450px;
+  font-size: 20px;
+  font-family:"ぼくたちのゴシック2ボールド"; 
+  color: #383838;
+  letter-spacing: 2px
+}
+.triangle {
+  position: absolute;
+  top: 720px;
+  left: 510px;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid black; /* 下向きの三角形 */
+  cursor: pointer; /* カーソルをポインタに変更 */
+}
+.line {
+  position: absolute;
+  top: 285px;
+  left: 880px;
+  width: 310px; /* 例として200pxの幅を指定 */
+  border: 1px solid rgba(200, 72, 72, 0.818);
+}
+.line2 {
+  position: absolute;
+  top: 475px;
+  left: 880px;
+  width: 310px; /* 例として200pxの幅を指定 */
+  border: 1px solid rgba(200, 72, 72, 0.818);
+}
+

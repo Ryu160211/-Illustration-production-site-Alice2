@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block main %}
+<div class="zenntai">
+  <div class="matome">
+  <div class="yada">
+    <img src="{{ url_for('static', filename='image/洩矢諏訪子どろし.png') }}" class="imageactive" />
+  </div>
+  <div class="aikon">
+    <a href="Droshi.html"><img src="{{ url_for('static', filename='image/どろしえ.jpg') }}" class="imageactive2" /></a>
+    <div class="rounded-box"></div>
+    <h1 class="moji">どろしΞ</h1>
+    <h1 class="FOLLOW">FOLLOW</h1>
+  </div>
+  </div>
+
+  <div class="kouhyouka">
+    <img src="{{ url_for('static', filename='image/like.png') }}" class="guddo" />
+    <div class="gray-circle"></div>
+    <h1 class="suuti">0</h1>
+    <!-- 黒い枠線を持つ要素 -->
+  <div class="black-border"></div>
+  </div>
+
+  <div class="vertical-box"></div>
+  <h1 class="name">洩矢諏訪子</h1>
+  <h1 class="nameenglish">Suwako Moriya</h1>
+  <div class="gray-background"></div>
+  <div class="download-container">
+    <a href="download/シンゆっくり茶番劇祭_諏訪子_どろしΞ.zip" download="洩矢諏訪子.zip" class="download-button">
+        <span style="font-size: 27px; display: flex; align-items: center;">ダウンロード</span>
+      </a>
+</div>
+<h1 class="explanation">少女らしい可憐さと、神としての威厳や恐ろしさが両立している諏訪子さまを描きたい…<br>
+  との思いから作成しました。<br>
+  表情18～20種×ポーズ3種、計58差分です。<br>
+  利用規約を守ってご自由にお使いください。<br>
+  </div>
+
+  <div class="Related-summary">
+    <h1 class="connection">その他の立ち絵</h1>
+    <div class="triangle"></div>
+    <div class="center-box"></div>
+    <div class="Other-portraits">
+      <div class="Mokou-Funiwarano">
+        <a href="Mokou-Funiwarano-Dolshi.html"> <img class="image" src="{{ url_for('static', filename='image/蓬莱山輝夜どろし.png') }}" width="900" height="200" id="yadaImage">
+      </div>
+      <div class="Reisen-Udongein">
+        <a href="Reisen-Udongein-Dolshi.html"> <img class="image" src="{{ url_for('static', filename='image/イナバどろし.png') }}" width="700" height="120" id="yadaImage">
+      </div>
+      <div class="Maribel-Hearn">
+        <a href="Maribel-Hearn-Dolshi.html"> <img class="image" src="{{ url_for('static', filename='image/メリーどろし.png') }}" width="700" height="120" id="yadaImage"></a>
+        </div>
+    </div>
+    </div>
+    <div class="gray-rectangle">
+      <!-- ここにコンテンツを追加 -->
+    
+      <div class="comment-box">
+        <input type="text" class="comment-input" placeholder="コメントする...">
+    </div>
+    <p>
+      <div class="kome1">
+      <span class="bold-name"><b>太字の名前:</b><br></span>
+      ここに文字を記載します。</div>
+  </p>
+  <p>
+    <div class="kome2">
+    <span class="bold-name"><b>太字の名前:</b><br></span>
+    ここに文字を記載します。</div>
+</p>
+      <!-- コンテンツを追加することで縦スクロールが発生するようになります。 -->
+    </div>
+  <div class="line"></div>
+  <div class="line2"></div>
+</div>
+
+  <script src="js/Other-portraits.js"></script>
+{% endblock %}

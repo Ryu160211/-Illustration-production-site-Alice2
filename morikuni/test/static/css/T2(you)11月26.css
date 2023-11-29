@@ -1,0 +1,200 @@
+.center-box {
+  width: 1200px; /* 長方形の幅を調整 */
+  height: 1260px; /* 長方形の高さを調整 */
+  
+  position: absolute;
+  top: 932px; /* 要素の上端を中央に配置 */
+  left: 1013px; /* 要素の左端を中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  border: 1px solid rgba(200, 72, 72, 0.818);
+  z-index: 1; /* squareのz-indexを設定 */
+}
+.center2-box {
+  width: 1200px; /* 長方形の幅を調整 */
+  height: 260px; /* 長方形の高さを調整 */
+  background-color: rgb(253, 251, 251); /* 薄水色の背景色 */
+  position: absolute;
+  top: 132px; /* 要素の上端を中央に配置 */
+  left: 1013px; /* 要素の左端を中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 1; /* squareのz-indexを設定 */
+  border: 1px solid rgba(200, 72, 72, 0.818);
+}
+.center3-box {
+  width: 300px; /* 長方形の幅を調整 */
+  height: 100px; /* 長方形の高さを調整 */
+  background-color: rgb(51, 51, 51); /* 薄水色の背景色 */
+  position: absolute;
+  top: 205px; /* 要素の上端を中央に配置 */
+  left: 870px; /* 要素の左端を中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 1; /* squareのz-indexを設定 */
+  clip-path: inset(20px 20px 20px 20px round 15px);
+}
+
+.imageactive{
+  width: 600px;
+  height: 420px;
+  position: relative; /* .center-boxに対して相対位置 */
+  z-index: 2;
+  left: 180px; /* 要素の左端を中央に配置 */
+  top: 0px;
+}
+.imageactive2{
+  width: 40px;
+  height: 40px;
+  position: relative; /* .center-boxに対して相対位置 */
+  z-index: 2;
+  left: 830px; /* 要素の左端を中央に配置 */
+  top: -400px;
+  clip-path: circle(20px at center);
+}
+
+.moji { 
+  color: #100f0f;
+  font-size: 20px;
+  font-family: "けいふぉんと";
+  position: relative;
+  text-align:center;
+  padding:20px 0;
+  left: 900px; 
+  position: absolute; 
+  top: 80px;
+  z-index: 3;
+}
+.vertical-box {
+  width: 0px; /* 縦の細い図形の幅を調整 */
+  height: 1260px; /* 縦の細い図形の高さを調整 */
+  position: absolute;
+  top: 804px; /* 要素の上端を中央に配置 */
+  left: 1213px; /* 要素の左端を中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 3; /* 他の図形と重ならないようにz-indexを設定 */
+  border: 1px solid rgba(200, 72, 72, 0.818);
+}
+.taitoru { 
+  color: #100f0f;
+  font-size: 25px;
+  font-family: "けいふぉんと";
+  position: relative;
+  text-align:center;
+  padding:20px 0;
+  left: 850px; 
+  position: absolute; 
+  top: 150px;
+  z-index: 3;
+}
+.download-container {
+  position: relative; /* 相対配置を設定 */
+  text-align: center; /* ボタンを中央揃え */
+}
+
+.download-button {
+  background-color: #b44d67; /* ボタンの背景色 */
+  padding: 20px 70px; /* パディングを調整してボタンの大きさを変更 */
+  border: none; /* ボーダーを削除 */
+  border-radius: 100px; /* 角丸の半径を設定 */
+  cursor: pointer;
+  text-decoration: none; /* リンクの下線を削除 */
+  z-index: 2; /* ボタンを他の要素の上に配置 */
+  position: absolute; /* 絶対配置を設定 */
+  left: 1000px; /* 要素の左端を中央に配置 */
+  transform: translateX(-50%); /* 水平方向の中央揃え */
+  bottom: 100px; /* 下からの距離を調整 */
+
+    font-family: "けいふぉんと", "Arial", sans-serif; /* フォントの指定（適切なフォントに調整） */
+}
+
+
+  .Riyou{
+  left: 500px; 
+  position: absolute; 
+  top: 970px;
+  font-size: 24px; /* フォントサイズを調整 */
+  z-index: 2;
+}
+.senden {
+  left: 1260px; 
+  position: absolute; 
+  top: 570px;
+  font-size: 25px; /* フォントサイズを調整 */
+  z-index: 3;
+}
+.huran {
+    position: absolute;
+    top: 600px;
+    left: 1200px;
+    width: 400px;
+    height: 350px;
+    z-index: 2; /* squareのz-indexを設定 */
+    clip-path: circle(130px at center);
+  }
+  .huran img {
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+  }
+  .huran:hover img {
+    transform: scale(1.1); /* 拡大 */
+  }
+  .mariazu {
+    position: absolute;
+    top: 890px;
+    left: 1200px;
+    width: 400px;
+    height: 350px;
+    z-index: 2; /* squareのz-indexを設定 */
+    clip-path: circle(130px at center);
+  }
+  .mariazu img {
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+  }
+  .mariazu:hover img {
+    transform: scale(1.1); /* 拡大 */
+  }
+.guddo{
+  position: absolute;
+  top: 180px;
+  left: 1125px;
+  width: 35px;
+  height: 30px;
+}
+.gray-circle {
+  width: 40px; /* 円の直径を指定 */
+  height: 40px; /* 円の直径を指定 */
+  background-color: gray; /* 背景色をグレーに設定 */
+  border-radius: 50%; /* border-radiusを50%に設定して円形にする */
+  position: absolute;
+  top: 176px;
+  left: 1170px;
+}
+.suuti{
+  position: absolute;
+  top: 152px;
+  left: 1179px;
+  color: #ffffff;
+}
+.black-border {
+  position: absolute;
+  top: 174px;
+  left: 1120px;
+  width: 100px; /* 要素の幅を指定 */
+  height: 40px; /* 要素の高さを指定 */
+  border: 2px solid rgb(199, 199, 199); /* 黒い枠線を指定 */
+  border-radius: 10px; /* 四方を丸める半径を指定 */
+}
+.rounded-box {
+  position: absolute;
+  top: 140px;
+  left: 900px;
+  width: 150px;
+  height: 25px;
+  background-color: rgb(151, 118, 118);
+  border-radius: 30px; /* 四方を丸めるための値 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
