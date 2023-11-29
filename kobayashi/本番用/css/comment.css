@@ -1,7 +1,7 @@
 .gray-rectangle {
     position: absolute;
     top: 520px; /* トップからの位置（例: 50px） */
-    left: 885px; /* 左からの位置（例: 左端から20%の位置） */
+    left: 875px; /* 左からの位置（例: 左端から20%の位置） */
     width: 310px; /* 画面幅いっぱいの幅 */
     height: 600px; /* 画面高さいっぱいの高さ */
     background-color: #f0f0f0; /* グレーの色 */

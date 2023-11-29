@@ -18,22 +18,26 @@
   position: relative; /* .center-boxに対して相対位置 */
   z-index: 2;
   left: 180px; /* 要素の左端を中央に配置 */
-  top: 0px;
+  top: 100px;
+}
+
+
+
+
+.aikon{
+  position: relative; /* .center-boxに対して相対位置 */
+  left: 850px; /* 要素の左端を中央に配置 */
+  top: 100px;
 }
 .imageactive2{
   width: 40px;
   height: 40px;
-  position: relative; /* .center-boxに対して相対位置 */
   z-index: 2;
-  left: 800px; /* 要素の左端を中央に配置 */
-  top: -375px;
   clip-path: circle(20px at center);
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
 }
 .rounded-box {
-  position: absolute;
-  top: 67px;
-  left: 845px;
+
   width: 260px;
   height: 25px;
   border-radius: 30px; /* 四方を丸めるための値 */
@@ -44,19 +48,20 @@
   justify-content: center;
   color: white;
   font-weight: bold;
+  position: relative; /* .center-boxに対して相対位置 */
+  left: 55px; /* 要素の左端を中央に配置 */
+  top: -33px;
 }
 .moji { 
   color: #100f0f;
   font-size: 15px;
   font-family: "ぼくたちのゴシック2ボールド";
   position: relative;
-  text-align:center;
-  padding:20px 0;
-  left: 860px; 
-  position: absolute; 
-  top: 37px;
   z-index: 3;
   white-space: nowrap;
+  position: relative; /* .center-boxに対して相対位置 */
+  left: 70px; /* 要素の左端を中央に配置 */
+  top: -67px;
 }
 .FOLLOW {
   white-space: nowrap;
@@ -64,14 +69,11 @@
   font-size: 15px;
   font-family: "けいふぉんと";
   position: relative;
-  text-align:center;
-  padding:20px 0;
-  left: 1017px; 
-  position: absolute; 
-  top: 41px;
   z-index: 3;
-  letter-spacing: 1px
-  
+  letter-spacing: 1px;
+  position: relative; /* .center-boxに対して相対位置 */
+  left: 228px; /* 要素の左端を中央に配置 */
+  top: -95px;
 }
 
 .name { 
@@ -106,28 +108,31 @@
   position: relative; /* 相対配置を設定 */
   text-align: center; /* ボタンを中央揃え */
 }
+.download{
+  position: absolute;
+  top: 100px; /* 要素の上端を中央に配置 */
+  left: 0px; /* 要素の左端を中央に配置 */
+}
 .gray-background {
   width: 290px; /* 縦の細い図形の幅を調整 */
   height: 100px; /* 縦の細い図形の高さを調整 */
   position: absolute;
-  top: 220px; /* 要素の上端を中央に配置 */
-  left: 800px; /* 要素の左端を中央に配置 */
+  top: 280px; /* 要素の上端を中央に配置 */
+  left: 870px; /* 要素の左端を中央に配置 */
   background-color: #eeeeee; /* グレーの背景色を指定 */
   padding: 10px; /* 適切な余白を追加 */
   border-radius: 10px; /* 四方を丸めるための値 */
 }
 .download-button {
   background-color: #d59eac; /* ボタンの背景色 */
-  padding: 0px 20px; /* パディングを調整してボタンの大きさを変更 */
   border: none; /* ボーダーを削除 */
-  border-radius: 200px; /* 角丸の半径を設定 */
-  cursor: pointer;
+  border-radius: 7px; /* 角丸の半径を設定 */
+
   text-decoration: none; /* リンクの下線を削除 */
   z-index: 3; /* ボタンを他の要素の上に配置 */
   position: absolute; /* 絶対配置を設定 */
-  left: 950px; /* 要素の左端を中央に配置 */
-  transform: translateX(-50%); /* 水平方向の中央揃え */
-  bottom: 160px; /* 下からの距離を調整 */
+  left:950px; /* 要素の左端を中央に配置 */
+ top: 200px;
   white-space: nowrap;
     font-family: "ほのか新アンティーク角"; /* フォントの指定（適切なフォントに調整） */
 }
@@ -144,8 +149,8 @@
 
 .kouhyouka{
   position: absolute;
-  top: -70px;
-  left: -120px;
+  top: -20px;
+  left: -50px;
 }
 .guddo{
   position: absolute;
@@ -179,28 +184,43 @@
   border: 2px solid rgb(199, 199, 199); /* 黒い枠線を指定 */
   border-radius: 10px; /* 四方を丸める半径を指定 */
 }
+.vertical-box{
+  position: absolute;
+  top: 48px;
+  left:62px;
+}
+.matome{
+  position: absolute;
+  top: 0px;
+  left: 50px;
+}
 .explanation{
   white-space: nowrap;
   position: absolute;
-  top: 430px;
+  top: 530px;
   left: 190px;
   font-size: 15px;
   font-family:"ぼくたちのゴシック2ボールド"; 
   font-weight: lighter;
 }
+.Related-summary{
+  position: absolute;
+  left: 380px;
+  top: 880px;
+}
 .connection{
   position: absolute;
-  top: 770px;
-  left: 450px;
   font-size: 20px;
   font-family:"ぼくたちのゴシック2ボールド"; 
   color: #383838;
-  letter-spacing: 2px
+  letter-spacing: 2px;
+  white-space: nowrap;
+  
 }
 .triangle {
   position: absolute;
-  top: 720px;
-  left: 510px;
+  left: 70px;
+  top: 50px;
   position: relative;
   width: 0;
   height: 0;
@@ -211,16 +231,21 @@
 }
 .line {
   position: absolute;
-  top: 285px;
-  left: 880px;
+  top: 240px;
+  left: 870px;
   width: 310px; /* 例として200pxの幅を指定 */
   border: 1px solid rgba(200, 72, 72, 0.818);
 }
 .line2 {
   position: absolute;
-  top: 475px;
-  left: 880px;
+  top: 460px;
+  left: 870px;
   width: 310px; /* 例として200pxの幅を指定 */
   border: 1px solid rgba(200, 72, 72, 0.818);
+}
+.matome2{
+  position: absolute;
+  top: 0px;
+  left: 20px;
 }
 

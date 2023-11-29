@@ -1,0 +1,38 @@
+.image-container {
+    display: flex;
+    position: absolute;
+    top: 130px;
+    left: 280px;
+    width: 0px;
+    height: 00px;
+    z-index: 2;
+    transition: transform 1s, opacity 1s;
+}
+
+/* 各画像の初期状態 */
+.imageactive,
+.imageactive2,
+.imageactive3,
+.imageactive4,
+.imageactive5 {
+    position: absolute;
+    transition: transform 1s, opacity 1s;
+}
+
+/* 各画像の初期状態を設定するクラス */
+.initial {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 画像がフェードアウトするクラス */
+.fade-out {
+    opacity: 0;
+    transform: translateX(20px); /* 右に20px移動 */
+}
+
+/* 画像がフェードインするクラス */
+.fade-in {
+    opacity: 1;
+    transform: translateX(0); /* 左に戻す */
+}

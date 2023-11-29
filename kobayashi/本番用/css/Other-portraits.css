@@ -1,11 +1,12 @@
 
 .Other-portraits{
+  display: flex; /* 子要素を横並びにする */
     opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease; /* フェードインにトランジションを追加 */
     position: absolute;
-    top: 140px;
-    left: -700px;
+    top: 0px;
+    left: -380px;
 }
 .Other-portraits.show {
     opacity: 1;
@@ -18,35 +19,17 @@
   .Other-portraits :hover img {
     transform: scale(1.1); /* 拡大 */
   }
-  .Mokou-Funiwarano {
-    position: absolute;
-    top: 600px;
-    left: 800px;
+  .Mokou-Funiwarano,
+  .Reisen-Udongein,
+  .Maribel-Hearn {
     width: 500px;
     height: 350px;
-    z-index: 2; 
+    z-index: 2;
     clip-path: circle(60px at center);
-  }
-  
-  .Reisen-Udongein {
-    position: absolute;
-    top: 600px;
-    left: 1000px;
-    width: 500px;
-    height: 350px;
-    z-index: 2; 
-    clip-path: circle(60px at center);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 横方向、縦方向、ぼかしの半径、色 */
+    margin-right: -280px; /* 画像間の余白を設定 */
   }
   .Maribel-Hearn {
-    position: absolute;
-    top: 600px;
-    left: 1200px;
-    width: 500px;
-    height: 350px;
-    z-index: 2; 
-    clip-path: circle(60px at center);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 横方向、縦方向、ぼかしの半径、色 */
+    margin-right: 0;
   }
   .zenntai{
     position: absolute;
