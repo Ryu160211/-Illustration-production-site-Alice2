@@ -11,16 +11,16 @@
   clip-path: inset(20px 20px 20px 20px round 15px);
 }
 
-.imageactive{
+/*.imageactive{
   
   width: 600px;
   height: 420px;
-  position: relative; /* .center-boxに対して相対位置 */
+  position: relative;
   z-index: 2;
-  left: 180px; /* 要素の左端を中央に配置 */
+  left: 180px; 
   top: 100px;
 }
-
+*/
 
 
 
@@ -190,11 +190,13 @@
   left:62px;
 }
 .matome{
+  width: 100px; /* 要素の幅を指定 */
+  height: 48px; /* 要素の高さを指定 */
   position: absolute;
   top: 0px;
   left: 50px;
 }
-.explanation{
+/*.explanation{
   white-space: nowrap;
   position: absolute;
   top: 530px;
@@ -202,7 +204,7 @@
   font-size: 15px;
   font-family:"ぼくたちのゴシック2ボールド"; 
   font-weight: lighter;
-}
+}*/
 .Related-summary{
   position: absolute;
   left: 380px;
