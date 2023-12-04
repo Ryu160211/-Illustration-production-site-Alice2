@@ -42,9 +42,9 @@ li {
 
 .container {
   margin: 30px 40px 0 40px;
-	display:grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 .image {
@@ -58,7 +58,7 @@ li {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
-  transition: transform .6s ease; /* ゆっくり変化させる */
+  transition: transform 0.6s ease; /* ゆっくり変化させる */
 }
 .image:hover img {
   transform: scale(1.15); /* 拡大 */
