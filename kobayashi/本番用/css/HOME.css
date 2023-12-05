@@ -8,7 +8,7 @@ body {
   .top {
     overflow: hidden;
     position: relative;
-    z-index: 2; /* .topのz-indexを設定 */
+
 }
   .top img {
     /* 画像の幅を100%に設定 */
@@ -16,57 +16,11 @@ body {
     height: 100px;
     height: auto;
     position: fixed; /* 固定位置に配置 */
-    top: 0; /* 上端に配置 */
-    left: 0; /* 左端に配置 */
-    z-index: 2; /* squareのz-indexを設定 */
+
+
   }
   
  
 
-    /* メニューのスタイル */
-  .menu {
-      background-color: #333;
-      height: 70px; /* 高さを60pxに変更 */
-      position: fixed;
-      top: 0;
-      width: 1555px;
-      left: 0px;
-      z-index: 4; /* squareのz-indexを設定 */
-    }
-  
-    /* メニュバーの要素 */
-    .youso {
-      font-family: "LEMON MILK";
-      font-size: 23px;
-      display: flex; /* 子要素を横に並べる */
-      position: absolute; /* または relative など、適切な位置指定方法を選択 */
-      top: 17px; /* 上からの位置 */
-      left: auto; /* 左からの位置を自動調整 */
-      right: 100px; /* 右からの位置を0に設定 */
-    }
-  .youso ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-  }
-  .youso li {
-      margin-right: 5px;
-      letter-spacing: 1.5px; /* 文字と文字の間隔を調整する（お好みで調整） */
-      position: relative; /* 相対位置を設定 */
-  }
-  .bou li:not(:last-child)::after {
-      content: "|"; /* 縦棒の内容 */
-      margin-left: 10px; /* メニューアイテムと縦棒の間隔（お好みで調整） */
-      color: rgb(122, 122, 122); /* 縦棒の色 */
-      transform-origin: center bottom; /* 中心点を下部に設定 */
-  }
-  .youso a {   
-      text-decoration: none;
-      color: rgb(255, 255, 255);
-      transition: color 0.3s ease-in-out; /* アニメーションを追加 */
-  }
-  .youso li:hover a {
-      color: rgb(200, 48, 48); /* ホバー時に色を変更 */
-  }
+
   
