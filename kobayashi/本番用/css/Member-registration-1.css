@@ -1,0 +1,60 @@
+.container1 {
+    width: 900px;
+    height: 620px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gray-square {
+    position: relative; /* 相対的な位置指定 */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(216, 216, 216);
+    border-radius: 10px; 
+    z-index: 1; 
+}
+
+.letter {
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.White-square {
+    position: relative; /* 絶対的な位置指定 */
+    top: 35%; /* 上端の位置を親要素の中央に配置 */
+    left: 50%; /* 左端の位置を親要素の中央に配置 */
+    transform: translate(-50%, -50%); /* 中央揃え */
+    width: 80%;
+    height: 70%;
+    background-color: rgb(255, 255, 255); /* 白い色に指定 */
+    border-radius: 10px;
+    z-index: 2;
+    overflow-y: auto; /* 縦スクロールを追加 */
+}
+.white-text {
+    font-size: 20px;
+    color: black; /* または希望のテキストの色を指定 */
+}
+.black-square {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* 中央揃え */
+    width: 50%;
+    height: 10%;
+    background-color: rgb(41, 41, 41);
+    border-radius: 10px;
+    z-index: 2;
+    text-decoration: none; /* リンクの下線を非表示 */
+}
+.Next-text{
+    font-size: 20px;
+    color: rgb(255, 255, 255); /* または希望のテキストの色を指定 */
+    margin: 0; /* マージンをリセット */
+    padding: 0; /* パディングをリセット */
+}
