@@ -1,0 +1,283 @@
+.container {
+  display: flex; /* 親要素をフレックスボックスに設定 */
+}
+.matome {
+  width: 600px; /* 要素の幅を指定 */
+  height: 1400px; /* 要素の高さを指定 */
+  margin-left: 170px;
+  margin-top: 50px;
+}
+.imageactive {
+  width: 600px;
+  height: 420px;
+  z-index: 2;
+}
+.explanation {
+  margin-top: 20px;
+  white-space: nowrap;
+  font-size: 15px;
+  font-family: "ぼくたちのゴシック2ボールド";
+  font-weight: lighter;
+}
+.explanation {
+  white-space: nowrap;
+  font-size: 15px;
+  font-family: "ぼくたちのゴシック2ボールド";
+  font-weight: lighter;
+}
+
+/* 関連素材 */
+.connection {
+  margin-left: 210px;
+  margin-top: 260px;
+  font-size: 20px;
+  font-family: "ぼくたちのゴシック2ボールド";
+  color: #383838;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+.triangle {
+  margin-left: 280px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid black; /* 下向きの三角形 */
+  cursor: pointer; /* カーソルをポインタに変更 */
+}
+.Other-portraits {
+  margin-top: -80px;
+  margin-left: -170px;
+  display: flex; /* 子要素を横並びにする */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease; /* フェードインにトランジションを追加 */
+}
+.Other-portraits.show {
+  opacity: 1;
+  visibility: visible;
+}
+.Other-portraits img {
+  height: auto;
+  transition: transform 0.6s ease; /* ゆっくり変化させる */
+}
+.Other-portraits :hover img {
+  transform: scale(1.1); /* 拡大 */
+}
+.Mokou-Funiwarano,
+.Reisen-Udongein,
+.Maribel-Hearn {
+  width: 500px;
+  height: 350px;
+  z-index: 2;
+  clip-path: circle(60px at center);
+  margin-right: -280px; /* 画像間の余白を設定 */
+}
+.Maribel-Hearn {
+  margin-right: 0;
+}
+.zenntai {
+  display: flex;
+}
+
+.matome2 {
+  flex: 1; /* フレックスアイテムを均等に広げる */
+  width: 0px;
+  height: 1400px;
+  margin-left: 15px; /* 適切なマージンを設定して間隔を調整します */
+  margin-top: 50px;
+}
+.matome3 {
+  margin-left: 30px;
+  width: 400px;
+  height: 130px;
+  text-align: left;
+}
+.aikon {
+  height: 40px;
+  margin-left: 0px;
+}
+.imageactive2 {
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+
+  clip-path: circle(20px at center);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+  float: left;
+}
+.rounded-box {
+  margin-top: 0px;
+  margin-left: 10px;
+  width: 260px;
+  height: 25px;
+  border-radius: 30px; /* 四方を丸めるための値 */
+  background: linear-gradient(
+    to right,
+    rgb(217, 217, 217) 60%,
+    rgb(47, 47, 47) 0%
+  );
+  border-radius: 30px 30px 30px 30px; /* 上右下左の順で丸みを指定 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+.moji {
+  margin-top: 20px;
+  margin-left: 0px;
+  color: #100f0f;
+  font-size: 15px;
+  font-family: "ぼくたちのゴシック2ボールド";
+  z-index: 3;
+  white-space: nowrap;
+}
+.FOLLOW {
+  margin-top: 20px;
+  margin-left: 100px;
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "けいふぉんと";
+  z-index: 3;
+  letter-spacing: 1px;
+}
+.kouhyouka {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.black-border {
+  white-space: nowrap;
+  width: 100px; /* 要素の幅を指定 */
+  height: 48px; /* 要素の高さを指定 */
+  margin-top: 20px;
+  border: 2px solid rgb(199, 199, 199); /* 黒い枠線を指定 */
+  border-radius: 10px; /* 四方を丸める半径を指定 */
+}
+.gray-circle {
+  margin-top: 0px;
+  margin-left: 55px;
+  width: 40px; /* 円の直径を指定 */
+  height: 40px; /* 円の直径を指定 */
+  background-color: gray; /* 背景色をグレーに設定 */
+  border-radius: 50%; /* border-radiusを50%に設定して円形にする */
+}
+.guddo {
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 35px;
+  height: 30px;
+  float: left;
+}
+.suuti {
+  margin-top: 0px;
+  margin-left: 63px;
+
+  color: #ffffff;
+}
+
+.vertical-box {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+.name,
+.nameenglish {
+  color: #100f0f;
+  text-align: left;
+  z-index: 3;
+}
+
+.name {
+  font-size: 30px;
+  font-family: "ぼくたちのゴシック2ボールド";
+  padding: 20px 0;
+  margin-top: 0px;
+  margin-left: 0px;
+  letter-spacing: 10px;
+}
+
+.nameenglish {
+  font-size: 7px;
+  font-family: "LEMON MILK";
+  padding: 20px 0;
+  margin-top: -45px;
+  margin-left: 0px;
+  letter-spacing: 10px;
+}
+.gray-background {
+  width: 290px;
+  height: 100px;
+  margin-top: 40px;
+  margin-left: 40px;
+  background-color: #e4e4e4; /* 赤い背景色に変更 */
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px; /* 左下と右下の角を丸める */
+}
+
+.download-container {
+  margin-top: -90px;
+  margin-left: 125px;
+  display: flex;
+  align-items: center;
+}
+
+.download-button {
+  background-color: #e6a0a0;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  z-index: 3;
+  margin-top: 25px; /* 上部の余白を相対的な値で微調整 */
+  margin-left: -32px; /* 左側の余白を相対的な値で微調整 */
+  padding: 5px 30px;
+  color: #ffffff;
+  font-family: "ほのか新アンティーク角";
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.download-button:hover {
+  background-color: #cc2525; /* ホバー時の背景色 */
+}
+.gray-rectangle {
+  margin-top: 70px;
+  margin-left: 40px;
+  width: 310px; /* 画面幅いっぱいの幅 */
+  height: 600px; /* 画面高さいっぱいの高さ */
+  background-color: #f0f0f0; /* グレーの色 */
+  overflow-y: auto; /* 縦スクロールを許可 */
+  box-sizing: border-box; /* ボックスモデルの影響を受けないように */
+  padding: 20px; /* 内部の余白 */
+  border-radius: 20px; /* 四方を丸めるための値 */
+}
+
+.comment-text {
+  color: black; /* 黒い文字色 */
+  font-weight: bold; /* 太字 */
+  opacity: 0.5; /* 透明度を0.5に設定 */
+}
+.comment-input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+}
+.bold-name {
+  font-weight: bold; /* 太字 */
+}
+.line {
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 310px; /* 例として200pxの幅を指定 */
+  border: 1px solid rgba(200, 72, 72, 0.818);
+}
+.line2 {
+  margin-top: 80px;
+  margin-left: 40px;
+  width: 310px; /* 例として200pxの幅を指定 */
+  border: 1px solid rgba(200, 72, 72, 0.818);
+}
