@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <link rel="stylesheet" href="css/Member-registration-2.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <meta charset="utf-8" />
+
+    <title>立ち絵｜Member-registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../static/icon.jpg"
+            alt="alice"
+            class="d-inline-block align-text-top"
+          />
+          Alice
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Artist</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">How to</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Form</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- menubar -->
+    <div class="container1">
+      <!-- グレーの四角形を表示する要素 -->
+      <div class="gray-square">
+        <p class="letter">会員登録</p>
+        <div class="White-square">
+          <!-- 名前の入力欄 -->
+          <div class="name">
+            <label for="name-label">name:</label>
+            <input
+              type="text"
+              id="name"
+              class="comment-input"
+              placeholder="ユーザー名を入力してください…"
+            />
+            <p class="name-condition">半角英数記号6～32字以内</p>
+          </div>
+          <div class="dotted-border"></div>
+          <!-- Gmailの入力欄 -->
+          <div class="Gmail">
+            <label for="Gmail-label">Gmail:</label>
+            <input
+              type="Gmailtext"
+              id="Gmail"
+              class="comment-input-Gmail"
+              placeholder="Gmailを入力してください…"
+            />
+          </div>
+          <div class="dotted-border2"></div>
+          <!-- PSの入力欄 -->
+          <div class="PS">
+            <label for="PS-label">PS:</label>
+            <input
+              type="PStext"
+              id="PS"
+              class="comment-input-PS"
+              placeholder="パスワードを入力してください…"
+            />
+            <p class="ps-condition">半角英数記号6～32字以内</p>
+          </div>
+          <!-- PS確認の入力欄 -->
+          <div class="confirmation">
+            <p class="confirmation-Re-enter">パスワード再入力</p>
+            <input
+              type="confirmationtext"
+              id="confirmation"
+              class="comment-input-confirmation"
+              placeholder="パスワードを再入力してください…"
+            />
+          </div>
+        </div>
+
+        <a href="Member-registration-3.html">
+          <div class="black-square">
+            <p class="Next-text">入力項目の確認へ</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <script src="js/Member-registration-2.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

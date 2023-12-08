@@ -1,0 +1,26 @@
+body {
+  overflow: hidden; /* 縦横スクロールを禁止 */
+  margin: 0;
+}
+.content {
+  position: relative;
+}
+.top {
+  overflow: hidden;
+}
+
+.top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* 画像を中央寄せに設定 */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.top img.show {
+  opacity: 1;
+}
+.arrow {
+  z-index: 2;
+  margin-bottom: 2000px;
+}
