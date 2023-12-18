@@ -1,16 +1,33 @@
-.container {
-  display: flex; /* 親要素をフレックスボックスに設定 */
+body {
+  margin: 0;
+  padding: 0;
 }
+.main_container {
+  display: flex;
+  max-width: 100%; /* これを追加 */
+  margin: 0;
+  flex-direction: column;
+  flex-direction: row;
+}
+
 .matome {
-  width: 600px; /* 要素の幅を指定 */
-  height: 1400px; /* 要素の高さを指定 */
-  margin-left: 170px;
+  flex: 1;
+  width: 600px;
+  height: 1400px;
+  margin-left: 270px;
   margin-top: 50px;
+  margin: 50px 0% 0 19%; /* 画面幅に対する相対的な値に変更 */
+  box-sizing: border-box;
+}
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 .imageactive {
-  width: 600px;
-  height: 420px;
-  z-index: 2;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* 追加 */
 }
 .explanation {
   margin-top: 20px;
@@ -46,9 +63,9 @@
   cursor: pointer; /* カーソルをポインタに変更 */
 }
 .Other-portraits {
-  margin-top: -80px;
-  margin-left: -170px;
-  display: flex; /* 子要素を横並びにする */
+  margin-top: 0px;
+  display: flex;
+  justify-content: center; /* 子要素を横並びにする */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease; /* フェードインにトランジションを追加 */
@@ -64,14 +81,11 @@
 .Other-portraits :hover img {
   transform: scale(1.1); /* 拡大 */
 }
-.Mokou-Funiwarano,
-.Reisen-Udongein,
-.Maribel-Hearn {
-  width: 500px;
-  height: 350px;
+.other_image {
+  width: 200px;
+  height: 200px;
   z-index: 2;
   clip-path: circle(60px at center);
-  margin-right: -280px; /* 画像間の余白を設定 */
 }
 .Maribel-Hearn {
   margin-right: 0;
@@ -81,11 +95,12 @@
 }
 
 .matome2 {
+  margin: 50px 5% 0 5%; /* 画面幅に対する相対的な値に変更 */
   flex: 1; /* フレックスアイテムを均等に広げる */
   width: 0px;
-  height: 1400px;
-  margin-left: 15px; /* 適切なマージンを設定して間隔を調整します */
+  margin-left: 0px; /* 適切なマージンを設定して間隔を調整します */
   margin-top: 50px;
+  box-sizing: border-box; /* ボーダーやパディングも要素の幅に含まれるようにする */
 }
 .matome3 {
   margin-left: 30px;
@@ -96,9 +111,16 @@
 .aikon {
   height: 40px;
   margin-left: 0px;
+  display: flex;
+  justify-content: flex-start;
+}
+.artist_icon {
+  width: 40px;
+  height: 40px;
 }
 .imageactive2 {
-  width: 40px;
+  width: 100%; /* 親要素に対する幅の割合を100%に設定 */
+  aspect-ratio: 1/1; /* アスペクト比を維持（例えば、1:1） */
   height: 40px;
   z-index: 2;
 
@@ -107,7 +129,7 @@
   float: left;
 }
 .rounded-box {
-  margin-top: 0px;
+  margin-top: 8px !important;
   margin-left: 10px;
   width: 260px;
   height: 25px;
@@ -125,11 +147,12 @@
   font-weight: bold;
 }
 .moji {
-  margin-top: 20px;
+  margin-top: 19px;
   margin-left: 0px;
   color: #100f0f;
   font-size: 15px;
   font-family: "ぼくたちのゴシック2ボールド";
+  font-weight: lighter;
   z-index: 3;
   white-space: nowrap;
 }
@@ -153,8 +176,9 @@
 .black-border {
   white-space: nowrap;
   width: 100px; /* 要素の幅を指定 */
-  height: 48px; /* 要素の高さを指定 */
+  height: 58px; /* 要素の高さを指定 */
   margin-top: 20px;
+  margin-left: 10px;
   border: 2px solid rgb(199, 199, 199); /* 黒い枠線を指定 */
   border-radius: 10px; /* 四方を丸める半径を指定 */
 }
@@ -163,26 +187,29 @@
   margin-left: 55px;
   width: 40px; /* 円の直径を指定 */
   height: 40px; /* 円の直径を指定 */
-  background-color: gray; /* 背景色をグレーに設定 */
   border-radius: 50%; /* border-radiusを50%に設定して円形にする */
 }
 .guddo {
-  margin-top: 5px;
+  margin-top: 13px;
   margin-left: 10px;
-  width: 35px;
-  height: 30px;
+  width: 30px;
+  height: 25px;
   float: left;
 }
 .suuti {
-  margin-top: 0px;
-  margin-left: 63px;
-
-  color: #ffffff;
+  margin-left: 7px;
+  margin-top: 5px;
+  z-index: 10;
+  color: #2e2e2e;
+  font-size: 35px;
 }
 
 .vertical-box {
   margin-top: 0px;
   margin-left: 0px;
+
+  display: flex;
+  flex-direction: column; /* 縦に並べる */
 }
 .name,
 .nameenglish {
@@ -194,8 +221,8 @@
 .name {
   font-size: 30px;
   font-family: "ぼくたちのゴシック2ボールド";
-  padding: 20px 0;
-  margin-top: 0px;
+  padding: 0;
+  margin-top: 20px; /*上部の余白を追加 */
   margin-left: 0px;
   letter-spacing: 10px;
 }
@@ -203,11 +230,13 @@
 .nameenglish {
   font-size: 7px;
   font-family: "LEMON MILK";
-  padding: 20px 0;
-  margin-top: -45px;
-  margin-left: 0px;
+
+  padding: 0; /* 余白を0に設定 */
+  margin-top: 0; /* 余白を0に設定 */
+
   letter-spacing: 10px;
 }
+
 .gray-background {
   width: 290px;
   height: 100px;
@@ -219,8 +248,8 @@
 }
 
 .download-container {
-  margin-top: -90px;
-  margin-left: 125px;
+  margin-top: 0px;
+  margin-left: 100px;
   display: flex;
   align-items: center;
 }
@@ -231,11 +260,12 @@
   border-radius: 10px;
   text-decoration: none;
   z-index: 3;
-  margin-top: 25px; /* 上部の余白を相対的な値で微調整 */
-  margin-left: -32px; /* 左側の余白を相対的な値で微調整 */
+  margin-top: 15px; /* 上部の余白を相対的な値で微調整 */
+  margin-left: 25px; /* 左側の余白を相対的な値で微調整 */
   padding: 5px 30px;
   color: #ffffff;
-  font-family: "ほのか新アンティーク角";
+  font-family: "LEMON MILK";
+  font-weight: bold;
   display: inline-block;
   white-space: nowrap;
 }
