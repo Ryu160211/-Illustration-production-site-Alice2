@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.main-container {
+  height: 690px;
+  display: flex;
+  background: url(../image/doroshi3.png) center center no-repeat,
+    rgba(46, 46, 46, 0.7);
+  background-size: cover; /* 縦横の表示サイズをカバーに設定 */
+}
+.left-container {
+  width: 75%;
+  overflow-y: hidden; /* 縦スクロールを無効にする */
+  display: flex; /* Flexboxを有効にする */
+}
+
+.right-container {
+  width: 25%;
+  position: relative;
+  display: flex; /* Flexboxを有効にする */
+  overflow-y: hidden; /* 縦スクロールを無効にする */
+}
+
+.haikei {
+  width: 100%;
+  height: 690px;
+  filter: blur(3px);
+  opacity: 0.5;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.Dolsie {
+  width: 100%;
+  height: 710px;
+  overflow-y: scroll;
+}
+
+.rectangle {
+  position: relative;
+  width: 100%; /* 100%は親要素(.Dolsie)に対しての幅 */
+  overflow-y: hidden; /* .rectangle内の縦スクロールを無効にする */
+}
+
+.gazou1,
+.gazou2,
+.gazou3 {
+  width: 100%;
+  height: auto;
+  z-index: 3;
+}
+
+.gazou2,
+.gazou3 {
+  max-width: 450px;
+}
+.aikon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 2;
+  margin-top: 50px;
+  margin-left: 100px;
+  clip-path: circle(50px at center);
+}
+.name {
+  white-space: nowrap;
+  color: #100f0f;
+  font-size: 25px;
+  font-family: "Be Vietnam Pro";
+  font-weight: bold;
+  margin-top: 60px;
+  margin-left: 70px;
+  z-index: 3;
+}
+
+
+/* SNS */
+
+.Twitter-frame {
+  width: 190px; /* 長方形の幅を調整 */
+  height: 70px; /* 長方形の高さを調整 */
+  margin-top: 130px;
+  margin-left: 0px;
+  background-color: rgb(66, 64, 64); /* 薄水色の背景色 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 1; /* squareのz-indexを設定 */
+  clip-path: inset(20px 20px 20px 20px round 15px);
+  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 *//
+  
+}
+.Twitter-letter{
+  color: rgb(219, 186, 186);
+  font-family: "Be Vietnam Pro";
+  font-weight: bold;
+font-size: 23px;
+margin-top: 13px;
+margin-left: 47px;
+  z-index: 1;
+}
+.pixiv-frame {
+  width: 190px; /* 長方形の幅を調整 */
+  height: 70px; /* 長方形の高さを調整 */
+  margin-top: 130px;
+  margin-left: 0px;
+  background-color: rgb(66, 64, 64); /* 薄水色の背景色 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 1; /* squareのz-indexを設定 */
+  clip-path: inset(20px 20px 20px 20px round 15px);
+  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 *//
+  
+}
+.pixiv-letter{
+  color: rgb(219, 186, 186);
+  font-family: "Be Vietnam Pro";
+  font-weight: bold;
+font-size: 23px;
+margin-top: 13px;
+margin-left: 60px;
+  z-index: 1;
+}
+.fanbox-frame {
+  width: 190px; /* 長方形の幅を調整 */
+  height: 70px; /* 長方形の高さを調整 */
+  margin-top: 130px;
+  margin-left: 0px;
+  background-color: rgb(66, 64, 64); /* 薄水色の背景色 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 1; /* squareのz-indexを設定 */
+  clip-path: inset(20px 20px 20px 20px round 15px);
+  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 *//
+  
+}
+.fanbox-letter{
+  color: rgb(219, 186, 186);
+  font-family: "Be Vietnam Pro";
+  font-weight: bold;
+font-size: 23px;
+margin-top: 13px;
+margin-left: 48px;
+  z-index: 1;
+}
+.skeb-frame {
+  width: 190px; /* 長方形の幅を調整 */
+  height: 70px; /* 長方形の高さを調整 */
+  margin-top: 130px;
+  margin-left: 0px;
+  background-color: rgb(66, 64, 64); /* 薄水色の背景色 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  z-index: 1; /* squareのz-indexを設定 */
+  clip-path: inset(20px 20px 20px 20px round 15px);
+  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 *//
+  
+}
+.skeb-letter{
+  color: rgb(219, 186, 186);
+  font-family: "Be Vietnam Pro";
+  font-weight: bold;
+font-size: 23px;
+margin-top: 13px;
+margin-left: 60px;
+  z-index: 1;
+}

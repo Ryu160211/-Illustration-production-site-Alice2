@@ -1,97 +1,219 @@
-.container {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    z-index: 3;
-    width: 700px;
-    position: absolute;
-    top: 130px;
-    left: 300px;
+.main-container {
+  width: 80%; /* 1300px の 80% */
+  max-width: 1300px; /* 最大幅を指定 */
+  height: auto; /* 高さを自動調整 */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vh; /* 上部のマージンを調整 */
 }
-
-.gazou {
-    transform: scaleX(-1);
-    position: absolute; /* 相対配置を設定 */
-    top: 45px;
-    left: 75px;
-    padding: 10px;
-    z-index: 3;
+.question-box {
+  width: 1000px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  animation: fadeIn 5s ease 1s 1 normal backwards;
 }
-.container1 {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    z-index: 3;
-    width: 700px;
-    height: 70px; /* 高さを60pxに変更 */
-    position: absolute;
-    top: 300px;
-    left: 450px;
+.circle-container {
+  position: relative;
+  width: 150px; /* 円の直径 */
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black; /* 黒い線 */
+  overflow: hidden;
 }
-
-.gazou1 {
-    position: absolute; /* 相対配置を設定 */
-    top: 200px;
-    left: 1130px;
-    padding: 10px;
-    z-index: 3;
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像が円内にフィットするように */
+  margin-top: 0px;
 }
-.container2 {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    z-index: 3;
-    width: 700px;
-    height: 70px; /* 高さを60pxに変更 */
-    position: absolute;
-    top: 470px;
-    left: 350px;
+.text-container {
+  margin-left: 40px;
+  width: 700px;
+  height: 150px;
 }
-
-.gazou2 {
-    transform: scaleX(-1);
-    position: absolute; /* 相対配置を設定 */
-    top: 380px;
-    left: 100px;
-    padding: 10px;
-    z-index: 3;
+.interrogative-text {
+  font-size: 50px;
+  font-family: "けいふぉんと";
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  position: relative;
 }
-.container3 {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    z-index: 3;
-    width: 700px;
-    height: 70px; /* 高さを60pxに変更 */
-    position: absolute;
-    top: 640px;
-    left: 450px;
+.interrogative-text-2 {
+  font-size: 20px;
+  font-family: "LEMON MILK";
+  margin-top: 0;
+  margin-left: 90px;
+  letter-spacing: 10px;
+  white-space: nowrap;
+  bottom: 0;
 }
-
-.gazou3 {
-    position: absolute; /* 相対配置を設定 */
-    top: 540px;
-    left: 1130px;
-    padding: 10px;
-    z-index: 3;
-}
-.HOW .container p {
-    font-size: 16px;
-    font-family: 'ラノベPOP', sans-serif;
-}
-
-.setume1 .long-rectangle1 p,
-.setume2 .long-rectangle2 p,
-.setume3 .long-rectangle2 p {
-    font-size: 16px;
-    font-family: 'ラノベPOP', sans-serif;
-}
-  .top .HOW,
-  .top .HOW2 {
-      z-index: 3; /* 子要素のz-indexを指定 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.answer-1-box {
+  width: 80%; /* 1000px の 80% */
+  max-width: 1000px; /* 最大幅を指定 */
+  height: auto; /* 高さを自動調整 */
+  margin-left: 4%; /* 左のマージンを調整 */
+  margin-right: auto;
+  margin-top: 3vh; /* 上部のマージンを調整 */
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  animation: fadeIn 5s ease 1s 1 normal backwards;
+}
+.answer-1-container {
+  position: relative;
+  width: 150px; /* 円の直径 */
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black; /* 黒い線 */
+  overflow: hidden;
+}
+.answer-1-numbers {
+  font-size: 90px;
+  margin-top: 170px;
+  margin-left: 30px;
+  object-fit: cover; /* 画像が円内にフィットするように */
+  margin-top: 0px;
+}
+.answer-1-text-container {
+  margin-left: 40px;
+  width: 700px;
+  height: 150px;
+}
+.answer-1-text {
+  font-size: 40px;
+  font-family: "けいふぉんと";
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  position: relative;
+}
+.answer-1-text-2 {
+  font-size: 20px;
+  font-family: "ぼくたちのゴシック2ボールド";
+  margin-top: 0;
+  margin-left: 0px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  bottom: 0;
+}
+
+.answer-2-box {
+  width: 80%; /* 1000px の 80% */
+  max-width: 1000px; /* 最大幅を指定 */
+  height: auto; /* 高さを自動調整 */
+  margin-left: 4%; /* 左のマージンを調整 */
+  margin-right: auto;
+  margin-top: 5.5vh; /* 上部のマージンを調整 */
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  animation: fadeIn 5s ease 1s 1 normal backwards;
+}
+.answer-2-container {
+  position: relative;
+  width: 150px; /* 円の直径 */
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black; /* 黒い線 */
+  overflow: hidden;
+}
+.answer-2-numbers {
+  font-size: 90px;
+  margin-top: 170px;
+  margin-left: 27px;
+  object-fit: cover; /* 画像が円内にフィットするように */
+  margin-top: 0px;
+}
+.answer-2-text-container {
+  margin-left: 40px;
+  width: 700px;
+  height: 150px;
+}
+.answer-2-text {
+  font-size: 40px;
+  font-family: "けいふぉんと";
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  position: relative;
+}
+.answer-2-text-2 {
+  font-size: 20px;
+  font-family: "ぼくたちのゴシック2ボールド";
+  margin-top: 0;
+  margin-left: 0px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  bottom: 0;
+}
+
+.answer-3-box {
+  width: 80%; /* 1000px の 80% */
+  max-width: 1000px; /* 最大幅を指定 */
+  height: auto; /* 高さを自動調整 */
+  margin-left: 4%; /* 左のマージンを調整 */
+  margin-right: auto;
+  margin-top: 5.5vh; /* 上部のマージンを調整 */
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  animation: fadeIn 5s ease 1s 1 normal backwards;
+}
+.answer-3-container {
+  position: relative;
+  width: 150px; /* 円の直径 */
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black; /* 黒い線 */
+  overflow: hidden;
+}
+.answer-3-numbers {
+  font-size: 90px;
+  margin-top: 170px;
+  margin-left: 27px;
+  object-fit: cover; /* 画像が円内にフィットするように */
+  margin-top: 0px;
+}
+.answer-3-text-container {
+  margin-left: 40px;
+  width: 700px;
+  height: 150px;
+}
+.answer-3-text {
+  font-size: 40px;
+  font-family: "けいふぉんと";
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  position: relative;
+}
+.answer-3-text-2 {
+  font-size: 20px;
+  font-family: "ぼくたちのゴシック2ボールド";
+  margin-top: 0;
+  margin-left: 0px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  bottom: 0;
+}
