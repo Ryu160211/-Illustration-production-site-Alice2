@@ -5,6 +5,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 3vh; /* 上部のマージンを調整 */
+  background: url(../image/How-to実験.png) center center no-repeat;
+  animation: fadeIn 5s ease 1s 1 normal backwards;
 }
 .question-box {
   width: 1000px;
