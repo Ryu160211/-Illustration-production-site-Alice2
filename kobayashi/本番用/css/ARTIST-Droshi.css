@@ -76,7 +76,6 @@ body {
   z-index: 3;
 }
 
-
 /* SNS */
 
 .Twitter-frame {
@@ -88,16 +87,15 @@ body {
   transform: translate(-50%, -50%); /* 中央揃え */
   z-index: 1; /* squareのz-indexを設定 */
   clip-path: inset(20px 20px 20px 20px round 15px);
-  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 *//
-  
+  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 */
 }
-.Twitter-letter{
+.Twitter-letter {
   color: rgb(219, 186, 186);
   font-family: "Be Vietnam Pro";
   font-weight: bold;
-font-size: 23px;
-margin-top: 13px;
-margin-left: 47px;
+  font-size: 23px;
+  margin-top: 13px;
+  margin-left: 47px;
   z-index: 1;
 }
 .pixiv-frame {
@@ -109,16 +107,15 @@ margin-left: 47px;
   transform: translate(-50%, -50%); /* 中央揃え */
   z-index: 1; /* squareのz-indexを設定 */
   clip-path: inset(20px 20px 20px 20px round 15px);
-  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 *//
-  
+  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 */
 }
-.pixiv-letter{
+.pixiv-letter {
   color: rgb(219, 186, 186);
   font-family: "Be Vietnam Pro";
   font-weight: bold;
-font-size: 23px;
-margin-top: 13px;
-margin-left: 60px;
+  font-size: 23px;
+  margin-top: 13px;
+  margin-left: 60px;
   z-index: 1;
 }
 .fanbox-frame {
@@ -130,16 +127,15 @@ margin-left: 60px;
   transform: translate(-50%, -50%); /* 中央揃え */
   z-index: 1; /* squareのz-indexを設定 */
   clip-path: inset(20px 20px 20px 20px round 15px);
-  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 *//
-  
+  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 */
 }
-.fanbox-letter{
+.fanbox-letter {
   color: rgb(219, 186, 186);
   font-family: "Be Vietnam Pro";
   font-weight: bold;
-font-size: 23px;
-margin-top: 13px;
-margin-left: 48px;
+  font-size: 23px;
+  margin-top: 13px;
+  margin-left: 48px;
   z-index: 1;
 }
 .skeb-frame {
@@ -151,15 +147,14 @@ margin-left: 48px;
   transform: translate(-50%, -50%); /* 中央揃え */
   z-index: 1; /* squareのz-indexを設定 */
   clip-path: inset(20px 20px 20px 20px round 15px);
-  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 *//
-  
+  border: 4px dashed #4a4a4a; /* ボーダーの幅と種類、色 */
 }
-.skeb-letter{
+.skeb-letter {
   color: rgb(219, 186, 186);
   font-family: "Be Vietnam Pro";
   font-weight: bold;
-font-size: 23px;
-margin-top: 13px;
-margin-left: 60px;
+  font-size: 23px;
+  margin-top: 13px;
+  margin-left: 60px;
   z-index: 1;
 }
