@@ -117,7 +117,7 @@
               <h1 class="name">洩矢諏訪子</h1>
               <h1 class="nameenglish">Suwako Moriya</h1>
             </div>
-            <div class="black-border">
+            <div class="black-border" id="clickableImage">
               <img src="image/グッド.png" class="guddo" />
               <div class="gray-circle"><h1 class="suuti">0</h1></div>
             </div>
@@ -144,18 +144,25 @@
               class="comment-input"
               placeholder="コメントする..."
             />
+            <button class="decision-button" onclick="showAlert()">決定</button>
+            <div class="comment">
+              <div class="comment-item">
+                <span class="bold-name"><b>太字の名前:</b><br /></span>
+                ここに文字を記載します。
+              </div>
+              <div class="comment-item">
+                <span class="bold-name"><b>太字の名前:</b><br /></span>
+                ここに文字を記載します。
+              </div>
+              <!-- 他のコメントアイテムも同様に追加 -->
+            </div>
           </div>
-          <div class="kome1">
-            <span class="bold-name"><b>太字の名前:</b><br /></span>
-            ここに文字を記載します。
-          </div>
-          <div class="kome2">
-            <span class="bold-name"><b>太字の名前:</b><br /></span>
-            ここに文字を記載します。
-          </div>
+          
+        </div>
         </div>
       </div>
     </div>
+    <script src="js/GALLERY2.js"></script>
     <script src="js/Other-portraits.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

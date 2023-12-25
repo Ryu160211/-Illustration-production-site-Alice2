@@ -283,6 +283,7 @@ body {
   box-sizing: border-box; /* ボックスモデルの影響を受けないように */
   padding: 20px; /* 内部の余白 */
   border-radius: 20px; /* 四方を丸めるための値 */
+  display: flex;
 }
 
 .comment-text {
@@ -291,10 +292,22 @@ body {
   opacity: 0.5; /* 透明度を0.5に設定 */
 }
 .comment-input {
-  width: 100%;
+  width: 220px;
   height: 30px;
   border: none;
   outline: none;
+  float: left;
+}
+.decision-button {
+  /* 決定ボタンのスタイル */
+  margin-top: 0px; /* ボタンとコメント間にマージンを設定 */
+  margin-left: 10px;
+  padding: 3px;
+  background-color: #2c2c2c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .bold-name {
   font-weight: bold; /* 太字 */
@@ -310,4 +323,11 @@ body {
   margin-left: 40px;
   width: 310px; /* 例として200pxの幅を指定 */
   border: 1px solid rgba(200, 72, 72, 0.818);
+}
+.comment-item {
+  margin-bottom: 10px;
+}
+.comment {
+  /* コメント全体に対するスタイル */
+  flex: 1; /* コメントボックスとボタンが親要素内で均等に広がるようにする */
 }
