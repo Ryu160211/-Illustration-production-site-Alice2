@@ -11,25 +11,44 @@ function checkRequiredInputs(event) {
   var confirmationValue = document.getElementById("confirmation").value;
 
   if (
-    !nameValue ||
-    !gmailValue ||
-    !psValue ||
-    !confirmationValue ||
     !isValidInput(nameValue) ||
-    !isValidInput(gmailValue) ||
-    !isValidInput(psValue) ||
-    !isValidInput(confirmationValue) ||
-    !isValidLength(psValue) ||
-    !isValidLength(confirmationValue)
+    !isValidLength(nameValue, 2, 7) ||
+    nameValue.trim() === "" ||
+    nameValue.includes(" ")
   ) {
-    alert("入力されていない項目があります。もう一度入力してください。");
+    alert("ユーザー名を2～7文字で入力してください。空白は使用できません。");
     event.preventDefault();
-  } else {
-    // HTML2に入力内容を渡す
-    localStorage.setItem("confirmedName", nameValue);
-    localStorage.setItem("confirmedGmail", gmailValue);
-    localStorage.setItem("confirmedPS", psValue);
+    return;
   }
+
+  if (gmailValue.trim() === "") {
+    alert("Gmailを入力してください。");
+    event.preventDefault();
+    return;
+  }
+
+  if (
+    !isValidInput(psValue) ||
+    psValue !== psValue.toLowerCase() ||
+    !isValidLength(psValue, 6, 32)
+  ) {
+    alert(
+      "パスワードは半角英数記号で6～32文字以内で入力してください。大文字は使用できません。"
+    );
+    event.preventDefault();
+    return;
+  }
+
+  if (confirmationValue.trim() === "" || confirmationValue !== psValue) {
+    alert("パスワードが一致しません。再度入力してください。");
+    event.preventDefault();
+    return;
+  }
+
+  // 全ての条件に合致した場合
+  localStorage.setItem("confirmedName", nameValue);
+  localStorage.setItem("confirmedGmail", gmailValue);
+  localStorage.setItem("confirmedPS", psValue);
 }
 
 function isValidInput(value) {
@@ -37,6 +56,6 @@ function isValidInput(value) {
   return regex.test(value);
 }
 
-function isValidLength(value) {
-  return value.length >= 6 && value.length <= 32;
+function isValidLength(value, minLength, maxLength) {
+  return value.length >= minLength && value.length <= maxLength;
 }

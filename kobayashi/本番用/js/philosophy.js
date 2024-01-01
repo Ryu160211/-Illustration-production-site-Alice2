@@ -10,4 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
       };
     }
   });
+
+  // スマートフォンであればリダイレクト
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    window.location.href = "../smartphone/smartphone-philosophy.html";
+  }
 });

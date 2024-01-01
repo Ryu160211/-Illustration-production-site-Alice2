@@ -1,5 +1,2 @@
-// document.addEventListener("DOMContentLoaded", function() {
-   //  var howElement = document.querySelector('.HOW');
-    // howElement.style.opacity = 1; /* opacityの初期値を1に設定 */
-    // howElement.style.animation = 'fadeIn 1s ease-in-out forwards';
-// });
+var imageContainer = document.getElementById("imageContainer");
+imageContainer.style.opacity = 1.0; // 透明度を0.5に設定

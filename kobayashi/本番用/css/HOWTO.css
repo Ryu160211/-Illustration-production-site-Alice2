@@ -5,8 +5,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 3vh; /* 上部のマージンを調整 */
-  background: url(../image/How-to実験.png) center center no-repeat;
-  animation: fadeIn 5s ease 1s 1 normal backwards;
 }
 .question-box {
   width: 1000px;
@@ -18,19 +16,12 @@
   align-items: center; /* 垂直方向の中央揃え */
   animation: fadeIn 5s ease 1s 1 normal backwards;
 }
-.circle-container {
-  position: relative;
-  width: 150px; /* 円の直径 */
-  height: 150px;
-  border-radius: 50%;
-  border: 2px solid black; /* 黒い線 */
-  overflow: hidden;
-}
 .circle-image {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 150%;
   object-fit: cover; /* 画像が円内にフィットするように */
   margin-top: 0px;
+  margin-right: 20px;
 }
 .text-container {
   margin-left: 40px;
@@ -87,9 +78,10 @@
   overflow: hidden;
 }
 .answer-1-numbers {
-  font-size: 90px;
+  width: 72%;
+  height: auto;
   margin-top: 170px;
-  margin-left: 30px;
+  margin-left: 23px;
   object-fit: cover; /* 画像が円内にフィットするように */
   margin-top: 0px;
 }
@@ -138,9 +130,10 @@
   overflow: hidden;
 }
 .answer-2-numbers {
-  font-size: 90px;
+  width: 72%;
+  height: auto;
   margin-top: 170px;
-  margin-left: 27px;
+  margin-left: 20px;
   object-fit: cover; /* 画像が円内にフィットするように */
   margin-top: 0px;
 }
@@ -189,9 +182,10 @@
   overflow: hidden;
 }
 .answer-3-numbers {
-  font-size: 90px;
+  width: 72%;
+  height: auto;
   margin-top: 170px;
-  margin-left: 27px;
+  margin-left: 20px;
   object-fit: cover; /* 画像が円内にフィットするように */
   margin-top: 0px;
 }
