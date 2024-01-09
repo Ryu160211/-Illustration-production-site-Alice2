@@ -1,0 +1,210 @@
+.container1 {
+  width: 900px;
+  height: 620px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gray-square {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(216, 216, 216);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.letter {
+  font-size: 30px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.White-square {
+  position: relative;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  z-index: 2;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* 名前の入力欄 */
+.name {
+  width: 800px;
+  height: 70px;
+  display: inline-block;
+  font-family: "LEMON MILK";
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 80px;
+  align-items: center;
+  vertical-align: middle;
+  position: relative;
+}
+
+.comment-input {
+  margin-left: 30px;
+  width: 500px;
+  height: 50px;
+  border: 2px solid #1b1b1b;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.comment-input::placeholder {
+  font-size: 14px;
+  color: #888;
+}
+
+.dotted-border {
+  border-top: 1px dotted #000;
+  width: 500px;
+  height: 0;
+  margin: 0px 90px;
+}
+
+/* Gmailの入力欄 */
+.Gmail {
+  width: 800px;
+  height: 70px;
+  display: inline-block;
+  font-family: "LEMON MILK";
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 15px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.comment-input-Gmail {
+  margin-left: 20px;
+  width: 500px;
+  height: 50px;
+  border: 2px solid #1b1b1b;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.comment-input-Gmail::placeholder {
+  font-size: 14px;
+  color: #888;
+}
+
+.dotted-border2 {
+  border-top: 1px dotted #000;
+  width: 500px;
+  height: 0;
+  margin: 10px 90px;
+}
+
+/* PSの入力欄 */
+.PS {
+  width: 800px;
+  height: 70px;
+  display: inline-block;
+  font-family: "LEMON MILK";
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 15px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.comment-input-PS {
+  margin-left: 85px;
+  width: 500px;
+  height: 50px;
+  border: 2px solid #1b1b1b;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.comment-input-PS::placeholder {
+  font-size: 14px;
+  color: #888;
+}
+
+.ps-condition {
+  width: 800px;
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 0px;
+  margin-bottom: 220px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+/* PS確認の入力欄 */
+.confirmation-Re-enter {
+  width: 800px;
+  display: inline-block;
+  font-size: 15px;
+  margin-left: 160px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.comment-input-confirmation {
+  margin-left: 160px;
+  width: 500px;
+  height: 50px;
+  border: 2px solid #1b1b1b;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.comment-input-confirmation::placeholder {
+  font-size: 14px;
+  color: #888;
+}
+
+/* 黒い四角 */
+.black-square {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Next-text {
+  font-size: 16px;
+  margin: 0;
+}
+
+.black-square {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: 10%;
+  background-color: rgb(41, 41, 41);
+  border-radius: 10px;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.Next-text {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+}

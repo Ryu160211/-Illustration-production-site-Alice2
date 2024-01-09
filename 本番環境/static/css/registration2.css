@@ -1,0 +1,198 @@
+.container1 {
+  width: 900px;
+  height: 620px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gray-square {
+  position: relative; /* 相対的な位置指定 */
+  width: 100%;
+  height: 100%;
+  background-color: rgb(216, 216, 216);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.letter {
+  font-size: 30px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.White-square {
+  position: relative; /* 絶対的な位置指定 */
+  top: 35%; /* 上端の位置を親要素の中央に配置 */
+  left: 50%; /* 左端の位置を親要素の中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  width: 80%;
+  height: 70%;
+  background-color: rgb(255, 255, 255); /* 白い色に指定 */
+  border-radius: 10px;
+  z-index: 2;
+  overflow-y: auto; /* 縦スクロールを追加 */
+  overflow-x: hidden;
+  overflow-y: hidden; /* 縦スクロールを無効にする */
+}
+.name {
+  width: 800px;
+  height: 70px;
+  display: inline-block;
+  font-family: "LEMON MILK";
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 10px;
+  align-items: center;
+  vertical-align: middle;
+  position: relative; /* 相対的な位置指定 */
+}
+.comment-input {
+  margin-left: 30px; /* 任意の余白を追加 */
+  width: 500px; /* 任意の横幅に変更 */
+  height: 50px; /* 任意の縦幅に変更 */
+  border: 2px solid #1b1b1b; /* 枠線の色と太さを指定 */
+  border-radius: 10px; /* 四方を丸めるための値 */
+  padding: 5px; /* 文字と枠の余白を指定 */
+  font-size: 14px; /* placeholderの文字の大きさを変更 */
+  vertical-align: middle; /* 垂直方向に中央揃え */
+}
+.comment-input::placeholder {
+  font-size: 14px; /* placeholderの文字の大きさを変更 */
+  color: #888; /* placeholderの色を指定 */
+}
+
+.dotted-border {
+  border-top: 1px dotted #000; /* 1pxの幅で黒い点線 */
+  width: 500px; /* 要素の横幅を100%に設定 */
+  height: 0; /* 高さを0に設定（実際の線はborderで作成されるため） */
+  margin: 0px 90px; /* 適宜、上下の余白を追加 */
+}
+.name-condition {
+  width: 800px;
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 0px;
+  margin-bottom: 300px;
+  align-items: center;
+  vertical-align: middle;
+}
+.Gmail {
+  width: 800px;
+  height: 70px;
+  display: inline-block;
+  font-family: "LEMON MILK";
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 15px;
+  align-items: center;
+  vertical-align: middle;
+}
+.comment-input-Gmail {
+  margin-left: 20px; /* 任意の余白を追加 */
+  width: 500px; /* 任意の横幅に変更 */
+  height: 50px; /* 任意の縦幅に変更 */
+  border: 2px solid #1b1b1b; /* 枠線の色と太さを指定 */
+  border-radius: 10px; /* 四方を丸めるための値 */
+  padding: 5px; /* 文字と枠の余白を指定 */
+  font-size: 14px; /* placeholderの文字の大きさを変更 */
+  vertical-align: middle; /* 垂直方向に中央揃え */
+}
+.comment-input-Gmail::placeholder {
+  font-size: 14px; /* placeholderの文字の大きさを変更 */
+  color: #888; /* placeholderの色を指定 */
+}
+.dotted-border2 {
+  border-top: 1px dotted #000; /* 1pxの幅で黒い点線 */
+  width: 500px; /* 要素の横幅を100%に設定 */
+  height: 0; /* 高さを0に設定（実際の線はborderで作成されるため） */
+  margin: 10px 90px; /* 適宜、上下の余白を追加 */
+}
+.PS {
+  width: 800px;
+  height: 70px;
+  display: inline-block;
+  font-family: "LEMON MILK";
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 15px;
+  align-items: center;
+  vertical-align: middle;
+}
+.comment-input-PS {
+  margin-left: 85px; /* 任意の余白を追加 */
+  width: 500px; /* 任意の横幅に変更 */
+  height: 50px; /* 任意の縦幅に変更 */
+  border: 2px solid #1b1b1b; /* 枠線の色と太さを指定 */
+  border-radius: 10px; /* 四方を丸めるための値 */
+  padding: 5px; /* 文字と枠の余白を指定 */
+  font-size: 14px; /* placeholderの文字の大きさを変更 */
+  vertical-align: middle; /* 垂直方向に中央揃え */
+}
+.comment-input-PS::placeholder {
+  font-size: 14px; /* placeholderの文字の大きさを変更 */
+  color: #888; /* placeholderの色を指定 */
+}
+.ps-condition {
+  width: 800px;
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 0px;
+  margin-bottom: 220px;
+  align-items: center;
+  vertical-align: middle;
+}
+.confirmation-Re-enter {
+  width: 800px;
+  display: inline-block;
+  font-size: 15px;
+  margin-left: 160px;
+  align-items: center;
+  vertical-align: middle;
+}
+.comment-input-confirmation {
+  margin-left: 160px; /* 任意の余白を追加 */
+  width: 500px; /* 任意の横幅に変更 */
+  height: 50px; /* 任意の縦幅に変更 */
+  border: 2px solid #1b1b1b; /* 枠線の色と太さを指定 */
+  border-radius: 10px; /* 四方を丸めるための値 */
+  padding: 5px; /* 文字と枠の余白を指定 */
+  font-size: 14px; /* placeholderの文字の大きさを変更 */
+  vertical-align: middle; /* 垂直方向に中央揃え */
+}
+.comment-input-confirmation::placeholder {
+  font-size: 14px; /* placeholderの文字の大きさを変更 */
+  color: #888; /* placeholderの色を指定 */
+}
+.black-square {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Next-text {
+  font-size: 16px;
+  margin: 0;
+}
+.black-square {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* 中央揃え */
+  width: 50%;
+  height: 10%;
+  background-color: rgb(41, 41, 41);
+  border-radius: 10px;
+  z-index: 2;
+  text-decoration: none; /* リンクの下線を非表示 */
+}
+.Next-text {
+  font-size: 20px;
+  color: rgb(255, 255, 255); /* または希望のテキストの色を指定 */
+  margin: 0; /* マージンをリセット */
+  padding: 0; /* パディングをリセット */
+}

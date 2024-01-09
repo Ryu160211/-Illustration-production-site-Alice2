@@ -1,14 +1,18 @@
-from flask import Flask
+from flask import Flask, redirect, render_template, url_for
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'home'
+    return redirect(url_for('gallery'))
 
 @app.route('/gallery')
 def gallery():
-    return 'gallery'
+    return render_template('gallery.html')
+
+@app.route('/gallery/<str>', methods=['GET', 'POST'])
+def gallery_detail():
+    return 'gallery_detail' 
 
 @app.route('/artist')
 def artist():
