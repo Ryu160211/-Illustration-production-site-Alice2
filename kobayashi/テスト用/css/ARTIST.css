@@ -1,0 +1,200 @@
+.main-container {
+  width: 1000px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.header-container {
+  width: 1000px;
+  height: 300px;
+  position: relative; /* 相対的な位置を持たせる */
+}
+
+header {
+  background-image: url(../image/artist/どろしΞ/compress_初音ミク.png);
+  background-size: cover;
+  background-position: 50% 30%;
+  margin: 0 auto;
+  height: 250px;
+  clip-path: inset(10px 10px 10px 10px round 15px);
+  filter: grayscale(50%) contrast(0.7); /* グレースケールとコントラストを変更 */
+}
+
+.icon-container {
+  width: 100px;
+  height: 100px;
+  margin-left: 100px;
+  position: absolute;
+  bottom: 10px;
+  transform: translateX(-50%); /* 左端を中央に移動 */
+}
+
+.icon {
+  width: 100px;
+  height: auto;
+  overflow: hidden; /* 要素がはみ出した場合に隠す */
+  box-shadow: 0 0 0 5px white; /* アイコンに白いボーダーを追加 */
+}
+
+.follow-box {
+  width: 150px;
+  height: 35px;
+  background-color: rgb(43, 43, 43);
+  border-radius: 15px;
+  position: absolute;
+  left: 20%; /* .icon-containerの右端に配置 */
+  margin-left: 20px; /* 適切なマージンを設定 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.follow {
+  margin-top: 8px;
+  font-size: 15px;
+  font-family: "LEMON MILK";
+  color: #ffffff;
+}
+.main2-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 890px;
+  height: auto;
+  max-width: 890px; /* 最大幅を設定 */
+}
+.name-container {
+  display: flex;
+  align-items: center;
+}
+
+.name-box {
+  width: 200px;
+  height: 50px;
+}
+
+.name {
+  font-size: 30px;
+  font-family: "ぼくたちのゴシック２ボールド";
+}
+
+.SNS-container {
+  display: flex;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.SNS-background {
+  width: 140px;
+  height: 30px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+  background-color: rgb(66, 64, 64);
+  transform: translate(-50%, -50%);
+  border: 4px dashed #4a4a4a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SNS-name {
+  color: rgb(255, 255, 255);
+  font-family: "LEMON MILK";
+  font-size: 15px;
+  z-index: 1;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 2px;
+}
+@media (max-width: 600px) {
+  .main-container {
+    width: 100%; /* 画面幅いっぱいに広がるように */
+    height: auto; /* コンテンツに合わせて高さを調整 */
+    margin-top: 10px; /* 適切なマージンに調整 */
+  }
+
+  .head-container {
+    height: auto; /* コンテンツに合わせて高さを調整 */
+  }
+
+  .icon-box {
+    margin-left: 10px; /* 適切なマージンに調整 */
+    width: 40px;
+    height: 40px;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    clip-path: circle(20px at center);
+  }
+  .name-box {
+    margin-top: 10px; /* 適切なマージンに調整 */
+    margin-left: 10px; /* 適切なマージンに調整 */
+    width: auto; /* コンテンツに合わせて幅を調整 */
+  }
+  .name {
+    font-size: 15px;
+  }
+}
+.self-introduction-box {
+  width: 800px;
+  height: auto;
+}
+.self-introduction {
+  margin-top: 20px;
+  font-size: 19px;
+  font-family: "ほのか新丸ゴシック";
+}
+
+.line {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px; /* 例として200pxの幅を指定 */
+  border: 1px solid rgba(200, 72, 72, 0.818);
+}
+
+.illustration_field1 {
+  margin-top: 20px;
+  width: 300px;
+  height: 400px;
+  float: left;
+}
+.illustration_field1 img {
+  width: 100%; /* 画像を親要素の幅に合わせる */
+  height: auto; /* 高さを自動調整 */
+}
+.illustration_field2 {
+  width: 370px;
+  height: 200px;
+  margin-left: 330px;
+}
+.illustration_field2 {
+  margin-top: 20px;
+  width: 370px;
+  height: 188px;
+  margin-left: 320px;
+}
+
+.illustration_field2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像を親要素にフィットさせる */
+  object-position: 20% 20%; /* 左から20%、上から80%の位置に表示 */
+}
+.illustration_field3 {
+  margin-top: 20px;
+  width: 370px;
+  height: 188px;
+  margin-left: 320px;
+}
+
+.illustration_field3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像を親要素にフィットさせる */
+  object-position: 20% 20%; /* 左から20%、上から80%の位置に表示 */
+}
