@@ -1,0 +1,16 @@
+.navbar-brand {
+  font-size: 1.8rem;
+}
+
+.navbar {
+  font-size: 1.3rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: orange; /* 好みの色に変更 */
+}
+.navbar-nav a {
+  font-family: "Excon";
+  font-weight: lighter;
+  /* 他のスタイル設定 */
+}
