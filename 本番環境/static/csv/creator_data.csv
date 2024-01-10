@@ -1,7 +1,7 @@
-﻿id,name,icon,introduce,twitter,pixiv,skeb
-1,といろ,static/image/creator/toiro/toiro_icon.jpg,こんにちは,https://twitter.com/kagikakko_T,https://www.pixiv.net/users/54987413,
-2,とびうお,static/image/creator/tobiuo/tobiuo_icon.jpg,こんばんは,https://twitter.com/tobiuo0802,https://www.pixiv.net/users/21952107,https://skeb.jp/@tobiuo0802
-3,どろしΞ,static/image/creator/doroshi/doroshi_icon.jpg,おはようございます,https://twitter.com/oekakiAI,https://www.pixiv.net/users/30127229,https://skeb.jp/@oekakiAI
-4,ベロシー,static/image/creator/veloxy/veloxy_icon.jpg,うれしいです,https://twitter.com/Velox_S,https://www.pixiv.net/users/12641191,https://skeb.jp/@Velox_S
-5,めろざ,static/image/creator/meroza/meroza_icon.jpg,いいね！,https://twitter.com/meroza_skeb_x,https://www.pixiv.net/users/1374378,https://skeb.jp/@meroza_skeb_x
-6,雲丹園,static/image/creator/unizono/unizono_icon.jpg,最高！,https://twitter.com/uninosono,https://www.pixiv.net/users/90112479,https://skeb.jp/@uninosono
+﻿id,name,mail,icon,introduce,twitter,pixiv,skeb
+1,といろ,,static/image/creator/toiro/toiro_icon.jpg,こんにちは,https://twitter.com/kagikakko_T,https://www.pixiv.net/users/54987413,
+2,とびうお,,static/image/creator/tobiuo/tobiuo_icon.jpg,こんばんは,https://twitter.com/tobiuo0802,https://www.pixiv.net/users/21952107,https://skeb.jp/@tobiuo0802
+3,どろしΞ,,static/image/creator/drawthy/drawthy_icon.jpg,おはようございます,https://twitter.com/oekakiAI,https://www.pixiv.net/users/30127229,https://skeb.jp/@oekakiAI
+4,ベロシー,,static/image/creator/veloxy/veloxy_icon.jpg,うれしいです,https://twitter.com/Velox_S,https://www.pixiv.net/users/12641191,https://skeb.jp/@Velox_S
+5,めろざ,,static/image/creator/meroza/meroza_icon.jpg,いいね！,https://twitter.com/meroza_skeb_x,https://www.pixiv.net/users/1374378,https://skeb.jp/@meroza_skeb_x
+6,雲丹園,,static/image/creator/unizono/unizono_icon.jpg,最高！,https://twitter.com/uninosono,https://www.pixiv.net/users/90112479,https://skeb.jp/@uninosono
