@@ -7,9 +7,10 @@ from flask_admin.contrib.sqla import ModelView
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
 app.config['SECRET_KEY'] = 'secret_key'
+app.config['FLASK_ADMIN_SWATCH'] = 'flatly'
 db.init_app(app)
 
-admin = Admin(app)
+admin = Admin(app, name='東方立ち絵素材', template_mode='bootstrap3')
 admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Creator, db.session))
 admin.add_view(ModelView(Content, db.session))
@@ -26,7 +27,7 @@ def login():
         password = request.form['password']
         admin = AdminUser.query.filter_by(name=name).first()
         if admin.password == password:
-            return redirect(url_for('admin'))
+            return redirect(url_for('admin.index'))
     return render_template('login.html') 
 
 @app.route('/gallery')
