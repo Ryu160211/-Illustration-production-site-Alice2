@@ -69,14 +69,9 @@
 
     <main>
       <div class="image_container">
-        {% for image in images %}
+        {% for content in contents %}
         <div class="image">
-          <a
-            href="{{ url_for('static', filename='image/' + image.filename|e ) }}"
-            download="{{ image.filename }}"
-            ><img
-              src="{{ url_for('static', filename='image/' + image.filename|e ) }}"
-          /></a>
+          <input type="image" src="{{ content.icon }}" alt="{{ content.name }}">
         </div>
         {% endfor %}
       </div>
