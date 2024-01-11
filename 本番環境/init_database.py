@@ -30,10 +30,16 @@ class Content(db.Model):
     name = db.Column(db.String(100), index=True)
     filename = db.Column(db.String)
     icon = db.Column(db.String)
-    creator_id = db.Column(db.Integer, db.ForeignKey("creator.id"))
-    character_id = db.Column(db.Integer, db.ForeignKey("character.id"))
+    creator_id = db.Column(db.Integer)
+    character_id = db.Column(db.Integer)
     desc = db.Column(db.String(1000))
 
+class Comment(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, index=True)
+    content_id = db.Column(db.Integer, index=True)
+    date = db.Column(db.String)
+    body = db.Column(db.String(200))
 
 class Character(db.Model):
     id = db.Column(db.Integer, primary_key=True)
