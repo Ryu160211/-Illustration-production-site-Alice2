@@ -4,10 +4,7 @@
     <meta charset="utf-8" />
     <title>立ち絵|GALLEREY</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="static/css/menubar.css"
-    />
+    <link rel="stylesheet" href="static/css/menubar.css" />
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/gallery.css') }}"
@@ -18,7 +15,6 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
   </head>
 
   <body>
@@ -27,11 +23,11 @@
       <div class="container">
         <a class="navbar-brand" href="#">
           <img
-            src="{{ url_for('static', filename='image/icon.jpg') }}"
-            alt="alice"
+            src="static/image/home_icon.png"
+            alt="ホーム"
+            width="100px"
             class="d-inline-block align-text-top"
           />
-          Alice
         </a>
         <button
           class="navbar-toggler"
@@ -71,7 +67,11 @@
       <div class="image_container">
         {% for content in contents %}
         <div class="image">
-          <input type="image" src="{{ content.icon }}" alt="{{ content.name }}">
+          <input
+            type="image"
+            src="{{ content.icon }}"
+            alt="{{ content.name }}"
+          />
         </div>
         {% endfor %}
       </div>
