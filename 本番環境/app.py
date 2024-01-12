@@ -7,14 +7,17 @@ from flask_admin.contrib.sqla import ModelView
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
 app.config['SECRET_KEY'] = 'secret_key'
-app.config['FLASK_ADMIN_SWATCH'] = 'pulse'
+app.config['FLASK_ADMIN_SWATCH'] = 'sandstone'
 db.init_app(app)
 
+class UserModelView(ModelView):
+    column_display_pk = True  
+
 admin = Admin(app, name='東方立ち絵素材', template_mode='bootstrap4')
-admin.add_view(ModelView(User, db.session))
-admin.add_view(ModelView(Creator, db.session))
-admin.add_view(ModelView(Content, db.session))
-admin.add_view(ModelView(Character, db.session))
+admin.add_view(UserModelView(User, db.session))
+admin.add_view(UserModelView(Creator, db.session))
+admin.add_view(UserModelView(Content, db.session))
+admin.add_view(UserModelView(Character, db.session))
 
 @app.route('/')
 def home():
