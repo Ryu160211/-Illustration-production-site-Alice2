@@ -34,17 +34,10 @@ class Content(db.Model):
     character_id = db.Column(db.Integer)
     desc = db.Column(db.String(1000))
 
-class Comment(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, index=True)
-    content_id = db.Column(db.Integer, index=True)
-    date = db.Column(db.String)
-    body = db.Column(db.String(200))
-
 class Character(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), index=True)
-
+    jp_name = db.Column(db.String(100), index=True)
+    en_name = db.Column(db.String(100), index=True)
 
 class Like(db.Model):
     id = db.Column(db.Integer, primary_key=True)
