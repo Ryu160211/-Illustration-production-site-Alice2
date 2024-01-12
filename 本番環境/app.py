@@ -7,10 +7,10 @@ from flask_admin.contrib.sqla import ModelView
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
 app.config['SECRET_KEY'] = 'secret_key'
-app.config['FLASK_ADMIN_SWATCH'] = 'flatly'
+app.config['FLASK_ADMIN_SWATCH'] = 'pulse'
 db.init_app(app)
 
-admin = Admin(app, name='東方立ち絵素材', template_mode='bootstrap3')
+admin = Admin(app, name='東方立ち絵素材', template_mode='bootstrap4')
 admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Creator, db.session))
 admin.add_view(ModelView(Content, db.session))
