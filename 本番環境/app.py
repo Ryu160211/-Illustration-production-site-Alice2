@@ -19,6 +19,8 @@ admin.add_view(UserModelView(Creator, db.session))
 admin.add_view(UserModelView(Content, db.session))
 admin.add_view(UserModelView(Character, db.session))
 
+title = '東方立ち絵広場'
+
 @app.route('/')
 def home():
     return redirect(url_for('login'))
@@ -35,15 +37,28 @@ def login():
 
 @app.route('/gallery')
 def gallery():
-    return render_template('gallery.html')
+    title = 'gallery'
+    contents = Content.query.all()
+    return render_template('gallery.html', css='gallery.css', title=title, contents=contents)
 
-@app.route('/gallery/<str>', methods=['GET', 'POST'])
-def gallery_detail():
-    return 'gallery_detail' 
+@app.route('/content')
+def content(content_id, content_name):
+    content = Content.query.filter_by(id=content_id).first()
+    creator = Creator.query.filter_by(id=content.creator_id).first()
+    other_contents = Content.query.filter_by(creator_id=creator.id).limit(3).all()
+    return render_template('gallery_detail.html', css='gallery_detail.css', content=content, creator=creator, other_contents=other_contents) 
 
-@app.route('/artist')
-def artist():
-    return 'artist'
+@app.route('/creator')
+def creator():
+    return 'creator'
+
+@app.route('/how')
+def how():
+    return 'how'
+
+@app.route('/rule')
+def rule():
+    return 'rule'
 
 @app.route('/philosophy')
 def philosophy():
