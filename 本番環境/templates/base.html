@@ -2,16 +2,7 @@
 <html lang="ja">
   <head>
     <link rel="stylesheet" href="static/css/menubar.css" />
-    <link rel="stylesheet" href="static/css/artist.css" />
-    <link rel="stylesheet" href="static/css/gallery.css" />
-    <link rel="stylesheet" href="static/css/gallery_detail.css" />
-    <link rel="stylesheet" href="static/css/login.css" />
-    <link rel="stylesheet" href="static/css/philosophy.css" />
-    <link rel="stylesheet" href="static/css/rule.css" />
-    <link rel="stylesheet" href="static/css/signup1.css" />
-    <link rel="stylesheet" href="static/css/signup2.css" />
-    <link rel="stylesheet" href="static/css/signup3.css" />
-    <link rel="stylesheet" href="static/css/signup4.css" />
+    <link rel="stylesheet" href="static/css/{{ css }}" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,7 +10,7 @@
       crossorigin="anonymous"
     />
     <meta charset="utf-8" />
-    <title>立ち絵｜洩矢諏訪子</title>
+    <title>{{ title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
@@ -30,8 +21,8 @@
         <a class="navbar-brand" href="philosophy.html">
           <img
             src="{{ url_for('static', filename='image/home_icon.png') }}"
-            width="100px"
-            alt="alice"
+            width="90px"
+            alt="home"
             class="d-inline-block align-text-top"
           />
         </a>
@@ -49,16 +40,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="GALLERY.html">Gallery</a>
+              <a class="nav-link" href="{{ url_for('gallery') }}">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="GALLERY.html">Artist</a>
+              <a class="nav-link" href="{{ url_for('creator') }}">Creator</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="HOW.html">How to</a>
+              <a class="nav-link" href="{{ url_for('how') }}">How to</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="RULE.html">Rule</a>
+              <a class="nav-link" href="{{ url_for('rule') }}">Rule</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Form</a>
