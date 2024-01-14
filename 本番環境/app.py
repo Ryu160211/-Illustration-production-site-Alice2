@@ -31,7 +31,9 @@ def login():
         admin = AdminUser.query.filter_by(name=name).first()
         if admin.password == password:
             return redirect(url_for('admin.index'))
-    return render_template('login.html') 
+    title = '東方立ち絵広場-ログイン'
+    css = 'css/login.css'
+    return render_template('login.html', title=title, css=css) 
 
 @app.route('/gallery')
 def gallery():
