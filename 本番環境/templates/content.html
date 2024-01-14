@@ -4,9 +4,12 @@
   <!-- 画面左側 -->
   <div class="matome">
     <div class="image-container">
-      <img src="{{ content.filename }}" class="imageactive" />
+      <img
+        src="{{ url_for('static', filename=content.filename) }}"
+        class="imageactive"
+      />
     </div>
-    <h1 class="explanation">{{ content.desc }}</h1>
+    <h1 class="explanation">{{ content.desc| safe }}</h1>
 
     <div class="Related-summary">
       <h1 class="connection">その他の立ち絵</h1>
@@ -15,9 +18,12 @@
         {% for other_content in other_contents %}
         <div class="other_image">
           <a
-            href="{{ url_for('content', content_id=other_content.id,content_name=other_content.name) }}"
+            href="{{ url_for('content',content_name=other_content.name, content_id=other_content.id) }}"
           >
-            <img class="image" src="{{ other_content.icon }}" id="yadaImage"
+            <img
+              class="image"
+              src="{{ url_for('static', filename=other_content.icon) }}"
+              id="yadaImage"
           /></a>
         </div>
         {% endfor %}
@@ -31,7 +37,9 @@
       <div class="aikon">
         <div class="artist_icon">
           <a href="Droshi.html"
-            ><img src="{{ creator.icon }}" class="imageactive2"
+            ><img
+              src="{{ url_for('static', filename=creator.icon) }}"
+              class="imageactive2"
           /></a>
         </div>
         <div class="rounded-box">
@@ -41,8 +49,8 @@
       </div>
       <div class="kouhyouka">
         <div class="vertical-box">
-          <h1 class="name">{{ content.jp_name }}</h1>
-          <h1 class="nameenglish">{{ content.en_name }}</h1>
+          <h1 class="name">{{ character.jp_name }}</h1>
+          <h1 class="nameenglish">{{ character.en_name }}</h1>
         </div>
         <div class="black-border" id="clickableImage">
           <img src="image/グッド.png" class="guddo" />
