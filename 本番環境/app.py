@@ -19,8 +19,6 @@ admin.add_view(UserModelView(Creator, db.session))
 admin.add_view(UserModelView(Content, db.session))
 admin.add_view(UserModelView(Character, db.session))
 
-title = '東方立ち絵広場'
-
 @app.route('/')
 def home():
     return redirect(url_for('login'))
@@ -37,16 +35,18 @@ def login():
 
 @app.route('/gallery')
 def gallery():
-    title = 'gallery'
+    title = '東方立ち絵広場-gallery'
     contents = Content.query.all()
-    return render_template('gallery.html', css='gallery.css', title=title, contents=contents)
+    return render_template('gallery.html', css='css/gallery.css', title=title, contents=contents)
 
-@app.route('/content')
-def content(content_id, content_name):
+@app.route('/content/<content_name>/<content_id>')
+def content(content_name, content_id):
+    title = '東方立ち絵広場-' + content_name
     content = Content.query.filter_by(id=content_id).first()
+    character = Character.query.filter_by(id=content.character_id).first()
     creator = Creator.query.filter_by(id=content.creator_id).first()
     other_contents = Content.query.filter_by(creator_id=creator.id).limit(3).all()
-    return render_template('gallery_detail.html', css='gallery_detail.css', content=content, creator=creator, other_contents=other_contents) 
+    return render_template('content.html', css='css/content.css',title=title, content=content, character=character, creator=creator, other_contents=other_contents) 
 
 @app.route('/creator')
 def creator():
