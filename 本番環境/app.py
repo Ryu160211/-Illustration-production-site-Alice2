@@ -35,11 +35,11 @@ def login():
     css = 'css/login.css'
     return render_template('login.html', title=title, css=css) 
 
-@app.route('/gallery')
-def gallery():
+@app.route('/contents')
+def contents():
     title = '東方立ち絵広場-gallery'
-    contents = Content.query.all()
-    return render_template('gallery.html', css='css/gallery.css', title=title, contents=contents)
+    contents = Content.query.order_by(Content.id.asc()).all()
+    return render_template('contents.html', css='css/contents.css', title=title, contents=contents)
 
 @app.route('/content/<content_name>/<content_id>')
 def content(content_name, content_id):
@@ -50,9 +50,11 @@ def content(content_name, content_id):
     other_contents = Content.query.filter_by(creator_id=creator.id).limit(3).all()
     return render_template('content.html', css='css/content.css',title=title, content=content, character=character, creator=creator, other_contents=other_contents) 
 
-@app.route('/creator')
-def creator():
-    return 'creator'
+@app.route('/creators')
+def creators():
+    title = '東方立ち絵広場-creators'
+    creators = Creator.query.order_by(Creator.id.asc()).all()
+    return render_template('creators.html', css='css/creators.css', title=title, creators=creators)
 
 @app.route('/how')
 def how():
