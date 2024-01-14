@@ -1,10 +1,13 @@
 {% extends "base.html" %} {% block main %}
 <main>
   <div class="creator_container">
-    {% for content in contents %}
+    {% for creator in creators %}
     <div class="creator">
       <a href="#">
-        <img src="{{ creator.icon }}" alt="{{ creator.name }}" />
+        <img
+          src="{{ url_for('static', filename=creator.icon) }}"
+          alt="{{ creator.name }}"
+        />
       </a>
     </div>
     {% endfor %}
