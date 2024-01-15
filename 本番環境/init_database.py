@@ -20,6 +20,7 @@ class Creator(db.Model):
     mail = db.Column(db.String, index=True)
     introduce = db.Column(db.String(1000))
     icon = db.Column(db.String, index=True)
+    background = db.Column(db.String, index=True)
     twitter = db.Column(db.String)
     pixiv = db.Column(db.String)
     skeb = db.Column(db.String)
@@ -33,6 +34,13 @@ class Content(db.Model):
     creator_id = db.Column(db.Integer)
     character_id = db.Column(db.Integer)
     desc = db.Column(db.String(1000))
+
+class OtherWork(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    creator_id = db.Column(db.Integer, index=True)
+    index = db.Column(db.Integer, index=True)
+    filename = db.Column(db.String)
+    link = db.Column(db.String)
 
 class Character(db.Model):
     id = db.Column(db.Integer, primary_key=True)
