@@ -21,7 +21,7 @@ admin.add_view(UserModelView(Character, db.session))
 
 @app.route('/')
 def home():
-    return redirect(url_for('login'))
+    return redirect(url_for('contents'))
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
