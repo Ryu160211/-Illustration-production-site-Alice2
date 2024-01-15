@@ -173,7 +173,9 @@
     height: auto; /* 高さを自動調整 */
     margin-top: 20px;
   }
-
+  .name {
+    margin-top: 0;
+  }
   .name,
   .comment-input,
   .dotted-border,
