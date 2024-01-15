@@ -22,12 +22,7 @@
 }
 
 .White-square {
-  position: relative;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 80%;
-  height: 70%;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   z-index: 2;
@@ -42,7 +37,7 @@
   display: inline-block;
   font-family: "LEMON MILK";
   font-size: 30px;
-  margin-left: 20px;
+  margin-left: 70px;
   margin-top: 80px;
   align-items: center;
   vertical-align: middle;
@@ -72,42 +67,6 @@
   margin: 0px 90px;
 }
 
-/* Gmailの入力欄 */
-.Gmail {
-  width: 800px;
-  height: 70px;
-  display: inline-block;
-  font-family: "LEMON MILK";
-  font-size: 30px;
-  margin-left: 20px;
-  margin-top: 15px;
-  align-items: center;
-  vertical-align: middle;
-}
-
-.comment-input-Gmail {
-  margin-left: 20px;
-  width: 500px;
-  height: 50px;
-  border: 2px solid #1b1b1b;
-  border-radius: 10px;
-  padding: 5px;
-  font-size: 14px;
-  vertical-align: middle;
-}
-
-.comment-input-Gmail::placeholder {
-  font-size: 14px;
-  color: #888;
-}
-
-.dotted-border2 {
-  border-top: 1px dotted #000;
-  width: 500px;
-  height: 0;
-  margin: 10px 90px;
-}
-
 /* PSの入力欄 */
 .PS {
   width: 800px;
@@ -115,7 +74,7 @@
   display: inline-block;
   font-family: "LEMON MILK";
   font-size: 30px;
-  margin-left: 20px;
+  margin-left: 70px;
   margin-top: 15px;
   align-items: center;
   vertical-align: middle;
@@ -207,4 +166,47 @@
   color: rgb(255, 255, 255);
   margin: 0;
   padding: 0;
+}
+@media only screen and (max-width: 600px) {
+  .container1 {
+    width: 90%; /* 画面幅に対する相対的な幅に変更 */
+    height: auto; /* 高さを自動調整 */
+    margin-top: 20px;
+  }
+
+  .name,
+  .comment-input,
+  .dotted-border,
+  .PS,
+  .comment-input-PS,
+  .ps-condition,
+  .confirmation-Re-enter,
+  .comment-input-confirmation {
+    width: 100%; /* 幅を100%に変更 */
+    margin-left: 0; /* 左のマージンを0に変更 */
+    margin-right: 0; /* 右のマージンを0に変更 */
+  }
+
+  .black-square {
+    width: 80%; /* 幅を80%に変更 */
+    margin-top: 20px;
+  }
+
+  .Next-text {
+    font-size: 16px; /* テキストサイズを変更 */
+  }
+
+  .comment-input,
+  .comment-input-PS,
+  .comment-input-confirmation {
+    margin-left: 10px; /* マージンを変更 */
+  }
+
+  .ps-condition {
+    margin-bottom: 20px; /* マージンを変更 */
+  }
+
+  .confirmation-Re-enter {
+    margin-left: 10px; /* マージンを変更 */
+  }
 }

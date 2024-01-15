@@ -1,5 +1,5 @@
 .main-container {
-  width: 80%; /* 1300px の 80% */
+  width: 90%; /* 1300px の 80% */
   max-width: 1300px; /* 最大幅を指定 */
   height: auto; /* 高さを自動調整 */
   margin-left: auto;
@@ -16,6 +16,7 @@
   align-items: center; /* 垂直方向の中央揃え */
   animation: fadeIn 5s ease 1s 1 normal backwards;
 }
+
 .circle-image {
   width: auto;
   height: 150%;
@@ -23,11 +24,13 @@
   margin-top: 0px;
   margin-right: 20px;
 }
+
 .text-container {
   margin-left: 40px;
   width: 700px;
   height: 150px;
 }
+
 .interrogative-text {
   font-size: 50px;
   font-family: "けいふぉんと";
@@ -38,6 +41,7 @@
   white-space: nowrap;
   position: relative;
 }
+
 .interrogative-text-2 {
   font-size: 20px;
   font-family: "LEMON MILK";
@@ -47,14 +51,41 @@
   white-space: nowrap;
   bottom: 0;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+
+/* Responsive styles for smaller screens (up to 600px) */
+
+@media only screen and (max-width: 600px) {
+  .question-box {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+    align-items: flex-start;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .circle-image {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .text-container {
+    margin: 20px 0;
+    width: 100%;
+    height: 80px;
+  }
+
+  .interrogative-text {
+    letter-spacing: 0px;
+    font-size: 22px;
+    margin-top: 10px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .interrogative-text-2 {
+    letter-spacing: 3px;
+    font-size: 10px;
+    margin-left: 0;
+    text-align: center;
+    white-space: normal;
   }
 }
 
@@ -109,7 +140,45 @@
   white-space: nowrap;
   bottom: 0;
 }
+@media only screen and (max-width: 600px) {
+  .answer-1-box {
+    width: 90%;
+    margin-left: 0; /* マージンを調整 */
+    margin: 20px auto;
+  }
 
+  .answer-1-container {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-1-numbers {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-1-text-container {
+    margin-left: 0; /* マージンを調整 */
+    width: 100%; /* テキストコンテナの幅を80%に変更 */
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .answer-1-text {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 20px; /* フォントサイズを変更 */
+    margin-top: 10px; /* マージンを調整 */
+    overflow: hidden;
+  }
+
+  .answer-1-text-2 {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 10px; /* フォントサイズを変更 */
+    margin-top: 5px; /* マージンを調整 */
+    overflow: hidden;
+    white-space: normal; /* テキストが親要素内に折り返されるようにする */
+  }
+}
 .answer-2-box {
   width: 80%; /* 1000px の 80% */
   max-width: 1000px; /* 最大幅を指定 */
@@ -161,7 +230,45 @@
   white-space: nowrap;
   bottom: 0;
 }
+@media only screen and (max-width: 600px) {
+  .answer-2-box {
+    width: 90%;
+    margin-left: 0; /* マージンを調整 */
+    margin: 20px auto;
+  }
 
+  .answer-2-container {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-2-numbers {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-2-text-container {
+    margin-left: 0; /* マージンを調整 */
+    width: 100%; /* テキストコンテナの幅を80%に変更 */
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .answer-2-text {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 20px; /* フォントサイズを変更 */
+    margin-top: 10px; /* マージンを調整 */
+    overflow: hidden;
+  }
+
+  .answer-2-text-2 {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 10px; /* フォントサイズを変更 */
+    margin-top: 5px; /* マージンを調整 */
+    overflow: hidden;
+    white-space: normal; /* テキストが親要素内に折り返されるようにする */
+  }
+}
 .answer-3-box {
   width: 80%; /* 1000px の 80% */
   max-width: 1000px; /* 最大幅を指定 */
@@ -212,4 +319,43 @@
   letter-spacing: 3px;
   white-space: nowrap;
   bottom: 0;
+}
+@media only screen and (max-width: 600px) {
+  .answer-3-box {
+    width: 90%;
+    margin-left: 0; /* マージンを調整 */
+    margin: 20px auto;
+  }
+
+  .answer-3-container {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-3-numbers {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-3-text-container {
+    margin-left: 0; /* マージンを調整 */
+    width: 100%; /* テキストコンテナの幅を80%に変更 */
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .answer-3-text {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 20px; /* フォントサイズを変更 */
+    margin-top: 10px; /* マージンを調整 */
+    overflow: hidden;
+  }
+
+  .answer-3-text-2 {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 10px; /* フォントサイズを変更 */
+    margin-top: 5px; /* マージンを調整 */
+    overflow: hidden;
+    white-space: normal; /* テキストが親要素内に折り返されるようにする */
+  }
 }

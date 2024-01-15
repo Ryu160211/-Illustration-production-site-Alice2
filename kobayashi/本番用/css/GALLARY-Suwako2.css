@@ -10,7 +10,7 @@ body {
   flex-direction: row;
 }
 
-.matome {
+.mleft-side-of-screen {
   flex: 1;
   width: 600px;
   height: 1400px;
@@ -19,7 +19,7 @@ body {
   margin: 50px 0% 0 19%; /* 画面幅に対する相対的な値に変更 */
   box-sizing: border-box;
 }
-.image-container {
+.sample-image-container {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -94,7 +94,7 @@ body {
   display: flex;
 }
 
-.matome2 {
+.right-side-of-screen {
   margin: 50px 5% 0 5%; /* 画面幅に対する相対的な値に変更 */
   flex: 1; /* フレックスアイテムを均等に広げる */
   width: 0px;
@@ -103,9 +103,9 @@ body {
   box-sizing: border-box; /* ボーダーやパディングも要素の幅に含まれるようにする */
 }
 .matome3 {
-  margin-left: 30px;
+  margin-left: 40px;
   width: 400px;
-  height: 130px;
+  height: 120px;
   text-align: left;
 }
 .aikon {
@@ -156,18 +156,7 @@ body {
   z-index: 3;
   white-space: nowrap;
 }
-.FOLLOW {
-  margin-top: 20px;
-  margin-left: 100px;
-  white-space: nowrap;
-  color: #ffffff;
-  font-size: 15px;
-  font-family: "けいふぉんと";
-  z-index: 3;
-  letter-spacing: 1px;
-}
-.kouhyouka {
-  display: flex;
+.block-1 {
   justify-content: flex-start;
   margin-left: 0px;
   margin-top: 0px;
@@ -175,54 +164,61 @@ body {
 
 .black-border {
   white-space: nowrap;
-  width: 100px; /* 要素の幅を指定 */
-  height: 58px; /* 要素の高さを指定 */
+  width: 80px; /* 要素の幅を指定 */
+  height: 30px; /* 要素の高さを指定 */
   margin-top: 20px;
-  margin-left: 10px;
   border: 2px solid rgb(199, 199, 199); /* 黒い枠線を指定 */
   border-radius: 10px; /* 四方を丸める半径を指定 */
 }
 .gray-circle {
   margin-top: 0px;
-  margin-left: 55px;
+  margin-left: 30px;
   width: 40px; /* 円の直径を指定 */
-  height: 40px; /* 円の直径を指定 */
+  height: 20px; /* 円の直径を指定 */
   border-radius: 50%; /* border-radiusを50%に設定して円形にする */
 }
-.guddo {
-  margin-top: 13px;
+.Evaluation-image {
+  margin-top: 3px;
   margin-left: 10px;
-  width: 30px;
-  height: 25px;
+  width: 20px;
+  height: auto;
   float: left;
 }
-.suuti {
-  margin-left: 7px;
-  margin-top: 5px;
+/* 
+.Evaluation-image {
+  margin-top: 3px;
+  margin-left: 10px;
+  width: 20px;
+  height: auto;
+  float: left;
+  filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="redify"><feColorMatrix type="matrix" values="1.5 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 1 0"/></filter></svg>#redify');
+}*/
+.numerical-value {
+  margin-left: 20px;
   z-index: 10;
   color: #2e2e2e;
-  font-size: 35px;
+  font-size: 19px;
 }
 
 .vertical-box {
   margin-top: 0px;
   margin-left: 0px;
-
-  display: flex;
+  width: 325px;
+  height: 50px;
+  text-align: center;
   flex-direction: column; /* 縦に並べる */
 }
-.name,
+.character-name,
 .nameenglish {
   color: #100f0f;
   text-align: left;
   z-index: 3;
 }
 
-.name {
+.character-name {
   font-size: 30px;
   font-family: "ぼくたちのゴシック2ボールド";
   padding: 0;
-  margin-top: 20px; /*上部の余白を追加 */
   margin-left: 0px;
   letter-spacing: 10px;
 }
@@ -230,38 +226,26 @@ body {
 .nameenglish {
   font-size: 7px;
   font-family: "LEMON MILK";
-
   padding: 0; /* 余白を0に設定 */
   margin-top: 0; /* 余白を0に設定 */
-
   letter-spacing: 10px;
 }
 
 .gray-background {
-  width: 290px;
-  height: 100px;
-  margin-top: 40px;
-  margin-left: 40px;
-  background-color: #e4e4e4; /* 赤い背景色に変更 */
-  padding: 10px;
-  border-radius: 10px 10px 10px 10px; /* 左下と右下の角を丸める */
-}
-
-.download-container {
-  margin-top: 0px;
-  margin-left: 100px;
-  display: flex;
-  align-items: center;
+  margin-top: 10px;
+  margin-left: 37px;
+  width: 325px;
+  text-align: left;
 }
 
 .download-button {
+  width: 315px;
+  height: 50px;
   background-color: #e6a0a0;
   border: none;
-  border-radius: 10px;
   text-decoration: none;
   z-index: 3;
   margin-top: 15px; /* 上部の余白を相対的な値で微調整 */
-  margin-left: 25px; /* 左側の余白を相対的な値で微調整 */
   padding: 5px 30px;
   color: #ffffff;
   font-family: "LEMON MILK";
@@ -269,9 +253,22 @@ body {
   display: inline-block;
   white-space: nowrap;
 }
-
+.pictogram-image {
+  width: 30px;
+  height: auto;
+  margin-left: 30px;
+  margin-top: 2px;
+  float: left;
+}
 .download-button:hover {
   background-color: #cc2525; /* ホバー時の背景色 */
+}
+.download-characters {
+  margin-top: 8px;
+  margin-left: 70px;
+  font-family: "LEMON MILK";
+  font-weight: bold;
+  font-size: 20px;
 }
 .gray-rectangle {
   margin-top: 70px;
@@ -313,16 +310,16 @@ body {
   font-weight: bold; /* 太字 */
 }
 .line {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 40px;
   width: 310px; /* 例として200pxの幅を指定 */
-  border: 1px solid rgba(200, 72, 72, 0.818);
+  border: 1px solid rgba(216, 210, 210, 0.818);
 }
 .line2 {
-  margin-top: 80px;
+  margin-top: 40px;
   margin-left: 40px;
   width: 310px; /* 例として200pxの幅を指定 */
-  border: 1px solid rgba(200, 72, 72, 0.818);
+  border: 1px solid rgba(216, 210, 210, 0.818);
 }
 .comment-item {
   margin-bottom: 10px;
@@ -330,4 +327,118 @@ body {
 .comment {
   /* コメント全体に対するスタイル */
   flex: 1; /* コメントボックスとボタンが親要素内で均等に広がるようにする */
+}
+.illustrator-box {
+  width: 315px;
+  height: 100px;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+.gray-box {
+  width: 315px; /* 幅を適宜変更 */
+  height: 70px; /* 高さを適宜変更 */
+  background-color: rgb(244, 244, 244);
+  border-radius: 10px;
+  float: left;
+}
+.icon {
+  width: 50px;
+  height: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+}
+.name-box {
+  width: 200px;
+  height: 30px;
+  margin-top: 10px; /* 20pxから0に変更 */
+  margin-left: 80px;
+}
+.Creator-name {
+  font-size: 17px;
+  font-family: "ぼくたちのゴシック2ボールド";
+  padding: 0;
+  letter-spacing: 2px;
+}
+.follow-box {
+  width: 150px;
+  background-color: rgb(43, 43, 43);
+  text-align: center;
+}
+.follow {
+  font-size: 15px;
+  font-family: "LEMON MILK";
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+.Individual-terms-box {
+  width: 300px;
+  height: 120px;
+  text-align: left;
+  display: none; /* 通常は非表示にする */
+  overflow-wrap: break-word; /* 長い単語を折り返す */
+}
+
+.Individual-terms {
+  display: none; /* 通常は非表示にする */
+}
+/* 
+.follow-box {
+  width: 150px;
+  background-color: rgb(174, 220, 222);
+  text-align: center;
+}
+.follow {
+  font-size: 15px;
+  font-family: "LEMON MILK";
+  color: #303030;
+  letter-spacing: 1px;
+}*/
+@media screen and (max-width: 600px) {
+  .main_container {
+    flex-direction: column;
+  }
+
+  .mleft-side-of-screen {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+  .explanation {
+    display: none;
+  }
+  .Related-summary {
+    display: none;
+  }
+  .right-side-of-screen {
+    margin: 50px 0% 0 0%;
+  }
+  .matome3 {
+    margin-left: 40px;
+    width: 300px;
+    height: 120px;
+    text-align: left;
+  }
+  .rounded-box {
+    width: 100%;
+  }
+  .Individual-terms-box,
+  .Individual-terms {
+    display: block; /* 画面幅が600px以下の場合に表示する */
+  }
+  .Individual-terms-box {
+    width: 300px;
+    height: 80px;
+    word-wrap: break-word;
+  }
+
+  .Individual-terms {
+    margin-top: 20px;
+    font-size: 10px;
+    font-family: "ぼくたちのゴシック2ボールド";
+    font-weight: lighter;
+  }
+  .line {
+    margin-top: 90px;
+  }
 }

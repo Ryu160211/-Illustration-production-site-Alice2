@@ -1,61 +1,50 @@
-document.addEventListener("DOMContentLoaded", function () {
-  document
-    .querySelector(".black-square")
-    .addEventListener("click", checkRequiredInputs);
+document.querySelector(".black-square").addEventListener("click", function () {
+  // ユーザー名のチェック
+  var username = document.getElementById("name").value;
+  if (username.length < 2 || username.length > 7) {
+    alert("2～7文字以内でユーザー名を設定してください");
+    return;
+  }
+  if (/\s/.test(username)) {
+    alert("空白を使用しないでユーザー名を設定してください");
+    return;
+  }
+  if (username.trim() === "") {
+    alert("ユーザー名を設定してください");
+    return;
+  }
+
+  // パスワードのチェック
+  var password = document.getElementById("PS").value;
+  if (password.trim() === "") {
+    alert("パスワードを設定してください");
+    return;
+  }
+  if (/[^A-Za-z0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
+    alert("英半角数字記号以外を使用せずパスワードを設定してください");
+    return;
+  }
+  if (password.length < 6 || password.length > 32) {
+    alert("6～32文字以内でパスワードを設定してください");
+    return;
+  }
+
+  // パスワード(確認)のチェック
+  var passwordConfirmation = document.getElementById("confirmation").value;
+  if (passwordConfirmation.trim() === "") {
+    alert("パスワードを入力してください");
+    return;
+  }
+  if (password !== passwordConfirmation) {
+    alert("パスワードが一致しません");
+    return;
+  }
+
+  // 全ての条件を満たした場合、LocalStorageに値を保存
+  localStorage.setItem("name", username);
+  localStorage.setItem("Gmail", email);
+  localStorage.setItem("PS", password);
+
+  // Member-registration-3.htmlに移動
+  window.location.href = "Member-registration-3.html";
 });
-
-function checkRequiredInputs(event) {
-  var nameValue = document.getElementById("name").value;
-  var gmailValue = document.getElementById("Gmail").value;
-  var psValue = document.getElementById("PS").value;
-  var confirmationValue = document.getElementById("confirmation").value;
-
-  if (
-    !isValidInput(nameValue) ||
-    !isValidLength(nameValue, 2, 7) ||
-    nameValue.trim() === "" ||
-    nameValue.includes(" ")
-  ) {
-    alert("ユーザー名を2～7文字で入力してください。空白は使用できません。");
-    event.preventDefault();
-    return;
-  }
-
-  if (gmailValue.trim() === "") {
-    alert("Gmailを入力してください。");
-    event.preventDefault();
-    return;
-  }
-
-  if (
-    !isValidInput(psValue) ||
-    psValue !== psValue.toLowerCase() ||
-    !isValidLength(psValue, 6, 32)
-  ) {
-    alert(
-      "パスワードは半角英数記号で6～32文字以内で入力してください。大文字は使用できません。"
-    );
-    event.preventDefault();
-    return;
-  }
-
-  if (confirmationValue.trim() === "" || confirmationValue !== psValue) {
-    alert("パスワードが一致しません。再度入力してください。");
-    event.preventDefault();
-    return;
-  }
-
-  // 全ての条件に合致した場合
-  localStorage.setItem("confirmedName", nameValue);
-  localStorage.setItem("confirmedGmail", gmailValue);
-  localStorage.setItem("confirmedPS", psValue);
-}
-
-function isValidInput(value) {
-  var regex = /^[a-zA-Z0-9!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]+$/;
-  return regex.test(value);
-}
-
-function isValidLength(value, minLength, maxLength) {
-  return value.length >= minLength && value.length <= maxLength;
-}
