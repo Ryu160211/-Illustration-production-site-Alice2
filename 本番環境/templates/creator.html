@@ -1,0 +1,71 @@
+{% extends "base.html" %} {% block main %}
+<div class="main-container">
+  <div class="header-container">
+    <header class="custom-header"></header>
+    <div class="icon-container">
+      <img src="{{ url_for('static', filename=creator.icon) }}" class="icon" />
+    </div>
+    <div class="follow-box">
+      <h1 class="follow">follow</h1>
+    </div>
+  </div>
+  <div class="main2-container">
+    <div class="name-container">
+      <div class="name-box">
+        <div class="name">{{ creator.name }}</div>
+      </div>
+      <div class="SNS-container">
+        <div class="SNS-background">
+          <a href="{{ creator.twitter }}" class="SNS-name">Twitter</a>
+        </div>
+
+        <div class="SNS-background">
+          <a href="{{ creator.pixiv }}" class="SNS-name">pixiv</a>
+        </div>
+        <div class="SNS-background">
+          <a href="{{ creator.skeb }}" class="SNS-name">skeb</a>
+        </div>
+        <div class="SNS-background">
+          <a href="mailto:dorocie.illustration@gmail.com" class="SNS-name"
+            >Mail</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="self-introduction-box">
+      <h1 class="self-introduction">{{ creator.introduce }}</h1>
+    </div>
+    <div class="line"></div>
+
+    <div class="illustration-box">
+      <h1 class="illustration">Illust</h1>
+    </div>
+    <div class="illustration_field1">
+      <a href="https://www.pixiv.net/artworks/105599722"
+        ><img src="image/artist/どろしΞ/compress_Fx3ZSpsaUAU07BZ.png"
+      /></a>
+    </div>
+    <div class="illustration_field2">
+      <a href="https://www.pixiv.net/artworks/93874417"
+        ><img src="image/artist/どろしΞ/compress_Vyoutube.png"
+      /></a>
+    </div>
+    <div class="illustration_field3">
+      <a href="https://www.pixiv.net/artworks/113055653"
+        ><img src="image/artist/どろしΞ/compress_博麗霊夢_背景.png"
+      /></a>
+    </div>
+
+    <div class="illustration-box">
+      <h1 class="illustration">the work</h1>
+    </div>
+    {% for content in contents %}
+    <div class="the-work{{ loop.index }}">
+      <a href="GALLARY-Suwako2.html"
+        ><img src="{{ url_for('static', filename=content.filename) }}"
+      /></a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

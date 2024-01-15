@@ -56,6 +56,13 @@ def creators():
     creators = Creator.query.order_by(Creator.id.asc()).all()
     return render_template('creators.html', css='css/creators.css', title=title, creators=creators)
 
+@app.route('/creators/<creator_id>')
+def creator(creator_id):
+    creator = Creator.query.filter_by(id=creator_id).first()
+    title = '東方立ち絵広場-' + creator.name
+    contents = Content.query.filter_by(creator_id=creator.id).limit(4).all()
+    return render_template('creator.html', css='css/creator.css', title=title, creator=creator,  contents=contents)
+
 @app.route('/how')
 def how():
     return 'how'

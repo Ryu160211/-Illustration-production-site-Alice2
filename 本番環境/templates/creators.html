@@ -3,7 +3,7 @@
   <div class="creator_container">
     {% for creator in creators %}
     <div class="creator">
-      <a href="#">
+      <a href="{{ url_for('creator', creator_id=creator.id) }}">
         <img
           src="{{ url_for('static', filename=creator.icon) }}"
           alt="{{ creator.name }}"
