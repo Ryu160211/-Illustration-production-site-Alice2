@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 
 app = Flask(__name__)
-db_uri = "postgresql://postgres:postgres@localhost:5432/test"
+db_uri = "sqlite:///database.db"
 app.config["SQLALCHEMY_DATABASE_URI"] = db_uri
 db = SQLAlchemy(app)
 
@@ -41,14 +41,14 @@ class Character(db.Model):
 
 class Like(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
-    content_id = db.Column(db.Integer, db.ForeignKey("image.id"))
+    user_id = db.Column(db.Integer, index=True)
+    content_id = db.Column(db.Integer, index=True)
 
 
 class Follow(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
-    creator_id = db.Column(db.Integer, db.ForeignKey("creator.id"))
+    user_id = db.Column(db.Integer, index=True)
+    creator_id = db.Column(db.Integer, index=True)
 
 class AdminUser(db.Model):
     id = db.Column(db.Integer, primary_key=True)
