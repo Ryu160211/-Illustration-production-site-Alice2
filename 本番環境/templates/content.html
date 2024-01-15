@@ -1,0 +1,101 @@
+{% extends "base.html" %} {% block main %}
+
+<div class="main_container">
+  <!-- 画面左側 -->
+  <div class="matome">
+    <div class="image-container">
+      <img
+        src="{{ url_for('static', filename=content.filename) }}"
+        class="imageactive"
+      />
+    </div>
+    <h1 class="explanation">{{ content.desc| safe }}</h1>
+
+    <div class="Related-summary">
+      <h1 class="connection">その他の立ち絵</h1>
+      <div class="triangle"></div>
+      <div class="Other-portraits">
+        {% for other_content in other_contents %}
+        <div class="other_image">
+          <a
+            href="{{ url_for('content',content_name=other_content.name, content_id=other_content.id) }}"
+          >
+            <img
+              class="image"
+              src="{{ url_for('static', filename=other_content.icon) }}"
+              id="yadaImage"
+          /></a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- 画面右側 -->
+  <div class="matome2">
+    <div class="matome3">
+      <div class="aikon">
+        <div class="artist_icon">
+          <a href="Droshi.html"
+            ><img
+              src="{{ url_for('static', filename=creator.icon) }}"
+              class="imageactive2"
+          /></a>
+        </div>
+        <div class="rounded-box">
+          <p class="moji">{{ creator.name }}</p>
+          <p class="FOLLOW">FOLLOW</p>
+        </div>
+      </div>
+      <div class="kouhyouka">
+        <div class="vertical-box">
+          <h1 class="name">{{ character.jp_name }}</h1>
+          <h1 class="nameenglish">{{ character.en_name }}</h1>
+        </div>
+        <div class="black-border" id="clickableImage">
+          <img src="image/グッド.png" class="guddo" />
+          <div class="gray-circle"><h1 class="suuti">0</h1></div>
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="gray-background">
+      <div class="download-container"></div>
+      <a
+        href="download/シンゆっくり茶番劇祭_諏訪子_どろしΞ.zip"
+        download="洩矢諏訪子.zip"
+        class="download-button"
+      >
+        <span style="font-size: 25px; display: flex; align-items: center"
+          >Download</span
+        >
+      </a>
+    </div>
+    <div class="line2"></div>
+    <div class="gray-rectangle">
+      <div class="comment-box">
+        <input
+          type="text"
+          class="comment-input"
+          placeholder="コメントする..."
+        />
+        <button class="decision-button" onclick="showAlert()">決定</button>
+        <div class="comment">
+          <div class="comment-item">
+            <span class="bold-name"><b>太字の名前:</b><br /></span>
+            ここに文字を記載します。
+          </div>
+          <div class="comment-item">
+            <span class="bold-name"><b>太字の名前:</b><br /></span>
+            ここに文字を記載します。
+          </div>
+          <!-- 他のコメントアイテムも同様に追加 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/GALLERY2.js"></script>
+<script src="js/Other-portraits.js"></script>
+
+{% endblock %}

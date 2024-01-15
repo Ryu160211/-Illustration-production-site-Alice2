@@ -11,20 +11,25 @@ content_df = pd.read_csv("./static/csv/content_data.csv")
 creator_df = pd.read_csv("./static/csv/creator_data.csv")
 
 with app.app_context():
+    db.session.query(Character).delete()
+    db.session.query(Content).delete()
+    db.session.query(Creator).delete()
+    db.session.commit()
+    
     for index, row in chara_df.iterrows():
         character = Character(id=row["id"], name=row["name"])
         db.session.add(character)
 
-    # for index, row in content_df.iterrows():
-    #     content = Content(
-    #         id=row["id"],
-    #         name=row["name"],
-    #         character_id=row["character_id"],
-    #         filename=row["filename"],
-    #         icon=row["icon"],
-    #         desc=row["desc"],
-    #     )
-    #     db.session.add(content)
+    for index, row in content_df.iterrows():
+        content = Content(
+            id=row["id"],
+            name=row["name"],
+            character_id=row["character_id"],
+            filename=row["filename"],
+            icon=row["icon"],
+            desc=row["desc"],
+        )
+        db.session.add(content)
 
     for index, row in creator_df.iterrows():
         creator = Creator(

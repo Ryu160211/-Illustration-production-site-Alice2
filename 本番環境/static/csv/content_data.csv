@@ -1,2 +1,4 @@
 ﻿id,name,creator_id,character_id,filename,icon,desc
-1,,,,,,
+1,洩矢諏　訪子,3,7,static/image/drawthy/drawthy_sample_suwako1.jpg,static/image/drawthy/drawthy_icon_suwako1.jpg,諏訪子の立ち絵です。
+2,高麗野　輝夜,3,3,static/image/drawthy/drawthy_sample_kaguya1.jpg,static/image/drawthy/drawthy_icon_kaguya1.jpg,輝夜の立ち絵です。
+3,マエリベリー・ハーン,3,11,static/image/drawthy/drawthy_sample_maeriberry1.jpg,static/image/drawthy/drawthy_sample_maeriberry1.jpg,マエリベリーの立ち絵です。
