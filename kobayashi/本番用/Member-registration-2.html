@@ -60,7 +60,6 @@
     <!-- menubar -->
     <div class="container1">
       <!-- グレーの四角形を表示する要素 -->
-      <div class="gray-square">
         <p class="letter">会員登録</p>
         <div class="White-square">
           <!-- 名前の入力欄 -->
@@ -75,16 +74,7 @@
             <p class="name-condition">全角半角2～7字以内</p>
           </div>
           <!--<div class="dotted-border"></div>-->
-          <!-- Gmailの入力欄 -->
-          <div class="Gmail hidden">
-            <label for="Gmail-label">Gmail:</label>
-            <input
-              type="Gmailtext"
-              id="Gmail"
-              class="comment-input-Gmail"
-              placeholder="Gmailを入力してください…"
-            />
-          </div>
+
           <!--<div class="dotted-border2"></div>-->
           <!-- PSの入力欄 -->
           <div class="PS hidden">
@@ -109,7 +99,7 @@
           </div>
         </div>
 
-        <div class="black-square">
+        <div class="black-square" onclick="validateForm()">
           <p class="Next-text">入力項目の確認へ</p>
         </div>
       </div>

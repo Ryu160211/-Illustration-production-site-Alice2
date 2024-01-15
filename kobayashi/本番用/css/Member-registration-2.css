@@ -22,12 +22,9 @@
 }
 
 .White-square {
-  position: relative; /* 絶対的な位置指定 */
-  top: 35%; /* 上端の位置を親要素の中央に配置 */
-  left: 50%; /* 左端の位置を親要素の中央に配置 */
-  transform: translate(-50%, -50%); /* 中央揃え */
+  margin-left: auto;
+  margin-right: auto;
   width: 80%;
-  height: 70%;
   background-color: rgb(255, 255, 255); /* 白い色に指定 */
   border-radius: 10px;
   z-index: 2;
@@ -176,7 +173,7 @@
   margin: 0;
 }
 .black-square {
-  margin-top: 30px;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
