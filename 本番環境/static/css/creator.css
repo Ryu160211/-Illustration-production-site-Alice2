@@ -4,6 +4,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  margin-bottom: 100px;
   box-sizing: border-box;
 }
 
@@ -144,20 +145,19 @@
   letter-spacing: 2px;
   text-align: center;
 }
-#illustration_field1 {
-  margin-top: 20px;
+.illustration_field1 {
   width: 400px;
   height: 400px;
   float: left;
   overflow: hidden; /* はみ出た部分を非表示にする */
 }
 
-#illustration_field1 img {
+.illustration_field1 img {
   width: 100%; /* 画像を親要素の幅に合わせる */
   height: auto; /* 高さを自動調整 */
 }
 
-#illustration_field2 {
+.illustration_field2 {
   margin-top: 20px;
   width: 400px;
   height: 190px;
@@ -165,14 +165,14 @@
   overflow: hidden; /* はみ出た部分を非表示にする */
 }
 
-#illustration_field2 img {
+.illustration_field2 img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* 画像を親要素にフィットさせる */
   object-position: 20% 20%; /* 左から20%、上から80%の位置に表示 */
 }
 
-#illustration_field3 {
+.illustration_field3 {
   margin-top: 20px;
   width: 400px;
   height: 190px;
@@ -180,7 +180,7 @@
   overflow: hidden; /* はみ出た部分を非表示にする */
 }
 
-#illustration_field3 img {
+.illustration_field3 img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* 画像を親要素にフィットさせる */
