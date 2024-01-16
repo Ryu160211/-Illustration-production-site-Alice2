@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "LEMON MILK"; /* フォントファミリーの名前を指定 */
+  src: url("font/LemonMilk.otf") format("opentype"); /* フォントファイルのパスと形式を指定 */
+  font-weight: normal;
+  font-style: normal;
+}
 .container1 {
   width: 900px;
   height: 620px;

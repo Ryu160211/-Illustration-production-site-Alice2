@@ -42,7 +42,6 @@ document.querySelector(".black-square").addEventListener("click", function () {
 
   // 全ての条件を満たした場合、LocalStorageに値を保存
   localStorage.setItem("name", username);
-  localStorage.setItem("Gmail", email);
   localStorage.setItem("PS", password);
 
   // Member-registration-3.htmlに移動

@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "LEMON MILK"; /* フォントファミリーの名前を指定 */
+  src: url("font/LemonMilk.otf") format("opentype"); /* フォントファイルのパスと形式を指定 */
+  font-weight: normal;
+  font-style: normal;
+}
 .main-container {
   width: 90%; /* 1300px の 80% */
   max-width: 1300px; /* 最大幅を指定 */
@@ -34,7 +40,7 @@
 
 .interrogative-text {
   font-size: 50px;
-  font-family: "けいふぉんと";
+  font-family: "M PLUS 1", sans-serif;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -47,7 +53,7 @@
   font-size: 20px;
   font-family: "LEMON MILK";
   margin-top: 0;
-  margin-left: 90px;
+  margin-left: 130px;
   letter-spacing: 10px;
   white-space: nowrap;
   bottom: 0;
@@ -75,10 +81,11 @@
 
   .interrogative-text {
     letter-spacing: 0px;
-    font-size: 22px;
+    font-size: 21px;
     margin-top: 10px;
     text-align: center;
     white-space: normal;
+    font-family: "Dela Gothic One", sans-serif;
   }
 
   .interrogative-text-2 {
@@ -124,7 +131,7 @@
 }
 .answer-1-text {
   font-size: 40px;
-  font-family: "けいふぉんと";
+  font-family: "M PLUS 1", sans-serif;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
@@ -134,7 +141,8 @@
 }
 .answer-1-text-2 {
   font-size: 20px;
-  font-family: "ぼくたちのゴシック2ボールド";
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-family: "Alata", sans-serif;
   margin-top: 0;
   margin-left: 0px;
   letter-spacing: 3px;
@@ -175,7 +183,7 @@
     text-align: center;
     letter-spacing: 0px;
     font-size: 10px; /* フォントサイズを変更 */
-    margin-top: 5px; /* マージンを調整 */
+    margin-top: 0px; /* マージンを調整 */
     overflow: hidden;
     white-space: normal; /* テキストが親要素内に折り返されるようにする */
   }
@@ -214,7 +222,7 @@
 }
 .answer-2-text {
   font-size: 40px;
-  font-family: "けいふぉんと";
+  font-family: "M PLUS 1", sans-serif;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
@@ -224,7 +232,7 @@
 }
 .answer-2-text-2 {
   font-size: 20px;
-  font-family: "ぼくたちのゴシック2ボールド";
+  font-family: "Alata", sans-serif;
   margin-top: 0;
   margin-left: 0px;
   letter-spacing: 3px;
@@ -265,7 +273,7 @@
     text-align: center;
     letter-spacing: 0px;
     font-size: 10px; /* フォントサイズを変更 */
-    margin-top: 5px; /* マージンを調整 */
+    margin-top: 0px; /* マージンを調整 */
     overflow: hidden;
     white-space: normal; /* テキストが親要素内に折り返されるようにする */
   }
@@ -304,7 +312,7 @@
 }
 .answer-3-text {
   font-size: 40px;
-  font-family: "けいふぉんと";
+  font-family: "M PLUS 1", sans-serif;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
@@ -314,7 +322,7 @@
 }
 .answer-3-text-2 {
   font-size: 20px;
-  font-family: "ぼくたちのゴシック2ボールド";
+  font-family: "Alata", sans-serif;
   margin-top: 0;
   margin-left: 0px;
   letter-spacing: 3px;
@@ -355,7 +363,7 @@
     text-align: center;
     letter-spacing: 0px;
     font-size: 10px; /* フォントサイズを変更 */
-    margin-top: 5px; /* マージンを調整 */
+    margin-top: 0px; /* マージンを調整 */
     overflow: hidden;
     white-space: normal; /* テキストが親要素内に折り返されるようにする */
   }

@@ -2,6 +2,12 @@ body {
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: "LEMON MILK"; /* フォントファミリーの名前を指定 */
+  src: url("font/LemonMilk.otf") format("opentype"); /* フォントファイルのパスと形式を指定 */
+  font-weight: normal;
+  font-style: normal;
+}
 .main_container {
   display: flex;
   max-width: 100%; /* これを追加 */
@@ -33,22 +39,15 @@ body {
   margin-top: 20px;
   white-space: nowrap;
   font-size: 15px;
-  font-family: "ぼくたちのゴシック2ボールド";
+  font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: lighter;
 }
-.explanation {
-  white-space: nowrap;
-  font-size: 15px;
-  font-family: "ぼくたちのゴシック2ボールド";
-  font-weight: lighter;
-}
-
 /* 関連素材 */
 .connection {
   margin-left: 210px;
   margin-top: 260px;
   font-size: 20px;
-  font-family: "ぼくたちのゴシック2ボールド";
+  font-family: "Zen Kaku Gothic New", sans-serif;
   color: #383838;
   letter-spacing: 2px;
   white-space: nowrap;
@@ -151,7 +150,7 @@ body {
   margin-left: 0px;
   color: #100f0f;
   font-size: 15px;
-  font-family: "ぼくたちのゴシック2ボールド";
+  font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: lighter;
   z-index: 3;
   white-space: nowrap;
@@ -217,7 +216,7 @@ body {
 
 .character-name {
   font-size: 30px;
-  font-family: "ぼくたちのゴシック2ボールド";
+  font-family: "Zen Kaku Gothic New", sans-serif;
   padding: 0;
   margin-left: 0px;
   letter-spacing: 10px;
@@ -356,7 +355,7 @@ body {
 }
 .Creator-name {
   font-size: 17px;
-  font-family: "ぼくたちのゴシック2ボールド";
+  font-family: "LEMON MILK";
   padding: 0;
   letter-spacing: 2px;
 }
@@ -435,7 +434,7 @@ body {
   .Individual-terms {
     margin-top: 20px;
     font-size: 10px;
-    font-family: "ぼくたちのゴシック2ボールド";
+    font-family: "LEMON MILK";
     font-weight: lighter;
   }
   .line {

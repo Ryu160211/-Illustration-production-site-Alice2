@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "LEMON MILK"; /* フォントファミリーの名前を指定 */
+  src: url("font/LemonMilk.otf") format("opentype"); /* フォントファイルのパスと形式を指定 */
+  font-weight: normal;
+  font-style: normal;
+}
 .main-container {
   width: 1000px;
   height: auto;
@@ -15,7 +21,7 @@
 }
 
 header {
-  background-image: url(../image/artist/どろしΞ/compress_初音ミク.png);
+  background-image: url(../image/artist/どろしΞ/compress_どろしΞ_header.png);
   background-size: cover;
   background-position: 50% 70%;
   margin: 0 auto;
@@ -83,7 +89,7 @@ header {
 
 .name {
   font-size: 35px;
-  font-family: "ぼくたちのゴシック２ボールド";
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
 .SNS-container {
@@ -122,7 +128,7 @@ header {
 .self-introduction {
   margin-top: 20px;
   font-size: 19px;
-  font-family: "ほのか新丸ゴシック";
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
 .line {
