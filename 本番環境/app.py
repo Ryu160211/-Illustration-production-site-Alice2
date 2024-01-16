@@ -67,7 +67,9 @@ def creator(creator_id):
 
 @app.route('/how')
 def how():
-    return 'how'
+    title = '東方立ち絵広場-how to'
+    css = 'css/how.css'
+    return render_template('how.html', title=title, css=css)
 
 @app.route('/rule')
 def rule():
