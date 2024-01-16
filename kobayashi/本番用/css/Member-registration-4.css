@@ -1,6 +1,7 @@
 .container1 {
-  width: 900px;
-  height: 620px;
+  width: 90%;
+  max-width: 900px; /* 最大幅を設定 */
+  height: auto;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -9,37 +10,25 @@
 .gray-square {
   position: relative;
   width: 100%;
-  height: 40%;
+  height: 20%; /* 高さを調整 */
   background-color: rgb(216, 216, 216);
   border-radius: 10px;
   z-index: 1;
 }
 
-.letter {
+.letter,
+.letter1 {
   font-size: 30px;
   letter-spacing: 3px;
   text-align: center;
 }
+
 .letter1 {
-  font-size: 50px;
-  letter-spacing: 3px;
+  font-size: 30px; /* テキストサイズを変更 */
   margin-top: 10px;
-  text-align: center;
 }
 
 /* 黒い四角 */
-.black-square {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.Next-text {
-  font-size: 16px;
-  margin: 0;
-}
-
 .black-square {
   margin-top: 0px;
   margin-left: auto;
@@ -49,16 +38,36 @@
   align-items: center;
   text-align: center;
   width: 50%;
-  height: 30%;
+  height: 70px;
   background-color: rgb(41, 41, 41);
   border-radius: 10px;
   z-index: 2;
   text-decoration: none;
 }
-
+.black-square a {
+  text-decoration: none; /* リンクの下線を非表示にする */
+}
 .Next-text {
   font-size: 20px;
   color: rgb(255, 255, 255);
   margin: 0;
   padding: 0;
+  text-decoration: none; /* リンクの下線を非表示 */
+}
+
+/* メディアクエリを追加 */
+@media only screen and (min-width: 600px) {
+  .letter,
+  .letter1 {
+    font-size: 40px; /* テキストサイズを変更 */
+  }
+
+  .black-square {
+    margin-top: 0; /* 上部の余白をリセット */
+    width: 30%; /* 幅を変更 */
+  }
+
+  .Next-text {
+    font-size: 20px; /* テキストサイズを変更 */
+  }
 }

@@ -35,7 +35,6 @@
   width: 800px;
   height: 70px;
   display: inline-block;
-  font-family: "LEMON MILK";
   font-size: 30px;
   margin-left: 70px;
   margin-top: 80px;
@@ -43,7 +42,9 @@
   vertical-align: middle;
   position: relative;
 }
-
+label[for="name-label"] {
+  font-family: "LEMON MILK";
+}
 .comment-input {
   margin-left: 30px;
   width: 500px;
@@ -72,14 +73,15 @@
   width: 800px;
   height: 70px;
   display: inline-block;
-  font-family: "LEMON MILK";
   font-size: 30px;
   margin-left: 70px;
   margin-top: 15px;
   align-items: center;
   vertical-align: middle;
 }
-
+label[for="PS-label"] {
+  font-family: "LEMON MILK";
+}
 .comment-input-PS {
   margin-left: 85px;
   width: 500px;
@@ -158,14 +160,17 @@
   background-color: rgb(41, 41, 41);
   border-radius: 10px;
   z-index: 2;
-  text-decoration: none;
+  text-decoration: none; /* リンクの下線を非表示 */
 }
-
+.black-square a {
+  text-decoration: none; /* リンクの下線を非表示にする */
+}
 .Next-text {
   font-size: 20px;
   color: rgb(255, 255, 255);
   margin: 0;
   padding: 0;
+  text-decoration: none; /* リンクの下線を非表示 */
 }
 @media only screen and (max-width: 600px) {
   .container1 {
@@ -176,6 +181,18 @@
   .name {
     margin-top: 0;
   }
+  .comment-input {
+    margin-left: 0;
+  }
+
+  .PS {
+    margin-top: 40px;
+  }
+  .White-square {
+    width: 100%;
+    height: 230px;
+  }
+
   .name,
   .comment-input,
   .dotted-border,
@@ -201,7 +218,7 @@
   .comment-input,
   .comment-input-PS,
   .comment-input-confirmation {
-    margin-left: 10px; /* マージンを変更 */
+    margin-left: 0px; /* マージンを変更 */
   }
 
   .ps-condition {
