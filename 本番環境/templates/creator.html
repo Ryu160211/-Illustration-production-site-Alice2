@@ -42,13 +42,15 @@
     <div class="illustration-box">
       <h1 class="illustration">Illust</h1>
     </div>
-    {% for otherwork in otherworks %}
-    <div id="illustration_field{{ otherwork.index }}">
-      <a href="#"
-        ><img src="{{ url_for('static', filename=otherwork.filename) }}"
-      /></a>
+    <div class="illustration-container">
+      {% for otherwork in otherworks %}
+      <div class="illustration_field{{ otherwork.index }}">
+        <a href="#"
+          ><img src="{{ url_for('static', filename=otherwork.filename) }}"
+        /></a>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
 
     <div class="illustration-box">
       <h1 class="illustration">the work</h1>
