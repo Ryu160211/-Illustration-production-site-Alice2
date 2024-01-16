@@ -1,5 +1,5 @@
 from flask import Flask, redirect, render_template, request, url_for
-from init_database import db, db_uri, User, Creator, Content, Character, Like, Follow, AdminUser
+from init_database import OtherWork, db, db_uri, User, Creator, Content, Character, Like, Follow, AdminUser
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 
@@ -16,6 +16,7 @@ class UserModelView(ModelView):
 admin = Admin(app, name='東方立ち絵素材', template_mode='bootstrap4')
 admin.add_view(UserModelView(User, db.session))
 admin.add_view(UserModelView(Creator, db.session))
+admin.add_view(UserModelView(OtherWork, db.session))
 admin.add_view(UserModelView(Content, db.session))
 admin.add_view(UserModelView(Character, db.session))
 
@@ -60,8 +61,9 @@ def creators():
 def creator(creator_id):
     creator = Creator.query.filter_by(id=creator_id).first()
     title = '東方立ち絵広場-' + creator.name
+    otherworks = OtherWork.query.filter_by(creator_id=creator.id).order_by(OtherWork.index.asc()).all()
     contents = Content.query.filter_by(creator_id=creator.id).limit(4).all()
-    return render_template('creator.html', css='css/creator.css', title=title, creator=creator,  contents=contents)
+    return render_template('creator.html', css='css/creator.css', title=title, creator=creator, otherworks=otherworks, contents=contents)
 
 @app.route('/how')
 def how():
