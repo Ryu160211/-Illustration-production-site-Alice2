@@ -121,9 +121,16 @@
               <h1 class="character-name">洩矢諏訪子</h1>
               <h1 class="nameenglish">Suwako Moriya</h1>
             </div>
-            <div class="black-border" id="clickableImage">
-              <img src="image/ハートのマーク2.png" class="Evaluation-image" />
-              <!-- <img src="image/ハートのマーク.png" class="Evaluation-image" />-->
+            <div
+              class="black-border"
+              id="clickableImage"
+              onclick="changeImage()"
+            >
+              <img
+                src="image/ハートのマーク2.png"
+                class="Evaluation-image"
+                id="heartImage"
+              />
               <div class="gray-circle"><h1 class="numerical-value">0</h1></div>
             </div>
             <div class="Individual-terms-box">
@@ -155,8 +162,9 @@
             </a>
             <div class="name-box">
               <h1 class="Creator-name">どろしΞ</h1>
-              <div class="follow-box">
+              <div class="follow-box" onclick="handleFollowClick()">
                 <h1 class="follow">follow</h1>
+              </div>
                 <!--切り替え用 <h1 class="follow">following</h1>-->
               </div>
             </div>
