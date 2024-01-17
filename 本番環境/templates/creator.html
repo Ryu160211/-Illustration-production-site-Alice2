@@ -16,26 +16,52 @@
       <div class="name-box">
         <div class="name">{{ creator.name }}</div>
       </div>
+      {% if creator.twitter %}
       <div class="SNS-container">
         <div class="SNS-background">
-          <a href="{{ creator.twitter }}" class="SNS-name">Twitter</a>
+          <a
+            href="{{ creator.twitter }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="SNS-name"
+            >Twitter</a
+          >
         </div>
-
+        {% endif %} {% if creator.pixiv %}
         <div class="SNS-background">
-          <a href="{{ creator.pixiv }}" class="SNS-name">pixiv</a>
+          <a
+            href="{{ creator.pixiv }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="SNS-name"
+            >pixiv</a
+          >
         </div>
+        {% endif %} {% if creator.skeb %}
         <div class="SNS-background">
-          <a href="{{ creator.skeb }}" class="SNS-name">skeb</a>
+          <a
+            href="{{ creator.skeb }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="SNS-name"
+            >skeb</a
+          >
         </div>
+        {% endif %} {% if creator.mail %}
         <div class="SNS-background">
-          <a href="mailto:dorocie.illustration@gmail.com" class="SNS-name"
+          <a
+            href="mailto:dorocie.illustration@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="SNS-name"
             >Mail</a
           >
         </div>
+        {% endif %}
       </div>
     </div>
     <div class="self-introduction-box">
-      <h1 class="self-introduction">{{ creator.introduce }}</h1>
+      <h1 class="self-introduction">{{ creator.introduce | safe}}</h1>
     </div>
     <div class="line"></div>
 
