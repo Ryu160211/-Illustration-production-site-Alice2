@@ -71,7 +71,7 @@
     <div class="illustration-container">
       {% for otherwork in otherworks %}
       <div class="illustration_field{{ otherwork.index }}">
-        <a href="#"
+        <a href="{{ otherwork.link }}" target="_blank" rel="noopener noreferrer"
           ><img src="{{ url_for('static', filename=otherwork.filename) }}"
         /></a>
       </div>
