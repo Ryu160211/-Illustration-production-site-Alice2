@@ -163,19 +163,22 @@ body {
 
 .black-border {
   white-space: nowrap;
-  width: 80px; /* 要素の幅を指定 */
-  height: 30px; /* 要素の高さを指定 */
+  width: 80px;
+  height: 30px;
   margin-top: 20px;
-  border: 2px solid rgb(199, 199, 199); /* 黒い枠線を指定 */
-  border-radius: 10px; /* 四方を丸める半径を指定 */
+  border: 2px solid rgb(199, 199, 199);
+  border-radius: 10px;
+  cursor: pointer;
 }
+
 .gray-circle {
   margin-top: 0px;
   margin-left: 30px;
-  width: 40px; /* 円の直径を指定 */
-  height: 20px; /* 円の直径を指定 */
-  border-radius: 50%; /* border-radiusを50%に設定して円形にする */
+  width: 40px;
+  height: 20px;
+  border-radius: 50%;
 }
+
 .Evaluation-image {
   margin-top: 3px;
   margin-left: 10px;
