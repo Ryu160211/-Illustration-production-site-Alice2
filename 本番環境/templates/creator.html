@@ -83,7 +83,7 @@
     </div>
     {% for content in contents %}
     <div class="the-work{{ loop.index }}">
-      <a href="GALLARY-Suwako2.html"
+      <a href="{{ url_for('content', content_id=content.id) }}"
         ><img src="{{ url_for('static', filename=content.filename) }}"
       /></a>
     </div>

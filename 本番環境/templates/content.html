@@ -60,7 +60,7 @@
         <div class="line2"></div>
         <div class="illustrator-box">
           <div class="gray-box">
-            <a href="Droshi.html"
+            <a href="{{ url_for('creator', creator_id=creator.id) }}"
               ><img
                 src="{{ url_for('static', filename=creator.icon) }}"
                 class="icon"

@@ -1,99 +1,27 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <link rel="stylesheet" href="css/Member-registration-1.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
-    <meta charset="utf-8" />
-
-    <title>立ち絵｜Member-registration</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            src="../static/icon.jpg"
-            alt="alice"
-            class="d-inline-block align-text-top"
-          />
-          Alice
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Artist</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">How to</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Rule</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Form</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- menubar -->
-    <div class="container1">
-      <!-- グレーの四角形を表示する要素 -->
-      <div class="gray-square">
-        <p class="letter">会員登録に関しての規約</p>
-        <div class="White-square">
-          <p class="white-text">
-            ◇適用◇<br />
-            1.
-            本規約は、当サイトの立ち絵を所持されたユーザーと立ち絵権利保持者との間の立ち絵の（利用.扱い　どっちが良いのか？）に関わる一切の関係に適用されるものとします。
-            2.
-            立ち絵利用に関し、本規約の他、ご利用に当たってのルール等、各種の定め(以下、「個別規定」と記載します。)をすることがあります。これら個別規定はその名称のいかんに関わらず、本規約の一部を構成するものとします。
-            3.
-            本規約の規定が個別規定と矛盾する場合には、個別規定において特段の定めなき限り、本規約が優先されるものとします。
-            ◇利用規約◇ ○前提条件○
-            □東方projectの二次創作ガイドラインを遵守しご使用ください。
-            □立ち絵を所持した後のトラブルは全て自己責任となります。
-            □使用時は当サイトのクレジットを必ず表記をしてください。（例
-            雲丹園（@uninosono）） ○禁止事項○
-            □自作発言、またはそう誤解されるような発言
-            □特定の思想を発信する目的での使用
-            □法に触れる可能性のある使用、また、公序良俗に反する使用
-            ◇商用利用について◇
-            当サイトで配布されている立ち絵は全てYoutube.ニコニコ動画.webサイトなど媒体を問わず広告費で利益を得る商用利用が可能です。立ち絵配布目的の雑誌やサイトなどで、二次配布、販売する行為は出来ません。また立ち絵をそのまま商品として直接販売する行為も禁止となります。
-          </p>
-        </div>
-        <div class="black-square">
-          <a href="Member-registration-2.html" class="link">
-            <p class="Next-text">規約に同意し会員登録へ</p>
-          </a>
-        </div>
-      </div>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+{% extends 'base.html' %} {% block main %}
+<div class="container1">
+  <!-- グレーの四角形を表示する要素 -->
+  <p class="letter">会員登録に関しての規約</p>
+  <div class="White-square">
+    <p class="white-text">
+      会員登録に関する規約 <br /><br />
+      1. アカウント情報の登録<br />
+      利用者は、本利用規約に同意した上でアカウント情報(登録された情報及びアカウントに関する全ての権利、権益を含みます。以下同様)の登録を行い、登録したアカウント情報を使用して、当サイトを利用することができるものとします。なお、アカウント情報が不正確又は虚偽であるために利用者に損害が発生しても、当サイトの運営側（以下、運営と記載します）は一切責任を負わないものとし、利用者はこれに同意するものとします。<br />
+      利用者が登録したアカウント情報で利用可能な個別サービスの追加及びその他の変更については、運営が任意に行うことができるものとし、利用者はこれに同意します。<br />
+      利用者は、自己のアカウント情報を、いかなる目的でも、第三者に対して、譲渡、貸与、使用等させることはできないものとします。<br />
+      会員登録の際に如何なる理由で合っても個人特定に繋がる情報を入力できないものとします。誤って入力してしまった場合、運営がデータを完全に削除し会員登録を無効にします。<br /><br />
+      2. アカウントの管理等<br />
+      利用者は、アカウント情報を自己の責任と権限において管理するものとし、運営は、登録したアカウント情報によって当サイトが利用された場合、当該アカウント情報を登録した利用者本人による利用とみなすものとします。<br />第三者によりアカウント情報が不正に使用され、利用者に損害が発生した場合であっても、当該アカウント情報を登録した利用者本人がその全ての責任を負うものとします。<br /><br />
+      3. 運営側の個人情報の取扱い<br />
+      利用者によって登録いただいた情報は以下の場面で使用されます。<br />
+      .利用者識別<br />
+      運営は上記の項目でのみ登録頂いた情報を使用します。また、利用者はこれに同意するものとします。<br />
+    </p>
+  </div>
+  <div class="black-square">
+    <a href="{{ url_for('signup2') }}" class="link">
+      <p class="Next-text">規約に同意し会員登録へ</p>
+    </a>
+  </div>
+</div>
+{% endblock %}
