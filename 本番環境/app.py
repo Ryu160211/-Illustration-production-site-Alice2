@@ -42,13 +42,13 @@ def contents():
     contents = Content.query.order_by(Content.id.asc()).all()
     return render_template('contents.html', css='css/contents.css', title=title, contents=contents)
 
-@app.route('/content/<content_name>/<content_id>')
-def content(content_name, content_id):
-    title = '東方立ち絵広場-' + content_name
+@app.route('/content/<content_id>')
+def content(content_id):
     content = Content.query.filter_by(id=content_id).first()
     character = Character.query.filter_by(id=content.character_id).first()
     creator = Creator.query.filter_by(id=content.creator_id).first()
     other_contents = Content.query.filter_by(creator_id=creator.id).limit(3).all()
+    title = '東方立ち絵広場-' + creator.name
     return render_template('content.html', css='css/content.css',title=title, content=content, character=character, creator=creator, other_contents=other_contents) 
 
 @app.route('/creators')
@@ -79,9 +79,25 @@ def rule():
 def philosophy():
     return 'philosophy'
 
-@app.route('/signup')
-def registlation():
-    return 'regist'
+@app.route('/signup1')
+def signup1():
+    title = '東方立ち絵広場-会員登録'
+    return render_template('signup1.html', title=title, css='css/signup1.css')
+
+@app.route('/signup2')
+def signup2():
+    title='東方立ち絵広場-会員登録'
+    return render_template('signup2.html', title=title, css='css/signup2.css')
+
+@app.route('/signup3')
+def signup3():
+    title='東方立ち絵広場-会員登録'
+    return render_template('signup3.html', title=title, css='css/signup3.css')
+
+@app.route('/signup4')
+def signup4():
+    title='東方立ち絵広場-会員登録'
+    return render_template('signup4.html', title=title, css='css/signup4.css')
 
 if __name__ == '__main__':
     app.run(port=123456, debug=True)
