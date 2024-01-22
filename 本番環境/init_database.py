@@ -9,18 +9,17 @@ db = SQLAlchemy(app)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), index=True)
-    password = db.Column(db.String, unique=True)
-    mail = db.Column(db.String, index=True)
+    name = db.Column(db.String(100), index=True, nullable=False)
+    password = db.Column(db.String, unique=True, nullable=False)
 
 
 class Creator(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), index=True)
+    name = db.Column(db.String(100), index=True, nullable=False)
     mail = db.Column(db.String, index=True)
     introduce = db.Column(db.String(1000))
-    icon = db.Column(db.String, index=True)
-    background = db.Column(db.String, index=True)
+    icon = db.Column(db.String, index=True, nullable=False)
+    background = db.Column(db.String, index=True, nullable=False)
     twitter = db.Column(db.String)
     pixiv = db.Column(db.String)
     skeb = db.Column(db.String)
@@ -28,24 +27,24 @@ class Creator(db.Model):
 
 class Content(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), index=True)
-    filename = db.Column(db.String)
-    icon = db.Column(db.String)
-    creator_id = db.Column(db.Integer)
-    character_id = db.Column(db.Integer)
-    desc = db.Column(db.String(1000))
+    name = db.Column(db.String(100), index=True, nullable=False)
+    filename = db.Column(db.String, nullable=False)
+    icon = db.Column(db.String, nullable=False)
+    creator_id = db.Column(db.Integer, nullable=False)
+    character_id = db.Column(db.Integer, nullable=False)
+    desc = db.Column(db.String(1000), nullable=False)
 
 class OtherWork(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    creator_id = db.Column(db.Integer, index=True)
-    index = db.Column(db.Integer, index=True)
-    filename = db.Column(db.String)
-    link = db.Column(db.String)
+    creator_id = db.Column(db.Integer, index=True, nullable=False)
+    index = db.Column(db.Integer, index=True, nullable=False)
+    filename = db.Column(db.String, nullable=False)
+    link = db.Column(db.String, nullable=False)
 
 class Character(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    jp_name = db.Column(db.String(100), index=True)
-    en_name = db.Column(db.String(100), index=True)
+    jp_name = db.Column(db.String(100), index=True, nullable=False)
+    en_name = db.Column(db.String(100), index=True, nullable=False)
 
 class Like(db.Model):
     id = db.Column(db.Integer, primary_key=True)
