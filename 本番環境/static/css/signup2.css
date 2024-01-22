@@ -22,12 +22,8 @@
 }
 
 .White-square {
-  position: relative; /* 絶対的な位置指定 */
-  top: 35%; /* 上端の位置を親要素の中央に配置 */
-  left: 50%; /* 左端の位置を親要素の中央に配置 */
-  transform: translate(-50%, -50%); /* 中央揃え */
+  margin-left: auto;
   width: 80%;
-  height: 70%;
   background-color: rgb(255, 255, 255); /* 白い色に指定 */
   border-radius: 10px;
   z-index: 2;
@@ -36,10 +32,8 @@
   overflow-y: hidden; /* 縦スクロールを無効にする */
 }
 .name {
-  width: 800px;
   height: 70px;
   display: inline-block;
-  font-family: "LEMON MILK";
   font-size: 30px;
   margin-left: 20px;
   margin-top: 10px;
@@ -48,7 +42,6 @@
   position: relative; /* 相対的な位置指定 */
 }
 .comment-input {
-  margin-left: 30px; /* 任意の余白を追加 */
   width: 500px; /* 任意の横幅に変更 */
   height: 50px; /* 任意の縦幅に変更 */
   border: 2px solid #1b1b1b; /* 枠線の色と太さを指定 */
@@ -72,8 +65,6 @@
   width: 800px;
   display: inline-block;
   font-size: 10px;
-  margin-left: 0px;
-  margin-bottom: 300px;
   align-items: center;
   vertical-align: middle;
 }
@@ -81,7 +72,6 @@
   width: 800px;
   height: 70px;
   display: inline-block;
-  font-family: "LEMON MILK";
   font-size: 30px;
   margin-left: 20px;
   margin-top: 15px;
@@ -89,7 +79,6 @@
   vertical-align: middle;
 }
 .comment-input-Gmail {
-  margin-left: 20px; /* 任意の余白を追加 */
   width: 500px; /* 任意の横幅に変更 */
   height: 50px; /* 任意の縦幅に変更 */
   border: 2px solid #1b1b1b; /* 枠線の色と太さを指定 */
@@ -112,7 +101,6 @@
   width: 800px;
   height: 70px;
   display: inline-block;
-  font-family: "LEMON MILK";
   font-size: 30px;
   margin-left: 20px;
   margin-top: 15px;
@@ -120,7 +108,6 @@
   vertical-align: middle;
 }
 .comment-input-PS {
-  margin-left: 85px; /* 任意の余白を追加 */
   width: 500px; /* 任意の横幅に変更 */
   height: 50px; /* 任意の縦幅に変更 */
   border: 2px solid #1b1b1b; /* 枠線の色と太さを指定 */
@@ -137,21 +124,20 @@
   width: 800px;
   display: inline-block;
   font-size: 10px;
-  margin-left: 0px;
-  margin-bottom: 220px;
   align-items: center;
   vertical-align: middle;
 }
 .confirmation-Re-enter {
   width: 800px;
+  margin-top: 30px;
   display: inline-block;
   font-size: 15px;
-  margin-left: 160px;
+  margin-left: 20px;
   align-items: center;
   vertical-align: middle;
 }
 .comment-input-confirmation {
-  margin-left: 160px; /* 任意の余白を追加 */
+  margin-left: 20px;
   width: 500px; /* 任意の横幅に変更 */
   height: 50px; /* 任意の縦幅に変更 */
   border: 2px solid #1b1b1b; /* 枠線の色と太さを指定 */
@@ -164,6 +150,7 @@
   font-size: 14px; /* placeholderの文字の大きさを変更 */
   color: #888; /* placeholderの色を指定 */
 }
+
 .black-square {
   background-color: black;
   color: white;
@@ -176,7 +163,7 @@
   margin: 0;
 }
 .black-square {
-  margin-top: 30px;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -195,4 +182,34 @@
   color: rgb(255, 255, 255); /* または希望のテキストの色を指定 */
   margin: 0; /* マージンをリセット */
   padding: 0; /* パディングをリセット */
+}
+@media only screen and (max-width: 600px) {
+  .container1 {
+    width: 90%; /* 画面幅に対する相対的な幅に変更 */
+    height: auto; /* 高さを自動調整 */
+    margin-top: 20px;
+  }
+
+  .gray-square,
+  .White-square,
+  .name,
+  .comment-input,
+  .name-condition,
+  .Gmail,
+  .comment-input-Gmail,
+  .dotted-border2,
+  .PS,
+  .comment-input-PS,
+  .ps-condition,
+  .confirmation-Re-enter,
+  .comment-input-confirmation {
+    width: 100%; /* 幅を100%に変更 */
+    margin-left: 0; /* 左のマージンを0に変更 */
+    margin-right: 0; /* 右のマージンを0に変更 */
+  }
+
+  .black-square {
+    width: 80%; /* 幅を80%に変更 */
+    margin-top: 20px;
+  }
 }
