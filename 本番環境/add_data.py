@@ -25,6 +25,7 @@ with app.app_context():
             creator_id=row["creator_id"],
             character_id=row["character_id"],
             desc=row["desc"],
+            download=row["download"]
         )
         db.session.add(content)
 
