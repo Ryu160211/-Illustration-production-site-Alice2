@@ -1,0 +1,370 @@
+@font-face {
+  font-family: "LEMON MILK"; /* フォントファミリーの名前を指定 */
+  src: url("font/LemonMilk.otf") format("opentype"); /* フォントファイルのパスと形式を指定 */
+  font-weight: normal;
+  font-style: normal;
+}
+.main-container {
+  width: 90%; /* 1300px の 80% */
+  height: auto; /* 高さを自動調整 */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vh; /* 上部のマージンを調整 */
+  margin-bottom: 30px;
+}
+.question-box {
+  width: 1000px;
+  max-width: 100%;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  animation: fadeIn 5s ease 1s 1 normal backwards;
+}
+
+.circle-image {
+  width: auto;
+  height: 150%;
+  object-fit: cover; /* 画像が円内にフィットするように */
+  margin-top: 0px;
+  margin-right: 20px;
+}
+
+.text-container {
+  margin-left: 40px;
+  width: 700px;
+  height: 150px;
+}
+
+.interrogative-text {
+  font-size: 50px;
+  font-family: "M PLUS 1", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.interrogative-text-2 {
+  font-size: 20px;
+  font-family: "LEMON MILK";
+  margin-top: 0;
+  margin-left: 130px;
+  letter-spacing: 10px;
+  white-space: nowrap;
+  bottom: 0;
+}
+
+/* Responsive styles for smaller screens (up to 600px) */
+
+@media only screen and (max-width: 600px) {
+  .question-box {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+    align-items: flex-start;
+  }
+
+  .circle-image {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .text-container {
+    margin: 20px 0;
+    width: 100%;
+    height: 80px;
+  }
+
+  .interrogative-text {
+    letter-spacing: 0px;
+    font-size: 21px;
+    margin-top: 10px;
+    text-align: center;
+    white-space: normal;
+    font-family: "Dela Gothic One", sans-serif;
+  }
+
+  .interrogative-text-2 {
+    letter-spacing: 3px;
+    font-size: 10px;
+    margin-left: 0;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+.answer-1-box {
+  width: 80%; /* 1000px の 80% */
+  max-width: 1000px; /* 最大幅を指定 */
+  height: auto; /* 高さを自動調整 */
+  margin-left: 4%; /* 左のマージンを調整 */
+  margin-right: auto;
+  margin-top: 3vh; /* 上部のマージンを調整 */
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  animation: fadeIn 5s ease 1s 1 normal backwards;
+}
+.answer-1-container {
+  position: relative;
+  width: 150px; /* 円の直径 */
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black; /* 黒い線 */
+  overflow: hidden;
+}
+.answer-1-numbers {
+  width: 72%;
+  height: auto;
+  margin-top: 170px;
+  margin-left: 23px;
+  object-fit: cover; /* 画像が円内にフィットするように */
+  margin-top: 0px;
+}
+.answer-1-text-container {
+  margin-left: 40px;
+  width: 700px;
+  height: 150px;
+}
+.answer-1-text {
+  font-size: 40px;
+  font-family: "M PLUS 1", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  position: relative;
+}
+.answer-1-text-2 {
+  font-size: 20px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-family: "Alata", sans-serif;
+  margin-top: 0;
+  margin-left: 0px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  bottom: 0;
+}
+@media only screen and (max-width: 600px) {
+  .answer-1-box {
+    width: 90%;
+    margin-left: 0; /* マージンを調整 */
+    margin: 20px auto;
+  }
+
+  .answer-1-container {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-1-numbers {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-1-text-container {
+    margin-left: 0; /* マージンを調整 */
+    width: 100%; /* テキストコンテナの幅を80%に変更 */
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .answer-1-text {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 20px; /* フォントサイズを変更 */
+    margin-top: 10px; /* マージンを調整 */
+    overflow: hidden;
+  }
+
+  .answer-1-text-2 {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 10px; /* フォントサイズを変更 */
+    margin-top: 0px; /* マージンを調整 */
+    overflow: hidden;
+    white-space: normal; /* テキストが親要素内に折り返されるようにする */
+  }
+}
+.answer-2-box {
+  width: 80%; /* 1000px の 80% */
+  max-width: 1000px; /* 最大幅を指定 */
+  height: auto; /* 高さを自動調整 */
+  margin-left: 4%; /* 左のマージンを調整 */
+  margin-right: auto;
+  margin-top: 5.5vh; /* 上部のマージンを調整 */
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  animation: fadeIn 5s ease 1s 1 normal backwards;
+}
+.answer-2-container {
+  position: relative;
+  width: 150px; /* 円の直径 */
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black; /* 黒い線 */
+  overflow: hidden;
+}
+.answer-2-numbers {
+  width: 72%;
+  height: auto;
+  margin-top: 170px;
+  margin-left: 20px;
+  object-fit: cover; /* 画像が円内にフィットするように */
+  margin-top: 0px;
+}
+.answer-2-text-container {
+  margin-left: 40px;
+  width: 700px;
+  height: 150px;
+}
+.answer-2-text {
+  font-size: 40px;
+  font-family: "M PLUS 1", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  position: relative;
+}
+.answer-2-text-2 {
+  font-size: 20px;
+  font-family: "Alata", sans-serif;
+  margin-top: 0;
+  margin-left: 0px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  bottom: 0;
+}
+@media only screen and (max-width: 600px) {
+  .answer-2-box {
+    width: 90%;
+    margin-left: 0; /* マージンを調整 */
+    margin: 20px auto;
+  }
+
+  .answer-2-container {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-2-numbers {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-2-text-container {
+    margin-left: 0; /* マージンを調整 */
+    width: 100%; /* テキストコンテナの幅を80%に変更 */
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .answer-2-text {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 20px; /* フォントサイズを変更 */
+    margin-top: 10px; /* マージンを調整 */
+    overflow: hidden;
+  }
+
+  .answer-2-text-2 {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 10px; /* フォントサイズを変更 */
+    margin-top: 0px; /* マージンを調整 */
+    overflow: hidden;
+    white-space: normal; /* テキストが親要素内に折り返されるようにする */
+  }
+}
+.answer-3-box {
+  width: 80%; /* 1000px の 80% */
+  max-width: 1000px; /* 最大幅を指定 */
+  height: auto; /* 高さを自動調整 */
+  margin-left: 4%; /* 左のマージンを調整 */
+  margin-right: auto;
+  margin-top: 5.5vh; /* 上部のマージンを調整 */
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  animation: fadeIn 5s ease 1s 1 normal backwards;
+}
+.answer-3-container {
+  position: relative;
+  width: 150px; /* 円の直径 */
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black; /* 黒い線 */
+  overflow: hidden;
+}
+.answer-3-numbers {
+  width: 72%;
+  height: auto;
+  margin-top: 170px;
+  margin-left: 20px;
+  object-fit: cover; /* 画像が円内にフィットするように */
+  margin-top: 0px;
+}
+.answer-3-text-container {
+  margin-left: 40px;
+  width: 700px;
+  height: 150px;
+}
+.answer-3-text {
+  font-size: 40px;
+  font-family: "M PLUS 1", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  position: relative;
+}
+.answer-3-text-2 {
+  font-size: 20px;
+  font-family: "Alata", sans-serif;
+  margin-top: 0;
+  margin-left: 0px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  bottom: 0;
+}
+@media only screen and (max-width: 600px) {
+  .answer-3-box {
+    width: 90%;
+    margin-left: 0; /* マージンを調整 */
+    margin: 20px auto;
+  }
+
+  .answer-3-container {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-3-numbers {
+    display: none; /* 画像を非表示にする */
+  }
+
+  .answer-3-text-container {
+    margin-left: 0; /* マージンを調整 */
+    width: 100%; /* テキストコンテナの幅を80%に変更 */
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .answer-3-text {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 20px; /* フォントサイズを変更 */
+    margin-top: 10px; /* マージンを調整 */
+    overflow: hidden;
+  }
+
+  .answer-3-text-2 {
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 10px; /* フォントサイズを変更 */
+    margin-top: 0px; /* マージンを調整 */
+    overflow: hidden;
+    white-space: normal; /* テキストが親要素内に折り返されるようにする */
+  }
+}
