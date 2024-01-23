@@ -6,23 +6,31 @@
       <div id="confirmedNameDisplay">
         <div class="name">
           <label for="name-label">name:</label>
-          <input type="text" id="confirmedName" class="comment-input" />
+          <input
+            type="text"
+            id="confirmedName"
+            class="comment-input"
+            name="name"
+          />
         </div>
         <div class="dotted-border"></div>
       </div>
       <div id="confirmedPSDisplay">
         <div class="PS">
           <label for="PS-label">PS:</label>
-          <input type="text" id="confirmedPS" class="comment-input-PS" />
+          <input
+            type="text"
+            id="confirmedPS"
+            class="comment-input-PS"
+            name="password"
+          />
         </div>
       </div>
     </div>
+    <div class="black-square">
+      <button type="submit">登録確定へ</button>
+    </div>
   </form>
-  <div class="black-square">
-    <a href="{{ url_for('signup4') }}" class="link">
-      <p class="Next-text">次の画面へ</p>
-    </a>
-  </div>
 </div>
 <script src="{{ url_for('static', filename='js/signup3.js') }}"></script>
 {% endblock %}

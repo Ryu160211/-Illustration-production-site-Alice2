@@ -1,8 +1,10 @@
-{% extends "base.html" %} 
-{% block main %}
+{% extends "base.html" %} {% block main %}
 <div class="main-container">
   <div class="question-box">
-    <img src="image/How-to八雲紫.png" class="circle-image" />
+    <img
+      src="{{ url_for('static', filename='image/common/how_yukari.png') }}"
+      class="circle-image"
+    />
 
     <div class="text-container">
       <div class="interrogative-text">このサイトって何が出来るの？</div>
@@ -11,19 +13,26 @@
   </div>
   <div class="answer-1-box">
     <div class="answer-1-container">
-      <img src="image/How-to博麗霊夢.png" class="answer-1-numbers" />
+      <img
+        src="{{ url_for('static', filename='image/common/how_reimu.png') }}"
+        class="answer-1-numbers"
+      />
     </div>
     <div class="answer-1-text-container">
       <div class="answer-1-text">立ち絵をダウンロードできる</div>
       <div class="answer-1-text-2">
         GALLERYページからお好みの立ち絵を選びダウンロードページに移動。<br />
-        「ダウンロード」ボタンを押していただくと立ち絵のZIPファイルがダウンロードできます。
+        「ダウンロード」ボタンを押していただくと立ち絵のZIPファイルを<br />
+        ダウンロードできます。
       </div>
     </div>
   </div>
   <div class="answer-2-box">
     <div class="answer-2-container">
-      <img src="image/How-to霧雨魔理沙.png" class="answer-2-numbers" />
+      <img
+        src="{{ url_for('static', filename='image/common/how_marisa.png') }}"
+        class="answer-2-numbers"
+      />
     </div>
     <div class="answer-2-text-container">
       <div class="answer-2-text">立ち絵を依頼できる</div>
@@ -35,12 +44,16 @@
   </div>
   <div class="answer-3-box">
     <div class="answer-3-container">
-      <img src="image/How-to東風谷早苗.png" class="answer-3-numbers" />
+      <img
+        src="{{ url_for('static', filename='image/common/how_sanae.png') }}"
+        class="answer-3-numbers"
+      />
     </div>
     <div class="answer-3-text-container">
       <div class="answer-3-text">イラストレーターの情報を見れる</div>
       <div class="answer-3-text-2">
-        Artistのページより当サイトでの立ち絵掲載許可を頂いたイラストレーターの情報ご確認頂けます<br />
+        Creatorページより当サイトでの立ち絵掲載許可を頂いたイラストレーターの<br />
+        情報をご確認頂けます<br />
         イラストレーターが過去、描いたイラストも掲載されています。是非ご覧ください。
       </div>
     </div>
