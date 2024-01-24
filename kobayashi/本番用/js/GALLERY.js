@@ -50,45 +50,37 @@ setRandomDarkColor("button9");
 setRandomDarkColor("button10");
 setRandomDarkColor("button11");
 setRandomDarkColor("button12");
-setRandomDarkColor("button13");
-setRandomDarkColor("button14");
-setRandomDarkColor("button15");
-setRandomDarkColor("button16");
-setRandomDarkColor("button17");
-setRandomDarkColor("button18");
-setRandomDarkColor("button19");
-setRandomDarkColor("button20");
 
 particlesJS("particles-js", {
   particles: {
-    number: { value: 80, density: { enable: true, value_area: 800 } },
+    number: { value: 6, density: { enable: true, value_area: 800 } },
     color: { value: "#000000" },
     shape: {
-      type: "circle",
-      stroke: { width: 0, color: "#000000" },
-      polygon: { nb_sides: 5 },
+      type: "polygon",
+      stroke: { width: 0, color: "#000" },
+      polygon: { nb_sides: 6 },
       image: { src: "img/github.svg", width: 100, height: 100 },
     },
     opacity: {
-      value: 0.5,
-      random: false,
+      value: 0.3,
+      random: true,
       anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
     },
     size: {
-      value: 3,
-      random: true,
-      anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+      value: 110.27963765261912,
+      random: false,
+      anim: { enable: true, speed: 10, size_min: 40, sync: false },
     },
     line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#000000",
-      opacity: 0.4,
-      width: 1,
+      enable: false,
+      distance: 200,
+      color: "#989898",
+      opacity: 0.7996801279488208,
+      width: 2,
     },
     move: {
       enable: true,
-      speed: 6,
+      speed: 8,
       direction: "none",
       random: false,
       straight: false,
@@ -100,8 +92,8 @@ particlesJS("particles-js", {
   interactivity: {
     detect_on: "canvas",
     events: {
-      onhover: { enable: true, mode: "repulse" },
-      onclick: { enable: true, mode: "push" },
+      onhover: { enable: false, mode: "grab" },
+      onclick: { enable: false, mode: "push" },
       resize: true,
     },
     modes: {
@@ -112,7 +104,7 @@ particlesJS("particles-js", {
       remove: { particles_nb: 2 },
     },
   },
-  retina_detect: false,
+  retina_detect: true,
 });
 var count_particles, stats, update;
 stats = new Stats();
