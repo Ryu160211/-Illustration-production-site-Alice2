@@ -1,3 +1,4 @@
+import json
 from flask import Flask, redirect, render_template, request, session, url_for
 from flask_login import LoginManager, current_user, login_required, login_user, logout_user
 from init_database import OtherWork, db, db_uri, User, Creator, Content, Character, Like, Follow, AdminUser
@@ -76,6 +77,28 @@ def content(content_id):
     other_contents = Content.query.filter_by(creator_id=creator.id).limit(3).all()
     title = '東方立ち絵広場-' + creator.name
     return render_template('content.html', css='css/content.css',title=title, content=content, is_like=is_like, like_count=like_count ,character=character, creator=creator, other_contents=other_contents) 
+
+@app.route('/like', methods=['POST'])
+def like():
+    if request.method == 'POST':
+        try:
+            content_id = request.form['content_id']
+            like = Like.query.filter_by(user_id=current_user.get_id(), content_id=content_id).first()
+            is_like = ''
+            if not like:
+                like = Like(user_id=current_user.get_id(), content_id=content_id)
+                db.session.add(like)
+                db.session.commit()
+                is_like = 'true'
+            else:
+                db.session.delete(like)
+                db.session.commit()
+                is_like = 'false'
+        except Exception as e:
+            print(e)
+        like_count = Like.query.filter_by(content_id=content_id).count()
+        serve_data = {'is_like': is_like, 'like_count':like_count}
+        return json.dumps(serve_data)
 
 @app.route('/creators')
 def creators():
