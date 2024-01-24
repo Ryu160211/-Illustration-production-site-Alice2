@@ -41,20 +41,20 @@
         </div>
         <div
           class="black-border"
-          id="{{ content.id }}"
-          onclick="changeImage(this.id)"
+          id="like-button"
+          data-content_id="{{ content.id }}"
+          data-is_login="{{ current_user.get_id() }}"
+          onclick="changeImage(this.dataset.content_id)"
         >
           {% if isLike %}
           <img
             src="{{ url_for('static', filename='image/common/like.png') }}"
-            class="Evaluation-image"
-            id="heartImage"
+            class="like-image"
           />
           {% else %}
           <img
             src="{{ url_for('static', filename='image/common/unlike.png') }}"
-            class="Evaluation-image"
-            id="heartImage"
+            class="like-image"
           />
           {% endif %}
           <div class="gray-circle">
@@ -91,8 +91,6 @@
       </div>
     </div>
   </div>
-  <script src="js/GALLERY2.js"></script>
-  <script src="js/Other-portraits.js"></script>
-
+  <script src="{{ url_for('static', filename='js/content.js') }}"></script>
   {% endblock %}
 </div>
