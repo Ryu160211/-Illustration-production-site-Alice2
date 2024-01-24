@@ -39,7 +39,11 @@
           <h1 class="jp-name">{{ character.jp_name }}</h1>
           <h1 class="en-name">{{ character.en_name }}</h1>
         </div>
-        <div class="black-border" id="clickableImage" onclick="changeImage()">
+        <div
+          class="black-border"
+          id="{{ content.id }}"
+          onclick="changeImage(this.id)"
+        >
           {% if isLike %}
           <img
             src="{{ url_for('static', filename='image/common/like.png') }}"
