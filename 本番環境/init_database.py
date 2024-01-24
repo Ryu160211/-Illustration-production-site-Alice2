@@ -35,6 +35,12 @@ class Content(db.Model):
     desc = db.Column(db.String(1000))
     download = db.Column(db.String)
 
+    def isLike(self, user_id):
+        like = Like.query.filter_by(user_id=user_id).first()
+        if like:
+            return True
+        return False
+
 class OtherWork(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     creator_id = db.Column(db.Integer, index=True, nullable=False)
