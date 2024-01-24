@@ -1,0 +1,151 @@
+.container1 {
+  width: 900px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.letter {
+  font-size: 30px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.White-square {
+  width: 80%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  z-index: 2;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name-box {
+  font-size: 30px;
+  flex-direction: column; /* Align items vertically */
+  width: 20%;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.character-control {
+  margin-top: 20px;
+}
+.name-box label {
+  width: 100%; /* Make the labels take up the full width */
+}
+.comment-input {
+  margin-left: 30px;
+  width: 500px;
+  height: 50px;
+  border: 2px solid #1b1b1b;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+  margin-top: 20px;
+}
+.black-square {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Next-text {
+  font-size: 16px;
+  margin: 0;
+}
+.black-square {
+  width: 450px;
+  height: 50px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* 中央揃え */
+  background-color: rgb(41, 41, 41);
+  border-radius: 10px;
+  z-index: 2;
+  text-decoration: none; /* リンクの下線を非表示 */
+}
+.Next-text {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+button {
+  border: none; /* ボーダーをリセット */
+  background: none; /* 背景を透明に */
+  padding: 0; /* パディングをリセット */
+}
+
+button:focus {
+  outline: none; /* フォーカス時のアウトラインを非表示 */
+}
+
+button a {
+  text-decoration: none; /* リンクの下線を非表示 */
+  color: inherit; /* リンクの色を継承 */
+}
+@media only screen and (max-width: 600px) {
+  .container1 {
+    width: 90%; /* 画面幅に対する相対的な幅に変更 */
+    height: auto; /* 高さを自動調整 */
+    margin-top: 20px;
+  }
+  .name {
+    margin-top: 0;
+  }
+  .comment-input {
+    margin-left: 0;
+  }
+
+  .PS {
+    margin-top: 40px;
+  }
+  .White-square {
+    width: 100%;
+    height: 230px;
+  }
+
+  .name,
+  .comment-input,
+  .dotted-border,
+  .PS,
+  .comment-input-PS,
+  .ps-condition,
+  .confirmation-Re-enter,
+  .comment-input-confirmation {
+    width: 100%; /* 幅を100%に変更 */
+    margin-left: 0; /* 左のマージンを0に変更 */
+    margin-right: 0; /* 右のマージンを0に変更 */
+  }
+
+  .black-square {
+    width: 80%; /* 幅を80%に変更 */
+    margin-top: 20px;
+  }
+
+  .Next-text {
+    font-size: 16px; /* テキストサイズを変更 */
+  }
+
+  .comment-input,
+  .comment-input-PS,
+  .comment-input-confirmation {
+    margin-left: 0px; /* マージンを変更 */
+  }
+
+  .ps-condition {
+    margin-bottom: 20px; /* マージンを変更 */
+  }
+
+  .confirmation-Re-enter {
+    margin-left: 10px; /* マージンを変更 */
+  }
+}
