@@ -1,5 +1,5 @@
 from flask import Flask, redirect, render_template, request, session, url_for
-from flask_login import LoginManager, login_user
+from flask_login import LoginManager, login_required, login_user, logout_user
 from init_database import OtherWork, db, db_uri, User, Creator, Content, Character, Like, Follow, AdminUser
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
@@ -29,6 +29,10 @@ admin.add_view(UserModelView(Character, db.session))
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+@login_manager.unauthorized_handler
+def unautherized():
+    return redirect('/')
+
 @app.route('/')
 def home():
     return redirect(url_for('contents'))
@@ -41,11 +45,17 @@ def login():
         user = User.query.filter_by(name=name).first()
         if check_password_hash(user.password, password):
             login_user(user)
-            session['username'] = name
             return redirect('contents')
     title = '東方立ち絵広場-ログイン'
     css = 'css/login.css'
     return render_template('login.html', title=title, css=css) 
+
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect('contents')
 
 @app.route('/contents')
 def contents():
