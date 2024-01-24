@@ -1,5 +1,5 @@
 from flask import Flask, redirect, render_template, request, session, url_for
-from flask_login import LoginManager, login_required, login_user, logout_user
+from flask_login import LoginManager, current_user, login_required, login_user, logout_user
 from init_database import OtherWork, db, db_uri, User, Creator, Content, Character, Like, Follow, AdminUser
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
@@ -66,11 +66,13 @@ def contents():
 @app.route('/content/<content_id>')
 def content(content_id):
     content = Content.query.filter_by(id=content_id).first()
+    isLike = content.isLike(current_user.id)
+    like_count = Like.query.filter_by(content_id=content.id).count()
     character = Character.query.filter_by(id=content.character_id).first()
     creator = Creator.query.filter_by(id=content.creator_id).first()
     other_contents = Content.query.filter_by(creator_id=creator.id).limit(3).all()
     title = '東方立ち絵広場-' + creator.name
-    return render_template('content.html', css='css/content.css',title=title, content=content, character=character, creator=creator, other_contents=other_contents) 
+    return render_template('content.html', css='css/content.css',title=title, content=content, isLike=isLike, like_count=like_count ,character=character, creator=creator, other_contents=other_contents) 
 
 @app.route('/creators')
 def creators():
