@@ -171,15 +171,13 @@ canvas {
 }
 @media screen and (max-width: 600px) {
   .name-button {
-    width: 100%;
-    height: auto;
+    width: 90%; /* 画面幅の90%に調整 */
     margin-top: 20px;
   }
-}
 
-@media screen and (max-width: 480px) {
   .button {
     padding: 3px 10px;
     font-size: 14px;
+    margin: 5px; /* ボタンのマージンを調整 */
   }
 }

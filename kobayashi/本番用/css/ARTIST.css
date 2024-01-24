@@ -195,6 +195,14 @@ header {
   object-fit: cover; /* 画像を親要素にフィットさせる */
   object-position: 20% 20%; /* 左から20%、上から80%の位置に表示 */
 }
+.illuillustration-boxstration {
+  font-family: "LEMON MILK";
+  font-size: 20px;
+  margin: auto;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-align: center;
+}
 .the-work1 {
   margin-top: 20px;
   width: 400px;
@@ -250,4 +258,170 @@ header {
   height: 100%;
   object-fit: cover; /* 画像を親要素にフィットさせる */
   object-position: 20% 20%; /* 左から20%、上から80%の位置に表示 */
+}
+@media only screen and (max-width: 600px) {
+  .main-container {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .header-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  header {
+    height: 150px;
+  }
+
+  .icon-container {
+    width: 50px;
+    height: 50px;
+    margin-left: 50px; /* マージンの調整 */
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .follow-box {
+    width: 100px;
+    height: 25px;
+    margin-left: 20px; /* マージンの調整 */
+  }
+
+  .follow {
+    font-size: 13px;
+  }
+
+  .main2-container {
+    width: 100%;
+    margin-top: 0px;
+    padding: 10px; /* パディングの調整 */
+  }
+
+  .name-container {
+    flex-direction: column;
+    align-items: center; /* 中央寄せ */
+  }
+
+  .name-box {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    font-size: 25px;
+  }
+
+  .SNS-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* 垂直方向の中央寄せを追加 */
+    margin: 20px 0;
+    width: 100%;
+    margin-left: 67px;
+  }
+
+  .SNS-background {
+    width: 120px;
+    height: 30px;
+    margin: 0 5px;
+    flex-grow: 1; /* 可能な限り広がるように設定 */
+  }
+  .self-introduction-box {
+    width: 100%;
+  }
+  .self-introduction {
+    margin-top: 0px;
+  }
+
+  .illustration-box {
+    width: 100%;
+  }
+  .the-work1,
+  .the-work2,
+  .the-work3,
+  .the-work4 {
+    width: 100%;
+    margin-top: 20px; /* 上部のマージン追加 */
+  }
+
+  .the-work1 img,
+  .the-work2 img,
+  .the-work3 img,
+  .the-work4 img {
+    width: 100%; /* 画像を親要素の幅に合わせる */
+    height: auto; /* 高さを自動調整 */
+  }
+  .illustration_field1 img {
+    width: 100%;
+  }
+  .the-work1,
+  .the-work2,
+  .the-work3,
+  .the-work4 {
+    margin-top: 20px;
+  }
+  .illustration_field1 {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  .illustration_field2,
+  .illustration_field3 {
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+  }
+  .illustration_field2 img,
+  .illustration_field3 img {
+    margin-top: 20px;
+  }
+  .illustration-box {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .the-work1,
+  .the-work2,
+  .the-work3,
+  .the-work4 {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  .the-work2 {
+    margin-top: 20px;
+  }
+  .the-work2 {
+    margin-top: 20px;
+  }
+
+  .the-work1 img,
+  .the-work2 img,
+  .the-work3 img,
+  .the-work4 img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 修正開始 */
+  .illustration_field2,
+  .illustration_field3 {
+    margin-left: 0;
+  }
+
+  .the-work2,
+  .the-work3,
+  .the-work4 {
+    float: none;
+    width: 100%;
+  }
 }
