@@ -1,9 +1,3 @@
-@font-face {
-  font-family: "LEMON MILK"; /* フォントファミリーの名前を指定 */
-  src: url("font/LemonMilk.otf") format("opentype"); /* フォントファイルのパスと形式を指定 */
-  font-weight: normal;
-  font-style: normal;
-}
 .container1 {
   width: 900px;
   height: 620px;
@@ -48,11 +42,18 @@
   vertical-align: middle;
   position: relative;
 }
-label[for="name-label"] {
+.name-box {
+  width: 150px;
+  height: 50px;
+  float: left;
+  display: flex;
+  align-items: center; /* 上下中央に配置 */
+}
+label[for="label"] {
   font-family: "LEMON MILK";
+  margin: auto;
 }
 .comment-input {
-  margin-left: 30px;
   width: 500px;
   height: 50px;
   border: 2px solid #1b1b1b;
@@ -75,6 +76,7 @@ label[for="name-label"] {
 }
 
 /* PSの入力欄 */
+
 .PS {
   width: 800px;
   height: 70px;
@@ -85,11 +87,8 @@ label[for="name-label"] {
   align-items: center;
   vertical-align: middle;
 }
-label[for="PS-label"] {
-  font-family: "LEMON MILK";
-}
+
 .comment-input-PS {
-  margin-left: 85px;
   width: 500px;
   height: 50px;
   border: 2px solid #1b1b1b;
@@ -119,13 +118,11 @@ label[for="PS-label"] {
   width: 800px;
   display: inline-block;
   font-size: 15px;
-  margin-left: 160px;
   align-items: center;
   vertical-align: middle;
 }
 
 .comment-input-confirmation {
-  margin-left: 160px;
   width: 500px;
   height: 50px;
   border: 2px solid #1b1b1b;
@@ -134,49 +131,57 @@ label[for="PS-label"] {
   font-size: 14px;
   vertical-align: middle;
 }
-
+.comment-input-PS {
+  width: 500px;
+  height: 50px;
+  border: 2px solid #1b1b1b;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+}
 .comment-input-confirmation::placeholder {
   font-size: 14px;
   color: #888;
 }
 
 /* 黒い四角 */
-.black-square {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
+.button_area {
+  text-align: center;
 }
-
-.Next-text {
-  font-size: 16px;
-  margin: 0;
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* ボタンにカーソルを表示 */
+  text-align: center; /* テキストを中央揃え */
 }
-
 .black-square {
   margin-top: 30px;
+  width: 400px;
+  height: 50px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 50%;
-  height: 10%;
   background-color: rgb(41, 41, 41);
   border-radius: 10px;
   z-index: 2;
-  text-decoration: none; /* リンクの下線を非表示 */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .black-square a {
-  text-decoration: none; /* リンクの下線を非表示にする */
+  text-decoration: none;
 }
+
 .Next-text {
   font-size: 20px;
   color: rgb(255, 255, 255);
   margin: 0;
   padding: 0;
-  text-decoration: none; /* リンクの下線を非表示 */
 }
 @media only screen and (max-width: 600px) {
   .container1 {
@@ -196,7 +201,7 @@ label[for="PS-label"] {
   }
   .White-square {
     width: 100%;
-    height: 230px;
+    height: 250px;
   }
 
   .name,
@@ -210,11 +215,6 @@ label[for="PS-label"] {
     width: 100%; /* 幅を100%に変更 */
     margin-left: 0; /* 左のマージンを0に変更 */
     margin-right: 0; /* 右のマージンを0に変更 */
-  }
-
-  .black-square {
-    width: 80%; /* 幅を80%に変更 */
-    margin-top: 20px;
   }
 
   .Next-text {
@@ -233,5 +233,14 @@ label[for="PS-label"] {
 
   .confirmation-Re-enter {
     margin-left: 10px; /* マージンを変更 */
+  }
+  label[for="label"] {
+    font-family: "LEMON MILK";
+    margin: 0;
+  }
+  .black-square {
+    margin-top: 30px;
+    margin-left: auto;
+    width: 200px;
   }
 }

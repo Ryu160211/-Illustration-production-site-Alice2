@@ -108,16 +108,9 @@
   align-items: center; /* 垂直方向の中央揃え */
   animation: fadeIn 5s ease 1s 1 normal backwards;
 }
-.answer-1-container {
-  position: relative;
-  width: 150px; /* 円の直径 */
-  height: 150px;
-  border-radius: 50%;
-  border: 2px solid black; /* 黒い線 */
-  overflow: hidden;
-}
+
 .answer-1-numbers {
-  width: 72%;
+  width: 110px;
   height: auto;
   margin-top: 170px;
   margin-left: 23px;
@@ -199,16 +192,9 @@
   align-items: center; /* 垂直方向の中央揃え */
   animation: fadeIn 5s ease 1s 1 normal backwards;
 }
-.answer-2-container {
-  position: relative;
-  width: 150px; /* 円の直径 */
-  height: 150px;
-  border-radius: 50%;
-  border: 2px solid black; /* 黒い線 */
-  overflow: hidden;
-}
+
 .answer-2-numbers {
-  width: 72%;
+  width: 110px;
   height: auto;
   margin-top: 170px;
   margin-left: 20px;
@@ -289,16 +275,8 @@
   align-items: center; /* 垂直方向の中央揃え */
   animation: fadeIn 5s ease 1s 1 normal backwards;
 }
-.answer-3-container {
-  position: relative;
-  width: 150px; /* 円の直径 */
-  height: 150px;
-  border-radius: 50%;
-  border: 2px solid black; /* 黒い線 */
-  overflow: hidden;
-}
 .answer-3-numbers {
-  width: 72%;
+  width: 110px;
   height: auto;
   margin-top: 170px;
   margin-left: 20px;
@@ -329,6 +307,7 @@
   white-space: nowrap;
   bottom: 0;
 }
+
 @media only screen and (max-width: 600px) {
   .answer-3-box {
     width: 90%;

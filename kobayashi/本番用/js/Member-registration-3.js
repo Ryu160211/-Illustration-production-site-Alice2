@@ -14,6 +14,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("confirmedPS").readOnly = true;
 });
-function redirectToNextPage() {
-  window.location.href = "Member-registration-4.html";
-}
