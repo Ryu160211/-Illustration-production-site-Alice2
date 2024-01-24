@@ -61,21 +61,27 @@
         <div class="container1">
           <p class="letter">登録情報の確認</p>
           <div class="White-square">
-            <div class="name-box">
-              <label for="name-label"class="character-control">name:</label>
-              <label for="PS-label"class="character-control">PS:</label>
-            </div>
             <div class="confirmation-box">
-              <input type="text" id="confirmedName" class="comment-input" />
-              <input type="text" id="confirmedPS" class="comment-input" />
+              <div class="name">
+                <div class="name-box">
+                <label for="label">name:</label>
+              </div>
+                <input type="text" id="confirmedName" class="comment-input" />
+              </div>
+              <div id="confirmedPSDisplay">
+                <div class="PS">
+                  <div class="name-box">
+                  <label for="label">PS:</label>
+                </div>
+                  <input type="text" id="confirmedPS" class="comment-input-PS" />
+                </div>
+              </div>
             </div>
-            <button>
-            <div class="black-square">
-              <a href="Member-registration-4.html" class="link">
-                <p class="Next-text">次の画面へ</p>
-              </a>
-            </div>
-          </button>
+          </div>
+          <div class="black-square" onclick="redirectToNextPage()">
+            <a href="Member-registration-4.html" class="link">
+              <p class="Next-text">次の画面へ</p>
+            </a>
           </div>
         </div>
         <script src="js/Member-registration-3.js"></script>
