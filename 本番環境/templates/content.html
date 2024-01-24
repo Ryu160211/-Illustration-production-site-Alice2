@@ -40,12 +40,22 @@
           <h1 class="en-name">{{ character.en_name }}</h1>
         </div>
         <div class="black-border" id="clickableImage" onclick="changeImage()">
+          {% if isLike %}
+          <img
+            src="{{ url_for('static', filename='image/common/like.png') }}"
+            class="Evaluation-image"
+            id="heartImage"
+          />
+          {% else %}
           <img
             src="{{ url_for('static', filename='image/common/unlike.png') }}"
             class="Evaluation-image"
             id="heartImage"
           />
-          <div class="gray-circle"><h1 class="numerical-value">0</h1></div>
+          {% endif %}
+          <div class="gray-circle">
+            <h1 class="numerical-value" id="like_count">{{ like_count }}</h1>
+          </div>
         </div>
         <div class="line"></div>
         <div class="gray-background">
