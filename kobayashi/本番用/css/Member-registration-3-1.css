@@ -1,43 +1,59 @@
 .container1 {
   width: 900px;
-  height: auto;
+  height: 620px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
 }
+
+.gray-square {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(216, 216, 216);
+  border-radius: 10px;
+  z-index: 1;
+}
+
 .letter {
   font-size: 30px;
   letter-spacing: 3px;
   text-align: center;
 }
+
 .White-square {
   width: 80%;
-  height: auto;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   z-index: 2;
   overflow-x: hidden;
   overflow-y: hidden;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.name-box {
+/* 名前の入力欄 */
+.name {
+  width: 800px;
+  height: 70px;
+  display: inline-block;
   font-size: 30px;
-  flex-direction: column; /* Align items vertically */
-  width: 20%;
+  margin-left: 70px;
+  margin-top: 80px;
+  align-items: center;
+  vertical-align: middle;
+  position: relative;
+}
+.name-box {
+  width: 150px;
+  height: 50px;
   float: left;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* 上下中央に配置 */
 }
-.character-control {
-  margin-top: 20px;
-}
-.name-box label {
-  width: 100%; /* Make the labels take up the full width */
+label[for="label"] {
+  font-family: "LEMON MILK";
+  margin: auto;
 }
 .comment-input {
-  margin-left: 30px;
   width: 500px;
   height: 50px;
   border: 2px solid #1b1b1b;
@@ -45,52 +61,116 @@
   padding: 5px;
   font-size: 14px;
   vertical-align: middle;
-  margin-top: 20px;
-}
-.black-square {
-  padding: 10px;
-  cursor: pointer;
 }
 
-.Next-text {
-  font-size: 16px;
-  margin: 0;
+.comment-input::placeholder {
+  font-size: 14px;
+  color: #888;
 }
-.black-square {
-  width: 450px;
+
+.dotted-border {
+  border-top: 1px dotted #000;
+  width: 500px;
+  height: 0;
+  margin: 0px 90px;
+}
+
+/* PSの入力欄 */
+
+.PS {
+  width: 800px;
+  height: 70px;
+  display: inline-block;
+  font-size: 30px;
+  margin-left: 70px;
+  margin-top: 15px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.comment-input-PS {
+  width: 500px;
   height: 50px;
-  margin-top: 100px;
+  border: 2px solid #1b1b1b;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.comment-input-PS::placeholder {
+  font-size: 14px;
+  color: #888;
+}
+
+.ps-condition {
+  width: 800px;
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 0px;
+  margin-bottom: 220px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+/* PS確認の入力欄 */
+.confirmation-Re-enter {
+  width: 800px;
+  display: inline-block;
+  font-size: 15px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.comment-input-confirmation {
+  width: 500px;
+  height: 50px;
+  border: 2px solid #1b1b1b;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.comment-input-PS {
+  width: 500px;
+  height: 50px;
+  border: 2px solid #1b1b1b;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.comment-input-confirmation::placeholder {
+  font-size: 14px;
+  color: #888;
+}
+
+/* 黒い四角 */
+
+.black-square {
+  margin-top: 30px;
+  width: 400px;
+  height: 50px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; /* 中央揃え */
   background-color: rgb(41, 41, 41);
   border-radius: 10px;
   z-index: 2;
-  text-decoration: none; /* リンクの下線を非表示 */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.black-square a {
+  text-decoration: none;
+}
+
 .Next-text {
   font-size: 20px;
   color: rgb(255, 255, 255);
   margin: 0;
   padding: 0;
-  text-decoration: none;
-}
-button {
-  border: none; /* ボーダーをリセット */
-  background: none; /* 背景を透明に */
-  padding: 0; /* パディングをリセット */
-}
-
-button:focus {
-  outline: none; /* フォーカス時のアウトラインを非表示 */
-}
-
-button a {
-  text-decoration: none; /* リンクの下線を非表示 */
-  color: inherit; /* リンクの色を継承 */
 }
 @media only screen and (max-width: 600px) {
   .container1 {
@@ -110,7 +190,7 @@ button a {
   }
   .White-square {
     width: 100%;
-    height: 230px;
+    height: 250px;
   }
 
   .name,
@@ -147,5 +227,14 @@ button a {
 
   .confirmation-Re-enter {
     margin-left: 10px; /* マージンを変更 */
+  }
+  label[for="label"] {
+    font-family: "LEMON MILK";
+    margin: 0;
+  }
+  .black-square {
+    margin-top: 30px;
+    margin-left: auto;
+    width: 100%;
   }
 }
