@@ -120,4 +120,15 @@ main {
   .image_container {
     grid-template-columns: 1fr 1fr;
   }
+  .name-button {
+    width: 90%; /* 画面幅の90%に調整 */
+    height: 100%;
+    margin-top: 20px;
+  }
+
+  .button {
+    padding: 3px 10px;
+    font-size: 14px;
+    margin: 5px; /* ボタンのマージンを調整 */
+  }
 }

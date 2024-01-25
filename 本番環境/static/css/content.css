@@ -395,6 +395,13 @@ body {
     margin: 0;
     padding: 10px;
   }
+  .left-side-of-screen {
+    flex: 1;
+    width: 90%;
+    height: 1400px;
+    margin: 50px 5% 5% 5%; /* 画面幅に対する相対的な値に変更 */
+    box-sizing: border-box;
+  }
   .explanation {
     display: none;
   }
