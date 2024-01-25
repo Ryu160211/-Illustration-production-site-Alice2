@@ -1,5 +1,5 @@
 function onClickLikeButton(content_id) {
-  if (document.getElementById("like-button").dataset.is_login === "None") {
+  if (document.getElementById("login").dataset.is_login === "false") {
     alert("ログインしてください");
     return;
   }
