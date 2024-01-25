@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <link rel="stylesheet" href="css/philosophy.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename=css) }}" />
     <meta charset="utf-8" />
-    <title>立ち絵|OP</title>
+    <title>東方立ち絵広場</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <div class="content">
       <div class="top">
-        <a href="GALLERY.html">
-          <img src="image/TOP画像.png" alt="説明文" />
+        <a href="{{ url_for('contents') }}">
+          <img
+            src="{{ url_for('static', filename='image/common/philosophy.png') }}"
+            alt="philosophy"
+          />
+        </a>
+      </div>
+      <div class="top2">
+        <a href="{{ url_for('contents') }}">
+          <img
+            src="{{ url_for('static', filename='image/common/smartphone_philosophy.png') }}"
+          />
         </a>
       </div>
     </div>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <script src="js/philosophy.js"></script>
+    <script src="{{ url_for('static', filename='js/philosophy.js') }}"></script>
   </body>
 </html>
