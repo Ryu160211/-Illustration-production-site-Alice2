@@ -181,7 +181,7 @@ body {
 
 .like-image {
   margin-top: 3px;
-  margin-left: 10px;
+  margin-left: 5px;
   width: 20px;
   height: auto;
   float: left;
@@ -200,6 +200,8 @@ body {
   z-index: 10;
   color: #2e2e2e;
   font-size: 19px;
+  text-align: center;
+  margin-top: 1px;
 }
 
 .vertical-box {
@@ -269,6 +271,7 @@ body {
   font-family: "LEMON MILK";
   font-weight: bold;
   font-size: 20px;
+  letter-spacing: 3px;
 }
 .gray-rectangle {
   margin-top: 70px;
