@@ -97,6 +97,27 @@ def like():
         like_count = Like.query.filter_by(content_id=content_id).count()
         serve_data = {'is_like': is_like, 'like_count':like_count}
         return json.dumps(serve_data)
+    
+@app.route('/follow', methods=['POST'])
+def follow():
+    if request.method == 'POST':
+        try:
+            creator_id = request.form['creator_id']
+            follow = Follow.query.filter_by(user_id=current_user.get_id(), creator_id=creator_id).first()
+            is_follow = ''
+            if not follow:
+                follow = Follow(user_id=current_user.get_id(), creator_id=creator_id)
+                db.session.add(follow)
+                db.session.commit()
+                is_follow = 'true'
+            else:
+                db.session.delete(follow)
+                db.session.commit()
+                is_follow = 'false'
+        except Exception as e:
+            print(e)
+        serve_data = {'is_follow': is_follow}
+        return json.dumps(serve_data)
 
 @app.route('/creators')
 def creators():
