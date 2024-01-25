@@ -38,7 +38,7 @@ def unautherized():
 
 @app.route('/')
 def home():
-    return redirect(url_for('contents'))
+    return redirect(url_for('philosophy'))
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -140,11 +140,12 @@ def how():
 
 @app.route('/rule')
 def rule():
-    return 'rule'
+    title = '東方立ち絵広場-rule'
+    return render_template('rule.html', css='css/rule.css', title=title)
 
 @app.route('/philosophy')
 def philosophy():
-    return 'philosophy'
+    return render_template('philosophy.html', css='css/philosophy.css')
 
 @app.route('/signup1')
 def signup1():
