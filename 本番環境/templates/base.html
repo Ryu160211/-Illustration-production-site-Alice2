@@ -57,33 +57,47 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Form</a>
             </li>
-          </ul>
-          {% if not current_user.is_authenticated %}
-          <form action="/login" method="get">
-            <button type="submit" class="btn btn-primary">Login</button>
-          </form>
-          {% else %}
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              {{ current_user.name }}
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">いいねした素材</a></li>
-              <li>
-                <a class="dropdown-item" href="#">フォローしたクリエイター</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="{{ url_for('logout') }}"
-                  >logout</a
+
+            {% if not current_user.is_authenticated %}
+            <li class="nav-item" id="login" data-is_login="false">
+              <form action="/login" method="get">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  data-is_login="false"
                 >
-              </li>
-            </ul>
-          </div>
+                  Login
+                </button>
+              </form>
+            </li>
+            {% else %}
+            <li class="nav-item" id="login" data-is_login="true">
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  data-is_login="true"
+                >
+                  {{ current_user.name }}
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">いいねした素材</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >フォローしたクリエイター</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{{ url_for('logout') }}"
+                      >logout</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
           {% endif %}
         </div>
       </div>

@@ -43,7 +43,6 @@
           class="black-border"
           id="like-button"
           data-content_id="{{ content.id }}"
-          data-is_login="{{ current_user.get_id() }}"
           onclick="onClickLikeButton(this.dataset.content_id)"
         >
           {% if content.isLike(current_user.get_id()) %}
@@ -79,12 +78,25 @@
                 src="{{ url_for('static', filename=creator.icon) }}"
                 class="icon"
             /></a>
-            <div class="name-box">
+            <div class="creator-box">
               <h1 class="Creator-name">{{ creator.name }}</h1>
-              <div class="follow-box" onclick="handleFollowClick()">
+              {% if creator.isFollow(current_user.get_id()) %}
+              <div
+                class="followed-button"
+                id="{{ creator.id }}"
+                onclick="onClickFollowButton(this.id)"
+              >
+                <h1 class="followed">followed</h1>
+              </div>
+              {% else %}
+              <div
+                class="follow-button"
+                id="{{ creator.id }}"
+                onclick="onClickFollowButton(this.id)"
+              >
                 <h1 class="follow">follow</h1>
               </div>
-              <!--切り替え用 <h1 class="follow">followed</h1>-->
+              {% endif %}
             </div>
           </div>
         </div>
@@ -93,4 +105,5 @@
   </div>
 </div>
 <script src="{{ url_for('static', filename='js/onClickLikeButton.js') }}"></script>
+<script src="{{ url_for('static', filename='js/onClickFollowButton.js') }}"></script>
 {% endblock %}
