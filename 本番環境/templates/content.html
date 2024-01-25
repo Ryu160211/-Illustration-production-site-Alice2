@@ -44,9 +44,9 @@
           id="like-button"
           data-content_id="{{ content.id }}"
           data-is_login="{{ current_user.get_id() }}"
-          onclick="changeImage(this.dataset.content_id)"
+          onclick="onClickLikeButton(this.dataset.content_id)"
         >
-          {% if isLike %}
+          {% if content.isLike(current_user.get_id()) %}
           <img
             src="{{ url_for('static', filename='image/common/like.png') }}"
             class="like-image"
@@ -58,7 +58,7 @@
           />
           {% endif %}
           <div class="gray-circle">
-            <h1 class="numerical-value" id="like_count">{{ like_count }}</h1>
+            <h1 class="numerical-value" id="like-count">{{ like_count }}</h1>
           </div>
         </div>
         <div class="line"></div>
@@ -91,6 +91,6 @@
       </div>
     </div>
   </div>
-  <script src="{{ url_for('static', filename='js/content.js') }}"></script>
-  {% endblock %}
 </div>
+<script src="{{ url_for('static', filename='js/onClickLikeButton.js') }}"></script>
+{% endblock %}
