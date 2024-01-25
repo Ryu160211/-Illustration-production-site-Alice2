@@ -25,6 +25,8 @@ admin.add_view(UserModelView(Creator, db.session))
 admin.add_view(UserModelView(OtherWork, db.session))
 admin.add_view(UserModelView(Content, db.session))
 admin.add_view(UserModelView(Character, db.session))
+admin.add_view(UserModelView(Like, db.session))
+admin.add_view(UserModelView(Follow, db.session))
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -67,16 +69,12 @@ def contents():
 @app.route('/content/<content_id>')
 def content(content_id):
     content = Content.query.filter_by(id=content_id).first()
-    if current_user.get_id():
-        is_like = content.isLike(current_user.get_id())
-    else:
-        is_like = False
     like_count = Like.query.filter_by(content_id=content.id).count()
     character = Character.query.filter_by(id=content.character_id).first()
     creator = Creator.query.filter_by(id=content.creator_id).first()
     other_contents = Content.query.filter_by(creator_id=creator.id).limit(3).all()
     title = '東方立ち絵広場-' + creator.name
-    return render_template('content.html', css='css/content.css',title=title, content=content, is_like=is_like, like_count=like_count ,character=character, creator=creator, other_contents=other_contents) 
+    return render_template('content.html', css='css/content.css',title=title, content=content, like_count=like_count ,character=character, creator=creator, other_contents=other_contents) 
 
 @app.route('/like', methods=['POST'])
 def like():
