@@ -163,7 +163,7 @@ body {
 
 .black-border {
   white-space: nowrap;
-  width: 80px;
+  width: fit-content;
   height: 30px;
   margin-top: 20px;
   border: 2px solid rgb(199, 199, 199);
@@ -196,7 +196,7 @@ body {
   filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="redify"><feColorMatrix type="matrix" values="1.5 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 1 0"/></filter></svg>#redify');
 }*/
 .numerical-value {
-  margin-left: 20px;
+  margin: auto;
   z-index: 10;
   color: #2e2e2e;
   font-size: 19px;
