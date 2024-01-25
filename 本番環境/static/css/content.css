@@ -328,7 +328,7 @@ body {
 .gray-box {
   width: 315px; /* 幅を適宜変更 */
   height: 70px; /* 高さを適宜変更 */
-  background-color: rgb(244, 244, 244);
+  background-color: rgb(231, 228, 228);
   border-radius: 10px;
   float: left;
 }
@@ -339,7 +339,7 @@ body {
   margin-left: 10px;
   float: left;
 }
-.name-box {
+.creator-box {
   width: 200px;
   height: 30px;
   margin-top: 10px; /* 20pxから0に変更 */
@@ -351,15 +351,27 @@ body {
   padding: 0;
   letter-spacing: 2px;
 }
-.follow-box {
+.follow-button {
   width: 150px;
-  background-color: rgb(43, 43, 43);
+  background-color: #000000;
   text-align: center;
 }
 .follow {
   font-size: 15px;
   font-family: "LEMON MILK";
   color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.followed-button {
+  width: 150px;
+  background-color: #ffffff;
+  text-align: center;
+}
+.followed {
+  font-size: 15px;
+  font-family: "LEMON MILK";
+  color: #000000;
   letter-spacing: 1px;
 }
 .Individual-terms-box {
@@ -373,18 +385,7 @@ body {
 .Individual-terms {
   display: none; /* 通常は非表示にする */
 }
-/* 
-.follow-box {
-  width: 150px;
-  background-color: rgb(174, 220, 222);
-  text-align: center;
-}
-.follow {
-  font-size: 15px;
-  font-family: "LEMON MILK";
-  color: #303030;
-  letter-spacing: 1px;
-}*/
+
 @media screen and (max-width: 600px) {
   .main_container {
     flex-direction: column;
