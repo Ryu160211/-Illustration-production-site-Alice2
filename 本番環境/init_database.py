@@ -24,6 +24,11 @@ class Creator(db.Model):
     pixiv = db.Column(db.String)
     skeb = db.Column(db.String)
 
+    def isFollow(self, user_id):
+        follow = Follow.query.filter_by(user_id=user_id, creator_id=self.id).first()
+        if follow:
+            return True
+        return False
 
 class Content(db.Model):
     id = db.Column(db.Integer, primary_key=True)
