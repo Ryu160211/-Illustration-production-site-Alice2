@@ -36,7 +36,7 @@ class Content(db.Model):
     download = db.Column(db.String)
 
     def isLike(self, user_id):
-        like = Like.query.filter_by(user_id=user_id).first()
+        like = Like.query.filter_by(content_id=self.id, user_id=user_id).first()
         if like:
             return True
         return False
