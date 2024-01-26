@@ -38,7 +38,7 @@
   box-shadow: 0 0 0 5px white; /* アイコンに白いボーダーを追加 */
 }
 
-.follow-box {
+.follow-button {
   width: 150px;
   height: 35px;
   background-color: rgb(43, 43, 43);
@@ -59,6 +59,28 @@
   font-style: normal;
 
   color: #ffffff;
+}
+.followed-button {
+  width: 150px;
+  height: 35px;
+  background-color: rgb(232, 232, 232);
+  border-radius: 15px;
+  position: absolute;
+  left: 20%; /* .icon-containerの右端に配置 */
+  margin-left: 20px; /* 適切なマージンを設定 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.followed {
+  margin-top: 8px;
+  font-size: 15px;
+
+  font-family: "LEMON MILK";
+  font-weight: normal;
+  font-style: normal;
+
+  color: #000000;
 }
 
 .main2-container {
