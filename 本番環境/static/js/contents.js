@@ -27,6 +27,7 @@ setRandomDarkColor("button9");
 setRandomDarkColor("button10");
 setRandomDarkColor("button11");
 setRandomDarkColor("button12");
+setRandomDarkColor("button13");
 
 particlesJS("particles-js", {
   particles: {
