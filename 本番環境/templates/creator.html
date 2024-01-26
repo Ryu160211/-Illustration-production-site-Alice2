@@ -7,9 +7,23 @@
     <div class="icon-container">
       <img src="{{ url_for('static', filename=creator.icon) }}" class="icon" />
     </div>
-    <div class="follow-box">
+    {% if not creator.isFollow(current_user.get_id()) %}
+    <div
+      class="follow-button"
+      id="{{ creator.id }}"
+      onclick="onClickFollowButton(this.id)"
+    >
       <h1 class="follow">follow</h1>
     </div>
+    {% else %}
+    <div
+      class="followed-button"
+      id="{{ creator.id }}"
+      onclick="onClickFollowButton(this.id)"
+    >
+      <h1 class="followed">followed</h1>
+    </div>
+    {% endif %}
   </div>
   <div class="main2-container">
     <div class="name-container">
@@ -90,4 +104,5 @@
     {% endfor %}
   </div>
 </div>
+<script src="{{ url_for('static', filename='js/onClickFollowButton.js') }}"></script>
 {% endblock %}
