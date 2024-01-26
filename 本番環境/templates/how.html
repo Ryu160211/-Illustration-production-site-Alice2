@@ -1,4 +1,11 @@
 {% extends "base.html" %} {% block main %}
+<!-- particles.js container -->
+<div id="particles-js"></div>
+<!-- stats - count particles -->
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- stats.js lib -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 <div class="main-container">
   <div class="question-box">
     <img
@@ -37,8 +44,8 @@
     <div class="answer-2-text-container">
       <div class="answer-2-text">立ち絵を依頼できる</div>
       <div class="answer-2-text-2">
-        Artistのページで立ち絵依頼のコースと依頼方法をご確認頂けます。<br />
-        選択したコースにより依頼方法が異なりますのでご注意ください。
+        Creatorページでクリエイターへの依頼方法をご確認頂けます。<br />
+        クリエイターによって依頼方法が異なりますのでご注意ください。
       </div>
     </div>
   </div>
@@ -59,5 +66,5 @@
     </div>
   </div>
 </div>
-<script src="js/HOWTO.js"></script>
+<script src="{{ url_for('static', filename='js/particle.js') }}"></script>
 {% endblock %}

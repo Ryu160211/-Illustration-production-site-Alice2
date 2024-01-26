@@ -1,4 +1,11 @@
 {% extends "base.html" %} {% block main %}
+<!-- particles.js container -->
+<div id="particles-js"></div>
+<!-- stats - count particles -->
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- stats.js lib -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 <div class="container1">
   <!-- グレーの四角形を表示する要素 -->
   <div class="gray-square">
@@ -46,5 +53,6 @@
       </ul>
     </div>
   </div>
+  <script src="{{ url_for('static', filename='js/particle.js') }}"></script>
   {% endblock %}
 </div>
