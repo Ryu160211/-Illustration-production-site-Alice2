@@ -8,18 +8,83 @@
   <!-- stats.js lib -->
   <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
   <div class="name-button">
-    <a href="#" class="button" id="button1">博麗霊夢</a>
-    <a href="#" class="button" id="button2">霧雨魔理沙</a>
-    <a href="#" class="button" id="button3">犬走椛</a>
-    <a href="#" class="button" id="button4">秦こころ</a>
-    <a href="#" class="button" id="button5">ルーミア</a>
-    <a href="#" class="button" id="button6">鈴仙・優曇華院・イナバ</a>
-    <a href="#" class="button" id="button7">マエリベリー・ハーン</a>
-    <a href="#" class="button" id="button8">洩矢諏訪子</a>
-    <a href="#" class="button" id="button9">藤原妹紅</a>
-    <a href="#" class="button" id="button10">蓬莱山輝夜</a>
-    <a href="#" class="button" id="button11">火焔猫燐</a>
-    <a href="#" class="button" id="button12">高麗野あうん</a>
+    <a
+      class="button"
+      id="button1"
+      href="{{ url_for('contents_sort_by_chara', character_id=1) }}"
+      >博麗霊夢</a
+    >
+    <a
+      class="button"
+      id="button2"
+      href="{{ url_for('contents_sort_by_chara', character_id=2) }}"
+      >霧雨魔理沙</a
+    >
+    <a
+      class="button"
+      id="button3"
+      href="{{ url_for('contents_sort_by_chara', character_id=3) }}"
+      >火焔猫燐</a
+    >
+    <a
+      class="button"
+      id="button4"
+      href="{{ url_for('contents_sort_by_chara', character_id=4) }}"
+      >高麗野あうん</a
+    >
+    <a
+      class="button"
+      id="button5"
+      href="{{ url_for('contents_sort_by_chara', character_id=5) }}"
+      >犬走椛</a
+    >
+    <a
+      class="button"
+      id="button6"
+      href="{{ url_for('contents_sort_by_chara', character_id=6) }}"
+      >ルーミア</a
+    >
+    <a
+      class="button"
+      id="button7"
+      href="{{ url_for('contents_sort_by_chara', character_id=7) }}"
+      >秦こころ</a
+    >
+    <a
+      class="button"
+      id="button8"
+      href="{{ url_for('contents_sort_by_chara', character_id=8) }}"
+      >洩矢諏訪子</a
+    >
+    <a
+      class="button"
+      id="button9"
+      href="{{ url_for('contents_sort_by_chara', character_id=9) }}"
+      >蓬莱山輝夜</a
+    >
+    <a
+      class="button"
+      id="button10"
+      href="{{ url_for('contents_sort_by_chara', character_id=10) }}"
+      >藤原妹紅</a
+    >
+    <a
+      class="button"
+      id="button11"
+      href="{{ url_for('contents_sort_by_chara', character_id=11) }}"
+    >
+      鈴仙・優曇華院・イナバ
+    </a>
+    <a
+      class="button"
+      id="button12"
+      href="{{ url_for('contents_sort_by_chara', character_id=12) }}"
+    >
+      マエリベリー・ハーン
+    </a>
+    <a class="button" id="button13" href="{{ url_for('contents') }}">
+      指定なし
+    </a>
   </div>
   <div class="image_container">
     {% for content in contents %}
