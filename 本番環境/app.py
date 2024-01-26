@@ -66,6 +66,11 @@ def contents():
     contents = Content.query.order_by(Content.id.asc()).all()
     return render_template('contents.html', css='css/contents.css', title=title, contents=contents)
 
+@app.route('/contents/<character_id>')
+def contents_sort_by_chara(character_id):
+    contents = Content.query.filter_by(character_id=character_id).all()
+    return render_template('contents.html', title='東方立ち絵広場-contents', css='css/contents.css', contents=contents)
+
 @app.route('/content/<content_id>')
 def content(content_id):
     content = Content.query.filter_by(id=content_id).first()
