@@ -9,7 +9,8 @@ main {
 }
 canvas {
   display: block;
-} /* ---- particles.js container ---- */
+}
+/* ---- particles.js container ---- */
 #particles-js {
   position: fixed;
   top: 0;

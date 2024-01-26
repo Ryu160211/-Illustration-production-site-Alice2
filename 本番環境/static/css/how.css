@@ -1,3 +1,50 @@
+/* ---- particles.js container ---- */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -1;
+} /* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.js-count-particles {
+  font-size: 1.1em;
+}
+#stats,
+.count-particles {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+/* particles */
+
 @font-face {
   font-family: "LEMON MILK"; /* フォントファミリーの名前を指定 */
   src: url("font/LemonMilk.otf") format("opentype"); /* フォントファイルのパスと形式を指定 */
@@ -6,6 +53,7 @@
 }
 .main-container {
   width: 90%; /* 1300px の 80% */
+  max-width: 1300px; /* 最大幅を指定 */
   height: auto; /* 高さを自動調整 */
   margin-left: auto;
   margin-right: auto;
@@ -14,7 +62,6 @@
 }
 .question-box {
   width: 1000px;
-  max-width: 100%;
   height: 200px;
   margin-left: auto;
   margin-right: auto;
@@ -44,7 +91,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   white-space: nowrap;
   position: relative;
 }
@@ -108,16 +155,9 @@
   align-items: center; /* 垂直方向の中央揃え */
   animation: fadeIn 5s ease 1s 1 normal backwards;
 }
-.answer-1-container {
-  position: relative;
-  width: 150px; /* 円の直径 */
-  height: 150px;
-  border-radius: 50%;
-  border: 2px solid black; /* 黒い線 */
-  overflow: hidden;
-}
+
 .answer-1-numbers {
-  width: 72%;
+  width: 110px;
   height: auto;
   margin-top: 170px;
   margin-left: 23px;
@@ -199,16 +239,9 @@
   align-items: center; /* 垂直方向の中央揃え */
   animation: fadeIn 5s ease 1s 1 normal backwards;
 }
-.answer-2-container {
-  position: relative;
-  width: 150px; /* 円の直径 */
-  height: 150px;
-  border-radius: 50%;
-  border: 2px solid black; /* 黒い線 */
-  overflow: hidden;
-}
+
 .answer-2-numbers {
-  width: 72%;
+  width: 110px;
   height: auto;
   margin-top: 170px;
   margin-left: 20px;
@@ -289,16 +322,8 @@
   align-items: center; /* 垂直方向の中央揃え */
   animation: fadeIn 5s ease 1s 1 normal backwards;
 }
-.answer-3-container {
-  position: relative;
-  width: 150px; /* 円の直径 */
-  height: 150px;
-  border-radius: 50%;
-  border: 2px solid black; /* 黒い線 */
-  overflow: hidden;
-}
 .answer-3-numbers {
-  width: 72%;
+  width: 110px;
   height: auto;
   margin-top: 170px;
   margin-left: 20px;
@@ -329,6 +354,7 @@
   white-space: nowrap;
   bottom: 0;
 }
+
 @media only screen and (max-width: 600px) {
   .answer-3-box {
     width: 90%;

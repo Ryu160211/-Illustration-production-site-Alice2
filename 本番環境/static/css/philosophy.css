@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow-y: hidden;
 }
 
 .content {
@@ -23,14 +24,24 @@ body {
   opacity: 1;
 }
 
+.top2 {
+  display: none;
+}
+
 /* スマートフォン用のスタイル */
 @media screen and (max-width: 600px) {
   body {
-    overflow: auto; /* スマホではスクロールを許可 */
+    overflow-x: hidden; /* 横スクロールを禁止 */
+    overflow-y: hidden; /* 縦スクロールを禁止 */
+  }
+
+  .top2 {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   .top img {
-    height: auto; /* 高さを自動調整 */
-    object-position: center center; /* スマホでは中央に配置 */
+    display: none;
   }
 }
