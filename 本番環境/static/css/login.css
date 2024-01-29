@@ -23,3 +23,78 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.form-floating {
+  margin-top: 30px;
+  width: 500px; /* 任意の横幅に変更 */
+  height: 50px; /* 任意の縦幅に変更 */
+  border: 2px solid #1b1b1b; /* 枠線の色と太さを指定 */
+  border-radius: 10px; /* 四方を丸めるための値 */
+  padding: 5px; /* 文字と枠の余白を指定 */
+  font-size: 14px; /* placeholderの文字の大きさを変更 */
+  vertical-align: middle; /* 垂直方向に中央揃え */
+}
+.btn {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+.form-floating > .form-control-plaintext:-webkit-autofill,
+.form-floating > .form-control:-webkit-autofill {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+.form-floating > .form-control-plaintext:focus,
+.form-floating > .form-control-plaintext:not(:placeholder-shown),
+.form-floating > .form-control:focus,
+.form-floating > .form-control:not(:placeholder-shown) {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext {
+  padding: 0rem 0rem;
+}
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext,
+.form-floating > .form-select {
+  height: calc(3.5rem + calc(var(--bs-border-width) * 2));
+  min-height: calc(3.5rem + calc(var(--bs-border-width) * 2));
+  line-height: 1.25;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-size: 0;
+  line-height: 0;
+}
+.form-control {
+  background-color: transparent; /* 背景色を透明に設定 */
+  -webkit-appearance: none; /* Webkitブラウザのデフォルトの外観を無効にする */
+  appearance: none; /* ブラウザのデフォルトの外観を無効にする */
+  border-radius: 0; /* 角丸を無効にする */
+  transition: none; /* トランジションを無効にする */
+}
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext {
+  padding: 0rem 0rem;
+}
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext,
+.form-floating > .form-select {
+  min-height: calc(2.4rem + calc(var(--bs-border-width) * 1));
+}
+.form-floating > .form-control-plaintext:focus,
+.form-floating > .form-control-plaintext:not(:placeholder-shown),
+.form-floating > .form-control:focus,
+.form-floating > .form-control:not(:placeholder-shown) {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
