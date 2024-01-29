@@ -36,8 +36,8 @@ body {
   object-fit: contain; /* 追加 */
 }
 .explanation {
+  margin-bottom: 40px;
   margin-top: 20px;
-  white-space: nowrap;
   font-size: 15px;
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: lighter;
