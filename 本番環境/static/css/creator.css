@@ -21,6 +21,9 @@
   clip-path: inset(10px 10px 10px 10px round 15px);
   filter: grayscale(50%) contrast(0.7); /* グレースケールとコントラストを変更 */
 }
+.custom-header img {
+  width: 1000px;
+}
 
 .icon-container {
   width: 100px;
